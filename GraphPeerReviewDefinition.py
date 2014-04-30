@@ -30,9 +30,10 @@ ivar_counts = checkbox_responses[ivar].value_counts()
 
 response_counts = checkbox_responses.groupby(ivar).sum()
 
-response_pct = response_counts.div(ivar_counts)
 
-response_pct.plot(kind='bar')
+
+#response_pct = response_counts.apply(f, axis=1)
+response_counts.plot(kind='bar')
 
 
 #split = responses[dvar].str.split(", ")
