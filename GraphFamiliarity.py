@@ -17,7 +17,7 @@ button_labels = ["Know all the details",
                  "Never heard of it"]
 
 #build filename
-ouput_filename = column + '_faimiliarity_by_' + CATEGORY_TYPE + '.svg'
+ouput_filename = column + '_familiarity_by_' + CATEGORY_TYPE + '.svg'
 
 #crosstab to summarize responses from each category
 category_ct = pd.crosstab(responses_ft[CATEGORY_TYPE], responses_ft[column])
