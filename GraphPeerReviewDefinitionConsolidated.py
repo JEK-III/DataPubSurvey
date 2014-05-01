@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Graph peer review checkbox definitions as a function 
-of confidence in a peer-reviewed dataset
+Created on Wed Apr 30 17:32:26 2014
+
+Graph peer review checkbox definitions 
+
+Group confidence into high
 @author: jkratz
 """
 from collections import Counter
@@ -23,6 +26,15 @@ COLORS = ['#e41a1c',
 
 IVAR_LABEL = 'total_responses'
 
+RESPONSE_MERGE = {"Complete confidence" : "Peer review",
+               "High confidence" : "Peer review",
+               "Some confidence" : "Peer review",
+               "Little confidence" : "Peer review",
+               "No confidence" : "Peer review"}
+
+GRAPH_INDEX = ["Peer review"]
+            
+
 #responses_ft = responses.reindex(columns=[ivar, dvar]).dropna()
 
 # extract checkbox column and split responses into array
@@ -36,6 +48,9 @@ checkbox_responses = pd.DataFrame({name :
 checkbox_responses[ivar] = responses[ivar]
 checkbox_responses = checkbox_responses.dropna()
 
+# merge ivar responses
+checkbox_responses[ivar] = checkbox_responses[ivar].map(RESPONSE_MERGE)
+
 # count ivar responses
 ivar_counts = checkbox_responses[ivar].value_counts()
 ivar_counts = pd.DataFrame(ivar_counts, columns=[IVAR_LABEL])
@@ -48,8 +63,6 @@ response_counts = pd.merge(response_counts, pd.DataFrame(ivar_counts),
 
 
 
-#response_counts = response_counts + ivar_counts.T
-
 
 response_counts = response_counts.apply(lambda x : x.div(x[IVAR_LABEL]),
                                         axis=1)
@@ -57,6 +70,6 @@ response_counts = response_counts.apply(lambda x : x.div(x[IVAR_LABEL]),
 
 # sort for graphing
 response_counts = response_counts.reindex(columns=PR_FEATURES, 
-                                          index = CONFIDENCE_LEVELS)
+                                          index = GRAPH_INDEX)
 
 response_counts.plot(kind='bar', color=COLORS)
