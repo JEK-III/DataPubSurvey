@@ -36,6 +36,40 @@ REVIEW_ACTIONS = ["reviewed a journal article",
                   "served on a tenure & promotions committee"]
 
 
+DATA_TRUST = ['traditional_paper_confidence',
+              'data_paper_confidence',
+              'peer_review_confidence',
+              'reuse_confidence']
+              
+DATA_TRUST_SEQUENCE = ["Complete confidence",
+                       "High confidence",
+                       "Some confidence",
+                       "Little confidence",
+                       "No confidence"]
+
+DATA_VALUE = ["impact_citation",
+              "impact_downloads",
+              "impact_altmetrics",
+              "impact_google_rank"]                                        
+
+DATA_VALUE_SEQUENCE = ["Extremely useful",
+                       "Highly useful",
+                       "Somewhat useful",
+                       "Slightly useful",
+                       "Not at all useful"]
+
+RESEARCHER_VALUE = ["traditional_paper_value",
+                    "data_paper_pr_value",
+                    "data_paper_npr_value",
+                    "dataset_pr_value",
+                    "dataset_npr_value"]       
+
+RESEARCHER_VALUE_SEQUENCE = ["A great deal",
+                             "Significant",
+                             "Some",
+                             "A small amount",
+                             "None"]
+
 responses = pd.read_csv("DataPubSurveyResponses - Form Responses.csv")
 
 

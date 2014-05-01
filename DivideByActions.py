@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+Created on Thu May  1 11:50:33 2014
+
 Graph peer review checkbox definitions as a function 
 of confidence in a peer-reviewed dataset
 @author: jkratz
@@ -12,28 +14,30 @@ COLORS = ['#e41a1c',
           '#ff7f00',
           '#ffff33']
 
-IVAR_LABEL = 'total_responses'
+
+
 
 #responses_ft = responses.reindex(columns=[ivar, dvar]).dropna()
 
 # extract checkbox column and split responses into array
-split_checkbox = responses[dvar].str.split(", ").dropna()
+split_checkbox = responses[ivar].str.split(", ").dropna()
+
 
 
 # DF of bools; responders x checkbox answers 
 checkbox_responses = pd.DataFrame({name : 
-    split_checkbox.apply(lambda x: name in x) for name in PR_FEATURES})
+    split_checkbox.apply(lambda x: name in x) for name in REVIEW_ACTIONS})
 
 # graft ivar column on
-checkbox_responses[ivar] = responses[ivar]
+checkbox_responses[dvar] = responses[dvar]
 checkbox_responses = checkbox_responses.dropna()
 
 # count ivar responses
-ivar_counts = checkbox_responses[ivar].value_counts()
-ivar_counts = pd.DataFrame(ivar_counts, columns=[IVAR_LABEL])
+ivar_counts = checkbox_responses[dvar].value_counts()
+ivar_counts = pd.DataFrame(dvar_counts, columns=[IVAR_LABEL])
 
 # count dvar responses
-response_counts = checkbox_responses.groupby(ivar).sum()
+response_counts = checkbox_responses.groupby(dvar).sum()
 
 response_counts = pd.merge(response_counts, pd.DataFrame(ivar_counts), 
                            left_index=True, right_index=True)

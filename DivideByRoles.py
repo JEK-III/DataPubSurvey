@@ -5,8 +5,6 @@ Created on Fri Apr 18 17:58:46 2014
 @author: jkratz
 """
 
-import pandas as pd
-
 #set category flag
 CATEGORY_TYPE = 'role'
 
