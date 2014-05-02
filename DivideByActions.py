@@ -34,10 +34,10 @@ checkbox_responses = checkbox_responses.dropna()
 
 # count ivar responses
 ivar_counts = checkbox_responses[dvar].value_counts()
-ivar_counts = pd.DataFrame(dvar_counts, columns=[IVAR_LABEL])
+ivar_counts = pd.DataFrame(ivar_counts, columns=[IVAR_LABEL])
 
 # count dvar responses
-response_counts = checkbox_responses.groupby(dvar).sum()
+response_counts = checkbox_responses.groupby(ivar).sum()
 
 response_counts = pd.merge(response_counts, pd.DataFrame(ivar_counts), 
                            left_index=True, right_index=True)

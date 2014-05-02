@@ -1,27 +1,47 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Apr 22 13:44:18 2014
+Created on Thu May  1 15:35:12 2014
 
 @author: jkratz
 """
+
 COLORS = ["#000000", "#404040", "#808080", "#C0C0C0", "#FFFFFF"]
 
       
 FEATURES = RESEARCHER_VALUE
 VALUES = RESEARCHER_VALUE_SEQUENCE
 
+FILTER = "served on a tenure & promotions committee"
 
 #build output filename
 output_filename = 'data_value.svg'
 
-responses_ft = responses.reindex(columns=FEATURES)
+responses_ft = responses.reindex(columns=([ivar] + FEATURES))
+
+responses_ft[ivar] = responses_ft[ivar].str.split(", ").dropna()
+
+checks = pd.DataFrame(responses_ft[ivar])
+
+checkbox_responses = pd.DataFrame({name : 
+    checks.apply(lambda x: name in x) for name in REVIEW_ACTIONS})
+
+
+"""
+responses_ft = responses_ft.mask(responses_ft[FILTER in responses_ft[ivar]])
+
+mask = responses_ft['role'].isin(CATEGORIES)
+responses_ft = responses.ix[mask]
+"""
+
 
 counts = {}
 for column in FEATURES:
   counts[column] = responses_ft[column].value_counts()
   
 response_ct = pd.DataFrame(counts)
+
 response_ct = response_ct.transpose()
+
 
 #print response_ct
 
@@ -33,7 +53,6 @@ response_ct = response_ct.transpose()
 
 #normalize by row to % of total responses
 response_ct = response_ct.div(response_ct.sum(1).astype(float), axis = 0)
-print response_ct
 #put rows in order for graph
 response_ct = response_ct.reindex(columns=VALUES)
 #response_ct = response_ct.reindex(DATA_TRUST)
