@@ -20,6 +20,8 @@ responses_ft = responses.reindex(columns=([ivar] + FEATURES))
 
 responses_ft[ivar] = responses_ft[ivar].str.split(", ").dropna()
 
+
+
 checks = pd.DataFrame(responses_ft[ivar])
 
 checkbox_responses = pd.DataFrame({name : 
