@@ -30,9 +30,7 @@ responses['discipline'] = responses['discipline'].map(DISCIPLINE_AGGREGATION)
 
 
 
-
-
-
+# replace any anwser not in the provided list with 'Other'
 def strip_other(cell, column):
     if cell != cell:
         return cell
@@ -48,7 +46,21 @@ def strip_other(cell, column):
 responses_ft = responses.drop(COLUMNS_TO_DROP, axis=1)
 
 for column in CHECKBOX_COLUMNS:
-    responses_ft[column] = responses_ft[column].str.split(", ")
-    responses_ft[column] = responses_ft[column].map(lambda x : strip_other(x, column))
+        
+    # split into individual answers on ','
+    filtered_column = responses_ft[column].str.split(", ").dropna()
+    
+    # replace free-text with 'Other'    
+    filtered_column = filtered_column.map(lambda x : strip_other(x, column))
+ 
+#    filtered_column = pd.DataFrame(responses_ft[column])
+    col_to_ans = COLUMN_TO_ANSWERS[column] + ['Other']    
+    print col_to_ans
+    checkbox_responses = pd.DataFrame({answer : 
+        filtered_column.apply(lambda x: answer in x) for answer in col_to_ans})
+    
+  
+    responses_ft = pd.merge(responses_ft, checkbox_responses, how='left', left_index=True, right_index=True)
 
+    
 # consolidate sparsely populated disciplines
