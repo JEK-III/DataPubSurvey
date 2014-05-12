@@ -13,17 +13,32 @@ COLUMNS_TO_DROP = ["can_name_data_journal",
 
 STANDARD_RESPONSES = DP_FEATURES
 
+DISCIPLINE_AGGREGATION = {"-Planetary Science" : "Earth science",
+                          "-Geology" : "Earth science",
+                          "Computer & Information Sciences" : "Computer science",
+                          "Social, Behavioral & Economic Sciences" : "Social science",
+                          "-Astronomy" : "Other",
+                          "-Oceanography" : "Earth science"}
+
+
 
 responses = pd.read_csv("DataPubSurveyResponses - Form Responses.csv")
 
 
 
-def strip_other(cell):
+responses['discipline'] = responses['discipline'].map(DISCIPLINE_AGGREGATION)
+
+
+
+
+
+
+def strip_other(cell, column):
     if cell != cell:
         return cell
     else:
         cell = pd.Series(cell)        
-        cell[~cell.isin(STANDARD_RESPONSES)] = 'Other'
+        cell[~cell.isin(COLUMN_TO_ANSWERS[column])] = 'Other'
         return cell
 
 
@@ -34,4 +49,6 @@ responses_ft = responses.drop(COLUMNS_TO_DROP, axis=1)
 
 for column in CHECKBOX_COLUMNS:
     responses_ft[column] = responses_ft[column].str.split(", ")
-    responses_ft[column] = responses_ft[column].map(strip_other)
+    responses_ft[column] = responses_ft[column].map(lambda x : strip_other(x, column))
+
+# consolidate sparsely populated disciplines
