@@ -24,6 +24,9 @@ CHECKBOX_COLUMNS = ['data_sharing_credit',
                     'peer_review_definition',
                     'researcher_review_experience']
                     
+RADIO_BUTTON_COLUMNS = ['institution',
+                        'role']
+
 # Leikert responses -------------------------------
                     
 CONFIDENCE_LEVELS = ["No confidence",
@@ -135,11 +138,19 @@ HOW_CREDITED_ANSWERS = ["Authorship on paper",
                         "Not credited",
                         "Not applicable"]
 
-ROLES_ANSWERS = ["Principal Investigator / Lab Head",
-                 "Postdoc",
-                 "Graduate student",
-                 "Technician / Staff",
-                 "Librarian / Information Professional"]
+INSTITUTION_ANSWERS = ["Academic: research-focused",
+                       "Academic: teaching-focused",
+                       "Academic: medical school",
+                       "Government",
+                       "Nonprofit",
+                       "Commercial"]
+
+
+ROLES_ANSWERS = ['PI',
+                 'Postdoc',
+                 'Graduate_student',
+                 'Tech',
+                 'Librarian']
 
 COLUMN_TO_ANSWERS = {'data_sharing_credit' : DATA_SHARING_CREDIT_ANSWERS,
                      'how_shared' : HOW_SHARED_ANSWERS,
@@ -149,4 +160,7 @@ COLUMN_TO_ANSWERS = {'data_sharing_credit' : DATA_SHARING_CREDIT_ANSWERS,
                      'how_you_credited' : HOW_CREDITED_ANSWERS,
                      'publish_definition' : DP_FEATURES,
                      'peer_review_definition' : PR_FEATURES,
-                     'researcher_review_experience' : REVIEW_ACTIONS}
+                     'researcher_review_experience' : REVIEW_ACTIONS,
+                     'institution' : INSTITUTION_ANSWERS,
+                     'role' : ROLES_ANSWERS}
+                     
