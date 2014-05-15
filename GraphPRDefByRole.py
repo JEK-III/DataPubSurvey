@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """
+Created on Thu May 15 15:56:35 2014
+
 Graph peer review checkbox definitions as a function 
-of confidence in a peer-reviewed dataset
+of role
 @author: jkratz
 """
 
@@ -13,7 +15,18 @@ COLORS = ['#e41a1c',
           '#ffff33']
 
 IVAR_LABEL = 'total_responses'
+ivar = 'role'
+dvar = 'peer_review_definition'
 
+
+GRAPH_INDEX = ['PI',
+               'Postdoc',
+               'Grad_student',
+               'Tech',
+               'Other']
+
+
+execfile("ReadInSurvey.py")
 
 #responses_ft = responses.reindex(columns=[ivar, dvar]).dropna()
 
@@ -22,8 +35,7 @@ split_checkbox = responses[dvar].str.split("; ").dropna()
 
 
 # DF of bools; responders x checkbox answers 
-checkbox_responses = pd.DataFrame({name : 
-    split_checkbox.apply(lambda x: name in x) for name in PR_FEATURES})
+checkbox_responses = pd.DataFrame({name : split_checkbox.apply(lambda x: name in x) for name in PR_FEATURES})
 
 # graft ivar column on
 checkbox_responses[ivar] = responses[ivar]

@@ -148,7 +148,7 @@ INSTITUTION_ANSWERS = ["Academic: research-focused",
 
 ROLES_ANSWERS = ['PI',
                  'Postdoc',
-                 'Graduate_student',
+                 'Grad_student',
                  'Tech',
                  'Librarian']
 

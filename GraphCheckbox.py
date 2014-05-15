@@ -25,7 +25,7 @@ COLORS = 'w'
 
 
 # extract checkbox column and split responses into array
-split_checkbox = responses[dvar].str.split(", ").dropna()
+split_checkbox = responses[dvar].str.split("; ").dropna()
 
 # DF of bools; responders x checkbox (checked = True) 
 checkbox_responses = pd.DataFrame({name : 

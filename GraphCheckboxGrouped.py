@@ -17,7 +17,7 @@ COLORS = 'w'
 responses_ft = responses.reindex(columns=[ivar, dvar]).dropna()
 
 # extract checkbox column and split responses into array
-responses_ft[dvar] = responses_ft[dvar].str.split(", ").dropna()
+responses_ft[dvar] = responses_ft[dvar].str.split("; ").dropna()
 
 # count dvar responses
 responses_ft['box_counts'] = responses_ft[dvar].apply(lambda x: len(x))

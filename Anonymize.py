@@ -4,10 +4,20 @@ Created on Wed May  7 11:23:12 2014
 
 Script to perform light anonymization of DataPub survey data.
 
+Reads in "DataPubSurveyResponses - Form Responses.csv" and
+1. drops unused columns that contain free text or demographic information
+2. scans checkbox answers for free text (filled in by checking 'Other') and
+    replaces with 'Other'.  Replace ',' delimeters with ';'
+3. scans radio button answers for or free text (filled in by checking 'Other') 
+    and replaces with 'Other'
+4. folds discipline answers with >0 and <3 respondents into broader categories
+Writes out as 'DataPubSurvey_anon.csv'
 
 @author: jkratz
 """
 
+
+# source of many necessary constants
 execfile('DefineConstants.py')
 
 COLUMNS_TO_DROP = ["can_name_data_journal",
@@ -26,10 +36,9 @@ DISCIPLINE_AGGREGATION = {"-Planetary Science" : "Earth science",
                           "-Astronomy" : "Other",
                           "-Oceanography" : "Earth science"}
 
-
-
+# ------------------------------------------------------------------------------
+# read in survey data
 responses = pd.read_csv("DataPubSurveyResponses - Form Responses.csv")
-
 
 # drop unecessary demographic or revealing columns
 responses_ft = responses.drop(COLUMNS_TO_DROP, axis=1)
@@ -43,7 +52,6 @@ def strip_other_checkbox(cell, column):
     cell = pd.Series(cell)        
     cell[~cell.isin(COLUMN_TO_ANSWERS[column])] = 'Other'
     return cell
-
 
 for column in CHECKBOX_COLUMNS:      
     # split answers on ',' into seires
@@ -69,9 +77,7 @@ for column in RADIO_BUTTON_COLUMNS:
     responses_ft[column] = \
         responses_ft[column].map(lambda x: strip_other_radio(x, column))
 
-
 # discipline -------------------------------------------------------------------
-
 # merge disciplines with < 3 responders into larger classes
  
 def merge_disciplines(cell):
@@ -80,7 +86,6 @@ def merge_disciplines(cell):
     return cell
 
 responses_ft['discipline'] = responses_ft['discipline'].map(merge_disciplines)
-
 
 responses_ft.to_csv('DataPubSurvey_anon.csv')
 
