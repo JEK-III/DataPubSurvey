@@ -2,8 +2,13 @@
 """
 Created on Wed May  7 11:23:12 2014
 
+Script to perform light anonymization of DataPub survey data.
+
+
 @author: jkratz
 """
+
+execfile('DefineConstants.py')
 
 COLUMNS_TO_DROP = ["can_name_data_journal",
                    "country",
@@ -11,12 +16,13 @@ COLUMNS_TO_DROP = ["can_name_data_journal",
                    "uc_campu",
                    "data_to_publish"]
 
-STANDARD_RESPONSES = DP_FEATURES
 
 DISCIPLINE_AGGREGATION = {"-Planetary Science" : "Earth science",
                           "-Geology" : "Earth science",
-                          "Computer & Information Sciences" : "Computer science",
-                          "Social, Behavioral & Economic Sciences" : "Social science",
+                          "Computer & Information Sciences" : 
+                              "Computer science",
+                          "Social, Behavioral & Economic Sciences" : 
+                              "Social science",
                           "-Astronomy" : "Other",
                           "-Oceanography" : "Earth science"}
 
@@ -60,7 +66,8 @@ def strip_other_radio(cell, column):
     return cell if cell in COLUMN_TO_ANSWERS[column] else 'Other'
     
 for column in RADIO_BUTTON_COLUMNS:
-    responses_ft[column] = responses_ft[column].map(lambda x: strip_other_radio(x, column))
+    responses_ft[column] = \
+        responses_ft[column].map(lambda x: strip_other_radio(x, column))
 
 
 # discipline -------------------------------------------------------------------
