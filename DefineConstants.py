@@ -16,6 +16,7 @@ COLUMNS_TO_DROP = ["can_name_data_journal",
 
 CHECKBOX_COLUMNS = ['data_sharing_credit',
                     'how_shared',
+                    'how_documented',
                     'how_others_got',
                     'how_you_got',
                     'how_you_credited',
@@ -60,12 +61,12 @@ DP_FEATURES = ["Openly available without contacting the author(s)",
                "Dataset is \"peer reviewed\"",
                "I don't see any difference"]
 
-PR_FEATURES = ['methods_evaluated',
-               'good_metadata',
-               'standard_metadata',
-               'technical_review',
-               'scientific_review',
-               'impact']
+PR_FEATURES = ["Collection and processing methods were evaluated",
+               "Descriptive text is thorough enough to use or replicate the dataset",
+               "Necessary metadata is standardized (e.g. in XML)",
+               "Technical details have been checked (e.g. no missing files no missing values)",
+               "Plausibility considered based on area expertise",
+               "Novelty/impact considered"]
 
 REVIEW_ACTIONS = ["reviewed a journal article",
                   "reviewed a grant proposal",
@@ -101,13 +102,19 @@ DATA_SHARING_CREDIT_ANSWERS = ["Authorship on paper",
                                "Not credited",
                                "Not applicable"]
                                
-HOW_SHARED_ANSWERS = ["A traditional research paper based on the data (with analysis and conclusions)",
-                      "Informal text describing the data",
-                      "A data paper describing the data (without analysis or conclusions)",
-                      "Informal text describing the data",
-                      "Formal metadata describing the data (e.g. as XML)",
-                      "Computer code used to process or generate the data",
-                      "Shared with no additional documentation"]
+HOW_SHARED_ANSWERS = ["Email / direct contact",
+                      "Personal or lab website",
+                      "Journal website (as supplemental material)",
+                      "Database or repository",
+                      "Don’t know",
+                      "Not applicable"]
+                      
+HOW_DOCUMENTED_ANSWERS = ["A traditional research paper based on the data (with analysis and conclusions)",
+                          "A data paper describing the data (without analysis or conclusions)",
+                          "Informal text describing the data",
+                          "Formal metadata describing the data (e.g. as XML)",
+                          "Computer code used to process or generate the data",
+                          "Shared with no additional documentation"]
                   
 HOW_YOU_GOT_ANSWERS = ["Email / direct contact",
                        "Personal or lab website",
@@ -136,6 +143,7 @@ ROLES_ANSWERS = ["Principal Investigator / Lab Head",
 
 COLUMN_TO_ANSWERS = {'data_sharing_credit' : DATA_SHARING_CREDIT_ANSWERS,
                      'how_shared' : HOW_SHARED_ANSWERS,
+                     'how_documented' : HOW_DOCUMENTED_ANSWERS,
                      'how_others_got' : HOW_OTHERS_GOT_ANSWERS,
                      'how_you_got' : HOW_YOU_GOT_ANSWERS,
                      'how_you_credited' : HOW_CREDITED_ANSWERS,

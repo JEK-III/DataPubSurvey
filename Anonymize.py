@@ -53,25 +53,11 @@ for column in CHECKBOX_COLUMNS:
     
     # replace free-text with 'Other'    
     filtered_column = filtered_column.map(lambda x : strip_other(x, column))
+    
+    filtered_column = filtered_column.map(lambda x : '; '.join(x))
+    
+    responses_ft[column] = filtered_column
+
  
-#    filtered_column = pd.DataFrame(responses_ft[column])
-    standard_answers = COLUMN_TO_ANSWERS[column] + ['Other']    
-    """
-    check_resp_dict = {}    
-    
-    for answer in standard_answers:
-        mask = filtered_column.isin(standard_answers)
-        check_resp_dict = {':'.join([column, answer]) : filtered_column[mask]}
- 
-    checkbox_responses = pd.DataFrame(check_resp_dict)
-    """
-    checkbox_responses = pd.DataFrame({answer : 
-        filtered_column.apply(lambda x: answer in x) for answer in standard_answers})
-    # rename with question
-    checkbox_responses = checkbox_responses.rename(columns=lambda x: ':'.join([column, x]))
-      
-    responses_ft = pd.merge(responses_ft, checkbox_responses, how='left', left_index=True, right_index=True)
-    
-    
 responses_ft.to_csv('test_output.csv')
 # consolidate sparsely populated disciplines
