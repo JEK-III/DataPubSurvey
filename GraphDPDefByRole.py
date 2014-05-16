@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 15 15:56:35 2014
+Created on Fri May 16 08:48:58 2014
 
-Graph peer review checkbox definitions as a function 
+Graph data publication checkbox definitions as a function 
 of role
 @author: jkratz
 """
@@ -20,7 +20,7 @@ COLORS = ['#8dd3c7',
 
 IVAR_LABEL = 'total_responses'
 ivar = 'role'
-dvar = 'peer_review_definition'
+dvar = 'publish_definition'
 
 
 GRAPH_INDEX = ['PI',
@@ -40,7 +40,7 @@ split_checkbox = responses[dvar].str.split("; ").dropna()
 
 # DF of bools; responders x checkbox answers 
 checkbox_responses = pd.DataFrame({name : 
-    split_checkbox.apply(lambda x: name in x) for name in PR_FEATURES + ['Other']})
+    split_checkbox.apply(lambda x: name in x) for name in DP_FEATURES + ['Other']})
 
 # graft ivar column on
 checkbox_responses[ivar] = responses[ivar]
@@ -58,15 +58,13 @@ response_counts = pd.merge(response_counts, pd.DataFrame(ivar_counts),
 
 
 
-#response_counts = response_counts + ivar_counts.T
-
 
 response_counts = response_counts.apply(lambda x : x.div(x[IVAR_LABEL]),
                                         axis=1)
 
 
 # sort for graphing
-response_counts = response_counts.reindex(columns=PR_FEATURES +['Other'], 
-                                          index = GRAPH_INDEX)
+response_counts = response_counts.reindex(columns=DP_FEATURES + ['Other'],                                      
+                                          index=GRAPH_INDEX)
 
-fig = response_counts.plot(kind='bar', color=COLORS)
+fig = response_counts.plot(kind='bar', color=COLORS, legend=False)
