@@ -23,16 +23,27 @@ dvar_checkbox_responses = pd.DataFrame({name :
     split_dvar_checkbox.apply(lambda x: name in x) for name in 
         PR_FEATURES + ['Other']})
         
-test_merge = pd.merge(ivar_checkbox_responses, dvar_checkbox_responses,
+merged_responses = pd.merge(ivar_checkbox_responses, dvar_checkbox_responses,
                       left_index=True, right_index=True)
                       
-test_group = test_merge.groupby(REVIEW_ACTIONS).sum()
+#test_group = test_merge.groupby(REVIEW_ACTIONS).sum()
 
-new_df=pd.DataFrame()
+#new_df=pd.DataFrame()
+
+experience_dfs = []
 
 for action in REVIEW_ACTIONS:
-    new_df = test_merge.groupby(action).sum()
-    print new_df.ix[True]
+    responses_by_action = pd.DataFrame(merged_responses.groupby(action).sum())
+    total_counts = pd.value_counts(merged_responses[action])
+    test_df = new_df    
+    responses_by_action = responses_by_action.reindex(columns=PR_FEATURES)
+    
+    responses_by_action.ix[True] = responses_by_action.ix[True].apply(lambda x : x/total_counts[True])
+    responses_by_action.ix[False] = responses_by_action.ix[False].apply(lambda x : x/total_counts[False])
+   
+    experience_dfs.append(responses_by_action)
 
+
+final_frame = pd.concat(experience_dfs, REVIEW_ACTIONS).T
 
 #test_group[True]
