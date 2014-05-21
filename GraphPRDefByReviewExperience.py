@@ -8,6 +8,8 @@ Created on Fri May 16 11:52:29 2014
 ivar = 'researcher_review_experience'
 dvar = 'peer_review_definition'
 
+COLORS = ['#8dd3c7',
+          '#ffffb3']
 
 execfile("ReadInSurvey.py")
 
@@ -44,6 +46,13 @@ for action in REVIEW_ACTIONS:
     experience_dfs.append(responses_by_action)
 
 
-final_frame = pd.concat(experience_dfs, REVIEW_ACTIONS).T
+combined_frame = pd.concat(experience_dfs, REVIEW_ACTIONS).T
+combined_frame = combined_frame.reindex(columns=[True, False])
+
+fig, axes = plt.subplots(2, 3, sharex=True, sharey=True)
+
+fig.axes[1]
+
+combined_frame.plot(kind='bar', color=COLORS, figure=fig, axes=axes[1][1])
 
 #test_group[True]
