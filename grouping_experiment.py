@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 21 15:34:25 2014
+Created on Thu May 22 14:29:32 2014
 
 @author: kratzscience
 """
-execfile("DefineConstants.py")
-GRAPH_TITLE = "Researcher evaluation as a function of sharing experience."
 
-IVAR = 'how_shared'
-DVARS = RESEARCHER_VALUE
+ivar = 'how_shared'
+dvar = 'publish_definition'
 
-IVAR_RESPONSES = COLUMN_TO_ANSWERS[IVAR]
-DVAR_RESPONSES =RESEARCHER_VALUE_SEQUENCE
+IVAR_RESPONSES = COLUMN_TO_ANSWERS[ivar]
+DVAR_RESPONSES = COLUMN_TO_ANSWERS[dvar]
 
 
 COLORS = ['#678bbc',
@@ -24,40 +22,36 @@ TITLE_FONT={'name' : 'Helevetica',
 execfile("ReadInSurvey.py")
 
 # extract checkbox column and split responses into array
-split_ivar_checkbox = responses[IVAR].str.split("; ").dropna()
-
+split_ivar_checkbox = responses[ivar].str.split("; ").dropna()
+split_dvar_checkbox = responses[dvar].str.split("; ").dropna()
 
 # DF of bools; responders x checkbox answers 
 ivar_checkbox_responses = pd.DataFrame({name : 
     split_ivar_checkbox.apply(lambda x: name in x) for name in IVAR_RESPONSES}) 
 
-merged_responses = pd.merge(pd.DataFrame(split_ivar_checkbox), responses[DVARS],
-                            right_index=True, left_index=True)
+dvar_checkbox_responses = pd.DataFrame({name : 
+    split_dvar_checkbox.apply(lambda x: name in x) for name in 
+        DVAR_RESPONSES + ['Other']})
+        
+merged_responses = pd.merge(ivar_checkbox_responses, dvar_checkbox_responses,
+                      left_index=True, right_index=True)
+                      
+#test_group = test_merge.groupby(REVIEW_ACTIONS).sum()
 
-# ------------------------------------------------------------------------------                    
+#new_df=pd.DataFrame()
 
 fig, subfigs = plt.subplots(2, 3, sharex=True, sharey=True)
+
 i = j = 0
 
+grouped_by_ivar = merged_responses.groupby(IVAR_RESPONSES)
+
+
 for action in IVAR_RESPONSES:
-                
-    
-    #responses_by_action = pd.DataFrame(merged_responses.groupby(action).sum())
-    #total_counts = pd.value_counts(ivar_checkbox_responses[action])
-#    responses_by_action = responses_by_action.reindex(columns=DVAR_RESPONSES)
+    responses_by_action = pd.DataFrame(merged_responses.groupby(action).sum())
+    total_counts = pd.value_counts(merged_responses[action])
+    responses_by_action = responses_by_action.reindex(columns=DVAR_RESPONSES)
 #    responses_by_action = responses_by_action.reindex([True, False])    
-    
-    #mask = merged_responses.groupby(action in merged_responses[IVAR])
-    test_thing = merged_responses.groupby(IVAR)    
-    
-    counts = {}
-    for column in DVARS:
-      counts[column] = responses_by_action_true[column].value_counts().dropna()
-      
-    dvar_leikert_responses = pd.DataFrame(counts)
-    dvar_leikert_responses = dvar_leikert_responses.transpose().fillna(0)
-            
-            
 
     for answer in [True, False]:
         if answer in total_counts.index:
@@ -68,14 +62,15 @@ for action in IVAR_RESPONSES:
             total_counts = total_counts.append(pd.Series({answer : 0}))
           
 
-    #responses_by_action = responses_by_action.T
+    responses_by_action = responses_by_action.T
     
     #plt.tick
-    dvar_leikert_responses.plot(kind='barh',
-                                stacked=True, 
+    responses_by_action.plot(kind='bar', 
                              color=COLORS, 
                              figure=fig,
                              ax=subfigs[i][j], 
+                             ylim=(0,1),
+                             yticks=[0,0.5,1],
                              grid=False, 
                              legend=False,
                              #title=action,
@@ -108,7 +103,8 @@ for action in IVAR_RESPONSES:
     else:
         j += 1
 
-fig.suptitle(GRAPH_TITLE, fontsize=14)        
+fig.suptitle('Data publication definition as a function of sharing experience', 
+             fontsize=14)        
 
 fig.show()
  #   experience_dfs.append(responses_by_action)
