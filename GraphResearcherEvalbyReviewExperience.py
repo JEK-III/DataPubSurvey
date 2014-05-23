@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 21 15:34:25 2014
+Created on Fri May 23 15:22:32 2014
 
 @author: kratzscience
 """
@@ -8,9 +8,9 @@ Created on Wed May 21 15:34:25 2014
 # constant definitions ---------------------------------------------------------
 execfile("DefineConstants.py")
 
-GRAPH_TITLE = "Researcher evaluation as a function of sharing experience."
+GRAPH_TITLE = "Researcher evaluation as a function of review experience."
 
-IVAR = 'how_shared'
+IVAR = 'researcher_review_experience'
 DVARS = RESEARCHER_VALUE
 
 IVAR_RESPONSES = COLUMN_TO_ANSWERS[IVAR]
@@ -96,7 +96,6 @@ for action in IVAR_RESPONSES:
                           ax=subfigs[i][j], 
                           grid=False, 
                           legend=False,
-                          xlim=(0,1),
                           #title=action,
                           edgecolor='none') 
     

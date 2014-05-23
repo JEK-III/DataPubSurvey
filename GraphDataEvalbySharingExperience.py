@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 21 15:34:25 2014
+Created on Fri May 23 15:15:58 2014
 
 @author: kratzscience
 """
@@ -8,13 +8,13 @@ Created on Wed May 21 15:34:25 2014
 # constant definitions ---------------------------------------------------------
 execfile("DefineConstants.py")
 
-GRAPH_TITLE = "Researcher evaluation as a function of sharing experience."
+GRAPH_TITLE = "Data evaluation as a function of sharing experience."
 
 IVAR = 'how_shared'
-DVARS = RESEARCHER_VALUE
+DVARS = DATA_VALUE
 
 IVAR_RESPONSES = COLUMN_TO_ANSWERS[IVAR]
-DVAR_RESPONSES =RESEARCHER_VALUE_SEQUENCE
+DVAR_RESPONSES =DATA_VALUE_SEQUENCE
 
 # build pandas MultiIndex for collected_counts 
 # First, whether the researcher checked the IVAR box
@@ -96,7 +96,6 @@ for action in IVAR_RESPONSES:
                           ax=subfigs[i][j], 
                           grid=False, 
                           legend=False,
-                          xlim=(0,1),
                           #title=action,
                           edgecolor='none') 
     

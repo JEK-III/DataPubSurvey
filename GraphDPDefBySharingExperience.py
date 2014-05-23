@@ -39,9 +39,7 @@ dvar_checkbox_responses = pd.DataFrame({name :
 merged_responses = pd.merge(ivar_checkbox_responses, dvar_checkbox_responses,
                       left_index=True, right_index=True)
                       
-#test_group = test_merge.groupby(REVIEW_ACTIONS).sum()
 
-#new_df=pd.DataFrame()
 
 fig, subfigs = plt.subplots(2, 3, sharex=True, sharey=True)
 
