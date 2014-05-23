@@ -28,9 +28,6 @@ COLORS = ['#08519c',
 
 
 
-
-
-
 TITLE_FONT={'name' : 'Helevetica',
             'size' : 12}
 
@@ -89,7 +86,8 @@ for action in IVAR_RESPONSES:
     #collected_counts[False] = collected_counts[False].div(collected_counts[False].sum(1).astype(float), axis = 0)
     collected_counts = collected_counts.div(collected_counts.sum(1).astype(float), axis = 0)
 
-            
+    collected_counts = collected_counts.reindex(index=collected_counts.index[ ::-1 ] )
+       
             
     """
     for answer in [True, False]:
@@ -105,14 +103,15 @@ for action in IVAR_RESPONSES:
     
     #plt.tick
     collected_counts.plot(kind='barh',
-                                stacked=True, 
-                             color=COLORS, 
-                             figure=fig,
-                             ax=subfigs[i][j], 
-                             grid=False, 
-                             legend=False,
-                             #title=action,
-                             edgecolor='none') 
+                          stacked=True, 
+                          color=COLORS, 
+                          figure=fig,
+                          ax=subfigs[i][j], 
+                          grid=False, 
+                          legend=False,
+                          #title=action,
+                          edgecolor='none') 
+    
     subfigs[i][j].tick_params(axis='both', 
                               which='both',
                               bottom='off',
