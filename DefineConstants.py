@@ -164,6 +164,15 @@ COLUMN_TO_ANSWERS = {'data_sharing_credit' : DATA_SHARING_CREDIT_ANSWERS,
                      'institution' : INSTITUTION_ANSWERS,
                      'role' : ROLES_ANSWERS}
 
+GRID_QUESTIONS_TO_ANSWERS = {'data_value' : DATA_VALUE_SEQUENCE,
+                            'researcher_value' : RESEARCHER_VALUE_SEQUENCE,
+                            'data_trust' : DATA_TRUST_SEQUENCE}
+                            
+GRID_QUESTIONS_TO_COLUMNS = {'data_value' : DATA_VALUE,
+                             'data_trust' : DATA_TRUST,
+                             'researcher_value' : RESEARCHER_VALUE}
+
+
 SUBDISCIPLINE_TO_DISCIPLINE = {'-Anthropology' : 'Social science',
                                '-Archaeology' : 'Social science',
                                '-Area studies' : 'Social science',
