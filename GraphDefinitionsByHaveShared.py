@@ -19,11 +19,7 @@ TITLE_FONT={'name' : 'Serif',
             
 execfile("ReadInSurvey.py")
 
-mask = responses[IVAR].apply(lambda x: x == 'Yes')
-
-"""
-
-"""                   
+ivar_column = responses[IVAR].apply(lambda x: x == 'Yes')                
 
 fig, subfigs = plt.subplots(2, sharex=False, sharey=True)
 fig.suptitle('Definitions as a function of whether shared', 
@@ -42,7 +38,7 @@ for question in QUESTIONS:
     split_dvar_checkbox.apply(lambda x: name in x) for name in 
         DVAR_RESPONSES + ['Other']})
 
-    merged_responses = pd.merge(pd.DataFrame(mask), dvar_checkbox_responses,
+    merged_responses = pd.merge(pd.DataFrame(ivar_column), dvar_checkbox_responses,
                       left_index=True, right_index=True)
                       
   
