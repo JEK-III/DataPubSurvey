@@ -2,9 +2,6 @@
 """
 Created on Wed May 21 15:34:25 2014
 
-
-Created on Wed May 21 10:35:06 2014
-
 @author: kratzscience
 """
 

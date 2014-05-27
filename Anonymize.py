@@ -27,14 +27,14 @@ COLUMNS_TO_DROP = ["can_name_data_journal",
                    "data_to_publish"]
 
 
-DISCIPLINE_AGGREGATION = {"-Planetary Science" : "Earth science",
-                          "-Geology" : "Earth science",
+DISCIPLINE_AGGREGATION = {"Planetary Science" : "Earth science",
+                          "Geology" : "Earth science",
                           "Computer & Information Sciences" : 
                               "Computer science",
                           "Social, Behavioral & Economic Sciences" : 
                               "Social science",
-                          "-Astronomy" : "Other",
-                          "-Oceanography" : "Earth science"}
+                          "Astronomy" : "Other",
+                          "Oceanography" : "Earth science"}
 
 # ------------------------------------------------------------------------------
 # read in survey data
@@ -78,6 +78,10 @@ for column in RADIO_BUTTON_COLUMNS:
         responses_ft[column].map(lambda x: strip_other_radio(x, column))
 
 # discipline -------------------------------------------------------------------
+
+# get rid of annoying dashes
+responses_ft['discipline'] = responses_ft['discipline'].str.replace('-', '')
+
 # merge disciplines with < 3 responders into larger classes
  
 def merge_disciplines(cell):

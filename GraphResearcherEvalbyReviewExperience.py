@@ -97,7 +97,7 @@ for action in IVAR_RESPONSES:
                           grid=False, 
                           legend=False,
                           #title=action,
-                          edgecolor='none') 
+                          edgecolor='w') 
     
     # format the subplot
     subfigs[i][j].tick_params(axis='both', 
