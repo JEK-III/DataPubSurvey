@@ -47,8 +47,7 @@ for question in QUESTIONS:
     total_counts = pd.value_counts(merged_responses[IVAR])
 
     responses_by_action = responses_by_action.reindex(columns=DVAR_RESPONSES)
-#    responses_by_action = responses_by_action.reindex([True, False])    
-
+    
     for answer in [True, False]:
         if answer in total_counts.index:
             responses_by_action.ix[answer] = (
@@ -56,7 +55,7 @@ for question in QUESTIONS:
                     x/total_counts[answer]))
         else: 
             total_counts = total_counts.append(pd.Series({answer : 0}))
-          
+              
 
     responses_by_action = responses_by_action.T
 

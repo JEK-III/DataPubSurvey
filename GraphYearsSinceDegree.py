@@ -9,7 +9,9 @@ requires previously defined responses_ft with the frame to graph
 
 import datetime
 
-degree_dates = responses_ft.degree_year.dropna()
+#degree_dates = responses.degree_year.dropna()
+degree_dates = responses[responses['highest_degree'] == 'Doctorate'].degree_year.dropna()
+
 degree_time_elapsed = degree_dates.sub(datetime.date.today().year)
 degree_time_elapsed = degree_time_elapsed.apply(lambda x : abs(x))
 dte_counts = degree_time_elapsed.value_counts()
