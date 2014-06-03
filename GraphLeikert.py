@@ -11,7 +11,7 @@ COLORS = ["#000000", "#404040", "#808080", "#C0C0C0", "#FFFFFF"]
 
 
 #build output filename
-output_filename = column + '_by_' + CATEGORY_TYPE + '.svg'
+#output_filename = column + '_by_' + CATEGORY_TYPE + '.svg'
 
 #crosstab to summarize responses from each role
 category_ct = pd.crosstab(responses_ft[CATEGORY_TYPE], responses_ft[column])
