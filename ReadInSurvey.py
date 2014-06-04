@@ -11,7 +11,6 @@ execfile('DefineConstants.py')
 
 responses = pd.read_csv('DataPubSurvey_anon.csv')
 
-
 responses = responses[responses['role'] != 'Librarian' ]
 responses = responses[responses['discipline'] != "Information science"]
 responses = responses[responses['highest_degree'] != 'Highschool']
