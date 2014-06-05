@@ -7,7 +7,8 @@ Created on Tue May 27 11:54:48 2014
 
 IVAR = 'have_shared'
 
-QUESTIONS = ['publish_definition', 'peer_review_definition']
+QUESTIONS = ['publish_definition',
+             'peer_review_definition']
 
 
 COLORS = ['#08519c',
@@ -20,8 +21,10 @@ TITLE_FONT={'name' : 'Serif',
 execfile("ReadInSurvey.py")
 
 ivar_column = responses[IVAR].apply(lambda x: x == 'Yes')                
+#ivar_column = responses[IVAR]
 
-fig, subfigs = plt.subplots(2, sharex=False, sharey=True)
+
+fig, subfigs = plt.subplots(len(QUESTIONS), sharex=False, sharey=True)
 fig.suptitle('Definitions as a function of whether shared', 
              fontsize=14)        
 
@@ -48,7 +51,7 @@ for question in QUESTIONS:
 
     responses_by_action = responses_by_action.reindex(columns=DVAR_RESPONSES)
     
-    for answer in [True, False]:
+    for answer in responses_by_action.index:
         if answer in total_counts.index:
             responses_by_action.ix[answer] = (
                 responses_by_action.ix[answer].apply(lambda x : 
