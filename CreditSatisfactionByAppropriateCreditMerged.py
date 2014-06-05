@@ -25,27 +25,16 @@ SCORE_AGGREGATE = {1 : 'Insufficient',
 
 IVAR_RESPONSES = COLUMN_TO_ANSWERS[IVAR]
 DVAR_RESPONSES = set(SCORE_AGGREGATE.values())
-
-# build pandas MultiIndex for collected_counts 
-# First, whether the researcher checked the IVAR box
-# Second, each row from the Leikert grid
-INDEX_LIST = []
-for i in DVARS:
-    INDEX_LIST.extend([i, i])
-
-GRAPH_INDEX = pd.MultiIndex.from_arrays(
-                                [len(DVARS) * [True, False],
-                                 INDEX_LIST], 
-                                 names = ['ivar', 'dvars'])
+GRAPH_INDEX = [True, False]
 
 
 # Graph formatting -------------------------------------------------------------
-"""
+
 COLORS = ['#ffb754',
           '#b5b5b5',
           '#6baed6']
-"""
-COLORS = ['#b5b5b5']
+
+#COLORS = ['#b5b5b5']
 
 TITLE_FONT={'name' : 'Helevetica',
             'size' : 12}
@@ -84,39 +73,43 @@ for action in IVAR_RESPONSES:
     
     # count responses in each Leikert column by action done or not
     for column in DVARS:            
-        collected_counts[True, column] = \
+        collected_counts[True] = \
             merged_responses[mask][column].value_counts().fillna(0)
-        collected_counts[False, column] = \
+        collected_counts[False] = \
             merged_responses[~mask][column].value_counts().fillna(0)
         
     collected_counts = collected_counts.transpose() 
     
     #compute chi squared
+    chi = "N/A"
+    p = "N/A"    
+    
     print action
     chi2_counts = collected_counts.dropna(axis=1)
-    counts_array = np.array([chi2_counts.ix[True, column], 
-                             chi2_counts.ix[False, column]])
+    counts_array = np.array([chi2_counts.ix[True], 
+                             chi2_counts.ix[False]])    
+    
     print counts_array
     if len(counts_array[0]) > 0 and len(counts_array[1]) > 0:
-        print sps.chi2_contingency(counts_array)
+        chi, p, dof, expected_counts = sps.chi2_contingency(counts_array)
     
-    # normalize     
-    print collected_counts    
-    
+    # normalize         
     collected_counts = \
         collected_counts.div(collected_counts.sum(1).astype(float), axis = 0)
-    print collected_counts
 
     # reverse the order of rows for graphing purposes
     collected_counts = \
         collected_counts.reindex(index=collected_counts.index[ ::-1 ])
-
+    
+    print collected_counts
+    
     # draw the subplot
+    ax = subfigs[i][j]
     collected_counts.plot(kind='bar',
                           #stacked=True, 
                           color=COLORS, 
                           figure=fig,
-                          ax=subfigs[i][j], 
+                          ax=ax, 
                           grid=False, 
                           legend=False,
                           ylim=(0,1),
@@ -124,18 +117,26 @@ for action in IVAR_RESPONSES:
                           edgecolor='w') 
     
     # format the subplot
-    subfigs[i][j].tick_params(axis='both', 
+    ax.tick_params(axis='both', 
                               which='both',
                               bottom='off',
                               top='off',
                               right='off')
                               
-    subfigs[i][j].set_title(action, fontdict=TITLE_FONT)
-    subfigs[i][j].spines['right'].set_visible(False)
-    subfigs[i][j].spines['top'].set_visible(False)
-    subfigs[i][j].spines['bottom'].set_color('#5b6f74')
-    subfigs[i][j].spines['left'].set_color('#5b6f74')
-                    
+    ax.set_title(action, fontdict=TITLE_FONT)
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['bottom'].set_color('#5b6f74')
+    ax.spines['left'].set_color('#5b6f74')
+    
+    n_string = ("chi2= " + str(chi) +
+                "\n p= " + str(p)) 
+    
+    ax.text(0,0.9,
+            n_string,
+            fontsize=10,
+            horizontalalignment='left',
+            transform=ax.transAxes)               
     
     # move to the next subplot
     if (i == 0 and j == 2):
