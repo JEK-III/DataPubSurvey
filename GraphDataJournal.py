@@ -4,12 +4,15 @@ Created on Mon Apr 21 13:58:28 2014
 
 @author: jkratz
 """
+execfile("ReadInSurvey.py")
+
+column = responses['data_journals_named'].str.split(",")
+
 # dict to collect journal names & counts
 journal_counts = {}
 
 # populate journal_counts with 'journal name' : # of times mentioned
-for cell in responses[column]:
-  if cell == cell:
+for cell in column:
     for journal in cell:
       if journal in journal_counts:
         journal_counts[journal] += 1
@@ -23,7 +26,9 @@ count_series = pd.Series(journal_counts)
 count_series.sort(ascending=False)
 
 # plot
-count_series.plot(kind='bar', color='w')
+count_series.plot(kind='bar', 
+                  color='w',
+                  grid=False)
 
 savefig("number_of_data_journal_mentions.svg", format="svg")
 

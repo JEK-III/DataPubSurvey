@@ -66,18 +66,42 @@
 * Responses from across the carreer spectrum: 41% principle investigator/lab heads, 24% postdocs, and 16% grad students.
 * Overwhelmingly, biggest response (85%) from academic institutions, 90% of those are research-focused.
 
+###Background knowledge
+* attempted to guage familiarity with issues around data publication/sharing/access
+
+####Policies
+* 
+
+####Data journals
+* most frequently named: ecological archive (16), Nature's Scientific Data (14)
+* then, ESSD (7), Biodiversity Data Journal (6), Geoscience Data Journal (5)
+* 29% (39) of respondents who answered the question in some way named at least one dat journal
+* 16% (39) of all respondents named a data journal
+
 
 ###Sharing background
+* asked about prior experience with sharing own data and using others
+* some background attitudes about 
 
 ###Data vultures
 * 'data vultures' / being taken advantage of is a concern in data publication 
 * we wanted to know how much of a problem it currently is
 * we asked respondents whose data had been reused in a publication by someone else "how did you feel about the amount of credit you were given?"
+
 * 86 answered the question
 * a majority 63% (54) thought they got the right amount of credit
 * 78% (67)thought they got sufficient or too much credit
 * 22% (19) were unhappy, 2% (2) got 'very insufficient' credit
 
+* belief that formal citation is appropriate credit was associated with more satisfaction 
+* *32% (6) insuffcient/very insufficient and 5% (1) excessive/very excessive vs.
+* *19% (13) insufficient/very insufficient and %18 (12) excessive
+* *not significant, chi2 = 2.56, p = 0.28
+
+* belief that authorship is appropriate credit was associated with more dissatisfaction
+* *16% (9) insufficient/very insufficient and 15% (8) excessive/very excessive vs.
+* *32% (10) insufficient/very insufficient and 16% (5) excessive/very excessive
+* *not significant, chi2 = 3.26, p = 0.20
 
 ###Definitions
 
