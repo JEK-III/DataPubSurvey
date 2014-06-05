@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun  4 17:35:26 2014
+Created on Thu Jun  5 09:47:40 2014
+
+@author: jkratz
 
 @author: kratzscience
 """
@@ -14,8 +16,15 @@ GRAPH_TITLE = "Credit satisfaction as a function of appropriate credit"
 IVAR = 'data_sharing_credit'
 DVARS = ['how_much_credit']
 
+SCORE_AGGREGATE = {1 : 'Insufficient',
+                   2 : 'Insufficient',
+                   3 : 'Appropriate',
+                   4 : 'Excessive',
+                   5 : 'Excessive'}
+
+
 IVAR_RESPONSES = COLUMN_TO_ANSWERS[IVAR]
-DVAR_RESPONSES = range(1,6)
+DVAR_RESPONSES = set(SCORE_AGGREGATE.values())
 
 # build pandas MultiIndex for collected_counts 
 # First, whether the researcher checked the IVAR box
@@ -29,13 +38,14 @@ GRAPH_INDEX = pd.MultiIndex.from_arrays(
                                  INDEX_LIST], 
                                  names = ['ivar', 'dvars'])
 
-# Graph formatting -------------------------------------------------------------
-COLORS = ['#08519c',
-          '#3182bd',
-          '#6baed6',
-          '#bdd7e7',
-          '#eff3ff']
 
+# Graph formatting -------------------------------------------------------------
+"""
+COLORS = ['#ffb754',
+          '#b5b5b5',
+          '#6baed6']
+"""
+COLORS = ['#b5b5b5']
 
 TITLE_FONT={'name' : 'Helevetica',
             'size' : 12}
@@ -49,12 +59,17 @@ fig.suptitle(GRAPH_TITLE, fontsize=14)
 # Start ------------------------------------------------------------------------           
 execfile("ReadInSurvey.py")
 
+
+
+
 # extract checkbox column and split responses into array
 split_ivar_checkbox = responses[IVAR].str.split("; ").dropna()
 
 # combine with the relevant columns from the response DataFrame
 merged_responses = pd.merge(pd.DataFrame(split_ivar_checkbox), responses[DVARS],
                             right_index=True, left_index=True)
+
+merged_responses['how_much_credit'] = merged_responses['how_much_credit'].map(SCORE_AGGREGATE)
 
 # ------------------------------------------------------------------------------                    
 # Each time through draws one of the subplots
@@ -86,21 +101,25 @@ for action in IVAR_RESPONSES:
         print sps.chi2_contingency(counts_array)
     
     # normalize     
+    print collected_counts    
+    
     collected_counts = \
         collected_counts.div(collected_counts.sum(1).astype(float), axis = 0)
+    print collected_counts
 
     # reverse the order of rows for graphing purposes
     collected_counts = \
         collected_counts.reindex(index=collected_counts.index[ ::-1 ])
 
     # draw the subplot
-    collected_counts.plot(kind='barh',
-                          stacked=True, 
+    collected_counts.plot(kind='bar',
+                          #stacked=True, 
                           color=COLORS, 
                           figure=fig,
                           ax=subfigs[i][j], 
                           grid=False, 
                           legend=False,
+                          ylim=(0,1),
                           #title=action,
                           edgecolor='w') 
     
