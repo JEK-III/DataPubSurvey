@@ -22,6 +22,7 @@
 
 ###Survey
 * Few required questions
+* Some questions presented based on answers to others, therefore n varies considerably from question to question
 * Demographics (minimal)
 * Data sharing experiences / attitudes / knowledge
 * Data publication perceptions
@@ -54,6 +55,8 @@
 ##Analysis
 
 * Chi-squared was used for all significance testing
+* Consider questions where no answer was marked as skipped, rather than an intentional 'none of these' answer
+
 
 ##Results
 
@@ -70,7 +73,8 @@
 * attempted to guage familiarity with issues around data publication/sharing/access
 
 ####Policies
-* 
+* no idea what to say here.
+
 
 ####Data journals
 * most frequently named: ecological archive (16), Nature's Scientific Data (14)
@@ -81,7 +85,7 @@
 
 ###Sharing background
 * asked about prior experience with sharing own data and using others
-* some background attitudes about 
+* some background attitudes about sharing
 
 ###Data vultures
 * 'data vultures' / being taken advantage of is a concern in data publication 
@@ -104,8 +108,84 @@
 * *not significant, chi2 = 3.26, p = 0.20
 
 ###Definitions
+####Data Publication
+* two most common expectations relate to access & preservation
+* *availability at 166 / 68%
+* *repository at 133 / 54%
+* traditional paper (105 / 43%) more expected than data paper (55 / 22%)
+* thorough metadata (97 / 39%) outranks formal metadata (62 / 25%)
+* most researchers *don't* expect publication to imply peer review (only 70 / 29%)
+
+
+####Peer review
+* Evaluation of metadata ranks highly (196 / 80%)
+* *researchers recognize it's importance
+* *more respondents expected metadata evaluation from peer review than good metadata from publication (what's that mean?)
+* a majority (150 / 62%) expect an evaluation of plausibility that requries domain expertise
+* collection and processing methods (220 / 90%) presumably also demand some domain expertise
+* low expectation that impact will be considered (53 / 22%)
+
 
 ###Values
+
+####Data trust
+* part of the rationale for data publication is to make reuse of data easier
+* we wanted to know what features of a data publication would be useful to researchers in deciding whether to trust a dataset
+
+* easily the biggest factor was peer review
+* *175 / 72% said complete or high confidence
+* *only 4 / 2% said little or no confidence
+
+* traditional paper was second with 137 / 56% complete or high confidence
+* reuse in 3rd, with 106 / 43% 
+* finally, data paper was the least convincing with 89 / 37%
+
+* all of the features inspired at least some confidence in a large majority of researchers
+* *the largest fraction of little/no confidence was reuse, at 25 / 10%
+
+* relate to peer review definition
+
+
+####Data value/impact
+* we wanted to know what dataset metrics researchers would value
+
+* citations, not surprisingly, was the winner
+* *119 / 49% extremely or highly useful
+
+* downloads did surprisingly well relative to citations
+* *77 / 32% extremely or highly useful
+* if somewhat useful is added in, downloads gets even closer to citations 179 (73%) vs. 201 (82%)
+
+* There was a substantial drop for search rank and altmetrics
+* *102 (42%) find search rank at least somewhat useful
+* *91 (37%) find altmetrics at least somewhat useful 
+* * furthermore, a majority of researchers find each to be slightly or not at all useful
+
+####Researcher evaluation
+* part of the rationale for data publication is to incentivise data sharing by fitting data into the academic reward system
+* to that end, we wanted to know what features of a data publication would increase its value as an item on a CV
+* we considered the imprimatur of peer review and the inclusion of a data paper 
+
+* to establish a baseline, we asked about traditional papers
+* *not surprsinigly, they are highly valued
+* *145 (60%) give it a great deal of weight and another 87 (36%) give it significant weight
+
+* data publications were much less highly valued at 23 (10%) a great deal for highest scorer, a peer-reviewed data paper, although 109 (46%) still gave that significant weight.
+
+* peer review appeared to be the more important feature
+* *from that 10%, a peer-reviewed dataset only dropped to 5% (12), while an un-peer-reviewed data paper dropped to 0.01% (2)
+* *if significant weight is added in, a peer reviewed data paper comes in at 134 (56%), a peer reviewed dataset at 85 (36%), and an un-reviewed data paper at 31 (12%)
+* not surprisingly, a significant number of respondents 65 (27%) gave un-peer reviewed data no weight at all.
+
+* we were particularly interested in the 26% (59) respondents who had served on a tenure and promotions committee.
+* their responses were similar to those who had not served on such a committee
+* we compared the set of values assigned to each item between those who had and had not served on a t&p committee by chi-square
+* values ranged from 
+* *chi2= 7.427 (p= 0.115) for peer-reviewed datasets (valued slightly less by experienced respondents) to 
+* *chi2= 2.097 (p= 0.351) for traditional papers (valued slightly more by experienced respondents)
+* for 5 items, alpha=0.01, none can be considered statistically significant
+
+
 
 ##Discussion
 
@@ -113,9 +193,24 @@
 * no judgement implied about whether researcher expectations are reasonable or not
 
 
-##Our demographics vs. previous surveys
+###Our demographics vs. previous surveys
 * Tenopir (2011)
 * *81% academic vs. our 85%
 * *most heavily environmental sciences & ecology (36%), followed by social sciences (16%) and biology (14%)
 
+###Peer review
+* low expecation that impact would be considered fits with the practices of current DP efforts
+
+###Data papers
+* data papers do clearly add value to a dataset on a CV, but peer-reviewed datasets without papers do still have much of that value
+* doesn't really resolve the question of whether data papers are a good use of one's time
+* the idea of data papers is to fit into the existing scholarly reward system; they don't seem to fit all that much better than datasets
+* the hope/presumption/trend is that data is getting more recognition.  the gap might shrink.
+
+
+
 #Scrap
+* at 22% peer review is low on the list (6/8) of expected publication features, but it's highly valued
+
+* people who haven't reviewed a journal article value journal articles less and everything else more than people who have
+* *nothing signficant at p = 0.01

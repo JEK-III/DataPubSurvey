@@ -7,6 +7,7 @@ Created on Fri May 23 15:22:32 2014
 
 # constant definitions ---------------------------------------------------------
 execfile("DefineConstants.py")
+import scipy.stats as sps
 
 GRAPH_TITLE = "Researcher evaluation as a function of review experience."
 
@@ -74,10 +75,24 @@ for action in IVAR_RESPONSES:
     # count responses in each Leikert column by action done or not
     for column in DVARS:            
         collected_counts[True, column] = \
-            merged_responses[mask][column].value_counts().fillna(0)
+            merged_responses[mask][column].value_counts().fillna(0.)
         collected_counts[False, column] = \
-            merged_responses[~mask][column].value_counts().fillna(0)
+            merged_responses[~mask][column].value_counts().fillna(0.)
+    
+    print action
+    #if action == "served on a tenure & promotions committee":
+    for column in DVARS:
+        print column
         
+        """
+        ct_df = pd.DataFrame({True : collected_counts[True, column].fillna(0),
+                              False : collected_counts[False, column].fillna(0)})
+        """
+        
+        ct_df = ct_df.T
+        ct_array = ct_df.as_matrix()              
+        print sps.chi2_contingency(ct_array)
+
     collected_counts = collected_counts.transpose() 
 
     # normalize     
@@ -96,6 +111,7 @@ for action in IVAR_RESPONSES:
                           ax=subfigs[i][j], 
                           grid=False, 
                           legend=False,
+                          xlim=(0,1),
                           #title=action,
                           edgecolor='w') 
     

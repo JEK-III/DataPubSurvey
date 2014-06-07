@@ -41,10 +41,14 @@ for question in QUESTIONS:
          
       
     collected_counts = collected_counts.T
-        
+    
+    print collected_counts    
     
     collected_counts = collected_counts.div(collected_counts.sum(1).astype(float), 
                                             axis = 0)      
+                                            
+    print collected_counts
+                                        
     collected_counts = collected_counts.reindex(
         index=collected_counts.index[ ::-1 ])
 

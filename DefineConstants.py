@@ -29,6 +29,11 @@ RADIO_BUTTON_COLUMNS = ['institution',
 
 # Leikert responses -------------------------------
                     
+AWARENESS_SEQUENCE = ["Know all the details",
+                        "Read about it",
+                        "Heard of it",
+                        "Never heard of it"]                    
+                    
 CONFIDENCE_LEVELS = ["No confidence",
                      "Little confidence",
                      "Some confidence",
@@ -162,7 +167,12 @@ COLUMN_TO_ANSWERS = {'data_sharing_credit' : DATA_SHARING_CREDIT_ANSWERS,
                      'peer_review_definition' : PR_FEATURES,
                      'researcher_review_experience' : REVIEW_ACTIONS,
                      'institution' : INSTITUTION_ANSWERS,
-                     'role' : ROLES_ANSWERS}
+                     'role' : ROLES_ANSWERS,
+                     'data_sharing_importance' : range(1,6),
+                     'aware_nsf_dmp' : AWARENESS_SEQUENCE,
+                     'aware_nih_data_sharing_policy' : AWARENESS_SEQUENCE,
+                     'aware_ostp_policy' : AWARENESS_SEQUENCE,
+                     'aware_uc_oap' : AWARENESS_SEQUENCE}
 
 GRID_QUESTIONS_TO_ANSWERS = {'data_value' : DATA_VALUE_SEQUENCE,
                             'researcher_value' : RESEARCHER_VALUE_SEQUENCE,
@@ -200,4 +210,33 @@ SUBDISCIPLINE_TO_DISCIPLINE = {'Anthropology' : 'Social science',
                                'Computer science' : 'Computer science',
                                'Mathematics' : 'Mathematics',
                                'Information science' : 'Information science',
-                               'Other' : 'Other'}                     
+                               'Other' : 'Other'}      
+
+PAPER_DISCIPLINE_MAP = {'Anthropology' : 'Social science',
+                        'Archaeology' : 'Archaeology',
+                        'Area studies' : 'Social science',
+                        'Economics' : 'Social science',
+                        'Political science' : 'Social science',
+                        'Psychology' : 'Social science',
+                        'Sociology' : 'Social science',
+                        'Astronomy' : 'Space science',
+                        'Astrophysics' : 'Space science',
+                        'Environmental Science' : 'Environmental science',
+                        'Geology' : 'Earth science',
+                        'Oceanography' : 'Environmental science',
+                        'Planetary science' : 'Earth science',
+                        'Biochemistry' : 'Biology',
+                        'Bioinformatics' : 'Biology',
+                        'Biology' : 'Biology',
+                        'Evolutionary Biology' : 'Biology',
+                        'Neurobiology' : 'Biology',
+                        'Social science' : 'Social science',
+                        'Space science' : 'Space science',
+                        'Earth science' : 'Earth science',
+                        'Life science' : 'Biology',
+                        'Chemistry' : 'Physical science',
+                        'Physics' : 'Physical science',
+                        'Computer science' : 'Computer science',
+                        'Mathematics' : 'Mathematics',
+                        'Information science' : 'Information science',
+                        'Other' : 'Other'} 

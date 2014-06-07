@@ -34,9 +34,11 @@ checkbox_responses = pd.DataFrame({name :
 # count checked boxes 
 response_counts = checkbox_responses.sum()
 
+print response_counts
+
 response_counts = response_counts.apply(lambda x: 
                                         float(x) / len(checkbox_responses))
-
+print response_counts
 
 # sort descending for graph
 response_counts.sort(ascending=True)
