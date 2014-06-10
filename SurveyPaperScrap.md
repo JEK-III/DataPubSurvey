@@ -7,7 +7,7 @@
 * UC Human Subjects IRB approved this survey
 * UC respondents had the option of identifying themselves, but that information is omitted here
 * Officially open January 22nd - February 28, 2014.  Got 2 responses in March, last one on the 25th
-* Distributed by email, social media (twitter, facebook)
+* Distributed by email, social media (twitter, Facebook)
 * Open to anyone
 
 ###Distribution
@@ -17,7 +17,7 @@
 * *Librarian Listservs
 * Social media
 * *twitter
-* *facebook
+* *Facebook
 * Blog post on DataPub
 
 ###Survey
@@ -35,7 +35,7 @@
 * UC & campus affiliation redacted
 * * knowledge of UC OA mandate redacted
 * free text answers standardized
-* * data journals converted to standardized list
+* * data journals converted to standardized list by hand
 * * all text boxes associated with 'Other' buttons recoded as 'other', except for a limited number of cases in 'role', where judgement was used to assign the respondent to one of the standard responses
 * Subdisciplines with < 3 respondents were merged into the corresponding discipline
 
@@ -45,12 +45,12 @@
 * Removed information scientists
 * Removed anyone who said they hadn't generated any data in the last 5 years
 * *90 respondents didn't answer.  too many to discard, so we kept them.
-* Removed anyone whose highest degree was from highschool
+* Removed anyone whose highest degree was from high school
 * We filtered out:
 * *16 librarians
 * *13 information scientists (6 of whom are also librarians)
 * *3 without college degrees
-* *11 who hadn't generated any data (2 libraians, 1 info scientist)
+* *11 who hadn't generated any data (2 librarians, 1 info scientist)
 * *sometimes the same person was filtered by multiple criteria
 ##Analysis
 
@@ -60,17 +60,16 @@
 
 ##Results
 
-
 ###Demographics
 
 * 281 unique responses   
 * 249 (89%) passed filters 
 * Largest response from biologists: (37%), followed by Archaeologists (13%), Social scientists (13%), and Environmental scientists (11%)
-* Responses from across the carreer spectrum: 41% principle investigator/lab heads, 24% postdocs, and 16% grad students.
+* Responses from across the career spectrum: 41% principle investigator/lab heads, 24% postdocs, and 16% grad students.
 * Overwhelmingly, biggest response (85%) from academic institutions, 90% of those are research-focused.
 
 ###Background knowledge
-* attempted to guage familiarity with issues around data publication/sharing/access
+* attempted to gauge familiarity with issues around data publication/sharing/access
 
 ####Policies
 * no idea what to say here.
@@ -98,7 +97,7 @@
 * 22% (19) were unhappy, 2% (2) got 'very insufficient' credit
 
 * belief that formal citation is appropriate credit was associated with more satisfaction 
-* *32% (6) insuffcient/very insufficient and 5% (1) excessive/very excessive vs.
+* *32% (6) insufficient/very insufficient and 5% (1) excessive/very excessive vs.
 * *19% (13) insufficient/very insufficient and %18 (12) excessive
 * *not significant, chi2 = 2.56, p = 0.28
 
@@ -121,7 +120,7 @@
 * Evaluation of metadata ranks highly (196 / 80%)
 * *researchers recognize it's importance
 * *more respondents expected metadata evaluation from peer review than good metadata from publication (what's that mean?)
-* a majority (150 / 62%) expect an evaluation of plausibility that requries domain expertise
+* a majority (150 / 62%) expect an evaluation of plausibility that requires domain expertise
 * collection and processing methods (220 / 90%) presumably also demand some domain expertise
 * low expectation that impact will be considered (53 / 22%)
 
@@ -162,12 +161,12 @@
 * * furthermore, a majority of researchers find each to be slightly or not at all useful
 
 ####Researcher evaluation
-* part of the rationale for data publication is to incentivise data sharing by fitting data into the academic reward system
+* part of the rationale for data publication is to incentivize data sharing by fitting data into the academic reward system
 * to that end, we wanted to know what features of a data publication would increase its value as an item on a CV
 * we considered the imprimatur of peer review and the inclusion of a data paper 
 
 * to establish a baseline, we asked about traditional papers
-* *not surprsinigly, they are highly valued
+* *not surprisingly, they are highly valued
 * *145 (60%) give it a great deal of weight and another 87 (36%) give it significant weight
 
 * data publications were much less highly valued at 23 (10%) a great deal for highest scorer, a peer-reviewed data paper, although 109 (46%) still gave that significant weight.
@@ -199,7 +198,7 @@
 * *most heavily environmental sciences & ecology (36%), followed by social sciences (16%) and biology (14%)
 
 ###Peer review
-* low expecation that impact would be considered fits with the practices of current DP efforts
+* low expectation that impact would be considered fits with the practices of current DP efforts
 
 ###Data papers
 * data papers do clearly add value to a dataset on a CV, but peer-reviewed datasets without papers do still have much of that value
@@ -213,4 +212,4 @@
 * at 22% peer review is low on the list (6/8) of expected publication features, but it's highly valued
 
 * people who haven't reviewed a journal article value journal articles less and everything else more than people who have
-* *nothing signficant at p = 0.01
+* *nothing significant at p = 0.01
