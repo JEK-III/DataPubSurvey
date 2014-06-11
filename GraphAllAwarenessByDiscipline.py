@@ -72,16 +72,15 @@ for dvar in QUESTIONS:
     
    
     
-    
     category_ct.plot(kind='barh',
-                          stacked=True, 
-                          color=COLORS, 
-                          figure=fig,
-                          ax=subfigs[i], 
-                          grid=False, 
-                          legend=False,
-                          xlim = (0,1),
-                          edgecolor='w') 
+                     stacked=True, 
+                     color=COLORS, 
+                     figure=fig,
+                     ax=subfigs[i], 
+                     grid=False, 
+                     legend=False,
+                     xlim = (0,1),
+                     edgecolor='w') 
           
     # format the subplot
     subfigs[i].tick_params(axis='both', 
