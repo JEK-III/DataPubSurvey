@@ -7,7 +7,9 @@ Created on Wed May 28 15:55:18 2014
 """
 
 
-QUESTIONS = ['publish_definition', 'peer_review_definition']
+QUESTIONS = ['publish_definition', 
+             'peer_review_definition', 
+             'researcher_review_experience']
 
 
 BAR_COLOR = ['#005695']
@@ -19,7 +21,7 @@ TITLE_FONT={'name' : 'Serif',
 execfile("ReadInSurvey.py")
 
 
-fig, subfigs = plt.subplots(2, sharex=True)
+fig, subfigs = plt.subplots(len(QUESTIONS), sharex=True)
 fig.suptitle('Definitions', 
              fontsize=14)        
 
@@ -76,13 +78,13 @@ for question in QUESTIONS:
     subfigs[i].spines['left'].set_color('#969696')
                  
                         
-    
+    """
     subfigs[i].text(1,0.9,
                     n_string,
                     fontsize=10,
                     horizontalalignment='left',
                     transform=subfigs[i].transAxes)
-    
+    """
     i += 1
 
 
