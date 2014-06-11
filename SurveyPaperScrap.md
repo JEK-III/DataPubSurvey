@@ -86,6 +86,8 @@
 * asked about prior experience with sharing own data and using others
 * some background attitudes about sharing
 
+* 
+
 ###Data vultures
 * 'data vultures' / being taken advantage of is a concern in data publication 
 * we wanted to know how much of a problem it currently is
@@ -107,6 +109,7 @@
 * *not significant, chi2 = 3.26, p = 0.20
 
 ###Definitions
+
 ####Data Publication
 * two most common expectations relate to access & preservation
 * *availability at 166 / 68%

@@ -5,6 +5,9 @@ Created on Thu Jun  5 15:48:56 2014
 
 @author: jkratz
 """
+import scipy.stats as sps
+
+
 # Graph formatting -------------------------------------------------------------
 COLORS = ['#08519c',
           '#3182bd',
@@ -61,7 +64,7 @@ for dvar in QUESTIONS:
     category_ct = category_ct.div(category_ct.sum(1).astype(float), axis = 0)
 
     #put rows in order for graph
-    category_ct = category_ct.reindex(columns=COLUMN_TO_ANSWERS[DVAR])
+    category_ct = category_ct.reindex(columns=COLUMN_TO_ANSWERS[dvar])
     category_ct = category_ct.reindex(SORT_ORDER)    
     
     #drop empty rows
