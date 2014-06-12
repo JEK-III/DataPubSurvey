@@ -31,7 +31,7 @@
 
 ###Anonymization
 
-* Location deleted
+* Location converted to US and 'Other'
 * UC & campus affiliation redacted
 * * knowledge of UC OA mandate redacted
 * free text answers standardized
@@ -71,21 +71,30 @@
 ###Background knowledge
 * attempted to gauge familiarity with issues around data publication/sharing/access
 
-####Policies
-* no idea what to say here.
 
+####Policies
+* we asked respondents to rate their familiarity with 3 US federal policies related to data sharing/availability
+* b/c policies are specific to US, we only report the results from the 197 (79%) of respondents who are in the US
+* United States Office of Science and Technology Policy (OSTP) Open Data Initiative  
+* *not yet relevant to scientists
+* *less than half 75 (38%) have heard of it at all
+* NSF DMP requirements
+* *the most well-known of the bunch
+* *32 (16%) knew all the details
+* NIH data sharing policy
+* *only looked at biologists (n=71)
+* *only 4 (5%) claimed to "know all the details", much fewer than the 18 (24%) who had never heard of it 
 
 ####Data journals
 * most frequently named: ecological archive (16), Nature's Scientific Data (14)
 * then, ESSD (7), Biodiversity Data Journal (6), Geoscience Data Journal (5)
-* 29% (39) of respondents who answered the question in some way named at least one dat journal
+* 29% (39) of respondents who answered the question in some way named at least one data journal
 * 16% (39) of all respondents named a data journal
 
 
 ###Sharing background
 * asked about prior experience with sharing own data and using others
 * some background attitudes about sharing
-
 * 
 
 ###Data vultures

@@ -21,7 +21,6 @@ Writes out as 'DataPubSurvey_anon.csv'
 execfile('DefineConstants.py')
 
 COLUMNS_TO_DROP = ["can_name_data_journal",
-                   "country",
                    "uc_affiliated",
                    "uc_campu",
                    "data_to_publish"]
@@ -67,6 +66,7 @@ for column in CHECKBOX_COLUMNS:
     # replace original column
     responses_ft[column] = filtered_column
 
+
 # radio buttons ----------------------------------------------------------------
 # replace free text answers with 'Other'
 
@@ -77,8 +77,13 @@ for column in RADIO_BUTTON_COLUMNS:
     responses_ft[column] = \
         responses_ft[column].map(lambda x: strip_other_radio(x, column))
 
-# discipline -------------------------------------------------------------------
+# dropdowns  -------------------------------------------------------------------
+# country
+# convert to column of bools, whether in US.
+responses_ft['country'] = responses_ft['country'] == "United States"
+responses_ft.rename(columns={'country' : 'united_states'}, inplace=True)
 
+# discipline
 # get rid of annoying dashes
 responses_ft['discipline'] = responses_ft['discipline'].str.replace('-', '')
 

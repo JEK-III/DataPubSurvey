@@ -24,14 +24,18 @@ execfile("ReadInSurvey.py")
 
 responses.discipline = responses.discipline.map(PAPER_DISCIPLINE_MAP)
 
-responses_ft = responses[responses.discipline == 'Biology']
+responses_ft = responses
+#responses_ft = responses[responses.discipline == 'Biology']
+responses_ft = responses_ft[responses_ft.united_states]
 
-responses_ct = responses_ft.aware_nih_data_sharing_policy.value_counts()
+responses_ct = responses_ft[QUESTIONS[0]].value_counts()
+
 
 responses_ct = responses_ct.div(responses_ct.sum().astype(float))
 
 responses_ct.plot(kind='barh',
-                  stacked=True)
+                  stacked=True,
+                  xlim=(0,1))
 
 
 
