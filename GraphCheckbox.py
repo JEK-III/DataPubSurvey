@@ -24,8 +24,11 @@ COLORS = 'w'
 
 ANSWERS = COLUMN_TO_ANSWERS[dvar]
 
+responses_ft = responses[responses.reused_others_data == 'Yes']
+
+
 # extract checkbox column and split responses into array
-split_checkbox = responses[dvar].str.split("; ").dropna()
+split_checkbox = responses_ft[dvar].str.split("; ").dropna()
 
 # DF of bools; responders x checkbox (checked = True) 
 checkbox_responses = pd.DataFrame({name : 
@@ -46,7 +49,7 @@ response_counts.sort(ascending=True)
 # plot bar graph
 response_counts.plot(kind='barh', 
                      alpha=1, 
-                     color=COLORS,
+                     color='r',
                      grid=False,
                      title=dvar,
                      xlim=(0,1))
