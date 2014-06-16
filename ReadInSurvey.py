@@ -6,14 +6,15 @@ Script to read the anonymized survey data in and perform some filtereing
 
 @author: jkratz
 """
-execfile('DefineConstants.py')
 
+#import DefineConstants
 
 responses = pd.read_csv('DataPubSurvey_anon.csv')
-#responses = pd.read_csv('DataPubSurvey_US_anon.csv')
 
 responses = responses[responses['role'] != 'Librarian' ]
 responses = responses[responses['discipline'] != "Information science"]
 responses = responses[responses['highest_degree'] != 'Highschool']
 responses = responses[responses['generated_data'] != 'No']
 
+for column in CHECKBOX_COLUMNS:
+    split_checkbox = responses[column].str.split("; ")
