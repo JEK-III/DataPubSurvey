@@ -1,4 +1,24 @@
 #Roadmap
+##Introduction
+* Data sharing is good, buy we need/ want to move from 'sharing' to 'publishing'
+* To do this, it's very, very important to talk to researchers, not just library folks
+* a lot of surveys about data sharing have been done, which is great, but...
+* no one has asked about publication before now.
+
+* data sharing is good, and we've done a lot of surveys / interviews / needs assessments
+* *Tenopir
+* *Kim
+
+* the idea in data publication is to borrow terminology ('publication', 'peer review') from the existing publication system and in that way tie in to the existing academic reward system
+* Lots of data publication initiatives are steaming ahead
+* in particular, lots of new venues for data papers
+* however, it's still not clear what 'data publicaiton' means, and 'data peer review' even less so
+* if we want to use those words, we'd better figure out what they mean to the real audience: researchers
+
+* therefore we decided to survey researchers directly about:
+1. what they think 'data publication' and 'data peer review' mean
+2. what potential components of a data publication would they find useful for evaluating the data and its creators
+
 
 ##Methods
 
@@ -52,6 +72,7 @@
 * *3 without college degrees
 * *11 who hadn't generated any data (2 librarians, 1 info scientist)
 * *sometimes the same person was filtered by multiple criteria
+
 ##Analysis
 
 * Chi-squared was used for all significance testing
@@ -70,6 +91,7 @@
 
 ###Background knowledge
 * attempted to gauge familiarity with issues around data publication/sharing/access
+* 
 
 
 ####Policies
@@ -102,20 +124,47 @@
 * asked about prior experience with sharing own data and using others
 * some background attitudes about sharing
 
+###Channels
+* we asked three questions about mechanisms for sharing
+* *Have you shared data in any of the following ways?
+* *[If] your data [has] been re-used by anyone outside your research group / collaborators, how did they get your data?
+* *[If] you ever re-used data from another research group (not as part of an existing collaboration), how did you get the data?
+* respondents were instructed to check all answers that applied
+* provided answers were equivalent to the 4 methods for external data sharing found by Kim (2012) \cite{kim_institutional_2012} in interviews with faculty:
+* *Email / direct contact
+* *database or repository
+* *journal website (as supplemental material)
+* *personal or lab website
+
+
 ###Credit
 * we wanted to asses what researchers thought was appropriate credit for the creators of a dataset
 * the most common response was formal citation in the reference list at 83% (126)
 * acknowledgement also ranked highly at 62% (93)
 * the most common actual practice <CITATION>, informal reference in the body of the paper, ranked lowest at 16% (24)
+	
+* we provided an 'Other' option with a free-text field.  
+* Overwhelmingly, some variant on "it depends"
+* many specified one of two factors:
+* *the role of the data in the paper
+* **"depends on the amount of data shared and the importance to the study-if just some support in discussion, acknowledgement; vs. half or more of main study, authorship."
+* **"authorship if data is primary source of analysis, otherwise acknowledgement"
+* **"depends how central the data is to the resulting paper"
+* *the publication status of the dataset
+* **"Depends on whether the data is already published"
+* **"Data should be archived at publication of its first use. After that it can be acknowledged or cited if used in the future."
 
-* because there substantial differences in culture between disciplines \cite{harley_assessing_2010} we examined them separately
+* because there are substantial differences in culture between disciplines \cite{harley_assessing_2010, swan_share_2008} we examined them separately
 * biology and the physical sciences had a relatively high expectation of authorship at 53% (48) and 50% (9) respectively
 * surprisingly, discounting Mathematics (b/c of low n) and Other (b/c meaningless), a chi2 test did not find significant differences between disciplines
 * *chi2=15.6, p=0.9
 
 * we also asked the subset who had published on someone else's data what they actually did
 * results agreed rougly with the responses to the hypothetical
-* formal citation rated highest with 
+* formal citation rated highest with 63% (81)
+* no one admitted to informal citation in the text
+
+
 
 ###Data vultures
 * In credit figure
@@ -232,15 +281,38 @@
 ###Our demographics vs. previous surveys
 * Tenopir (2011) \cite{tenopir_data_2011}
 * *81% academic vs. our 85% is quite similar
-* *most heavily environmental sciences & ecology (36%), followed by social sciences (16%) and biology (14%)
+* *most heavily environmental sciences & ecology (36%), followed by social science (16%) and biology (14%)
+* *we're heavy in biology (37%), but with a significant representation from Earth and environmental science (16%) and social science (13%).
 
+* Others have found significant differences in data sharing / scholarly communication culture between disciplines
+* Tenopir (2011) \cite{tenopir_data_2011} asked what conditions/credit would be fair in exchange for use of data (you using others and others using yours)
+* found statistically significant differences between disciplines for every condition
+* we didn't, which might be a function of the lower n or different test (we lumped everything together, they considered each column separately)
+
+* comparison between Tenopir results and ours; authorship is the only truly parallel condition
+>Is each of the following conditions a fair exchange for the use of data? 
+>Co-authorship on publications resulting from use of the data
+> >61% (105) biolgists
+> >53% (104) social scientists
+> >52% (59) computer science/engineering
+> >55% (84) physical sciences
+>we asked: How should a researcher who shares data be credited?
+>authorship on the paper
+> >53% (48) biolgists
+> >31% (10) social science
+> >27% (3) computer science
+> >50% (9) physical science
+* pretty good agreement among biologists, physical science.  our #s are lower for social & computer science
+* *could be change over time or question, but probably it's just the smaller n
+
+ 
 
 
 ###Sharing channels
 * likely to be distorted by, e.g. the fact that a researcher always knows when someone gets their data though email, might not know about it if it's downloaded from a repository
 
-###Credit
-* there is consensus in the scholarly communication community that the right thing to do is to cite formally in the reference list
+###Credit/citation
+* there is consensus in the scholarly communication community that the right thing to do is to cite formally in the reference list \cite{force11_data_citation_synthesis_group_joint_2014}
 * however, past studies have found that this is rarely actually done
 * *\cite{sieber_not_1995}: [old, somewhat complicated table of locations to parse]
 * here, most respondents agreed that formal citation is the way to go
@@ -253,6 +325,7 @@
 
 ###Data vultures 
 * although the majority of respondents were satisfied, the fraction who were not (22%) is too large to ignore
+* In kim (2012) study, 32% (8/25) researchers "Worried about data theft; cannot trust others" /cite{kim_institutional_2012}
 * no judgement implied about whether researcher expectations are reasonable or not
 * could potentially address by some combination of encouraging people to credit more and expect less
 * maybe disciplines will work it out for themselves
@@ -265,7 +338,11 @@
 * peer review is valued, but not expected (71% don't think publish implies peer review)
 * a majority of researchers expect peer review to involve assessments that require domain expertise
 * low expectation that impact would be considered fits with the practices of current DP efforts
+* *"I wouldn't expect metadata to be standardized, but I would like it if it were!"
 * data publication initiatives should probably incorporate some form of peer review if they can
+
+* "I have never heard this term applied to a dataset and I don't know what it means"
+
 
 ####Use as review
 * Successful reuse was rated relatively low, to our surprise
@@ -279,7 +356,7 @@
 * data papers do clearly add value to a dataset on a CV, but peer-reviewed datasets without papers do quite well
 * our results don't really resolve the question of whether data papers are a good use of one's time
 * the idea of data papers is to fit into the existing scholarly reward system; they don't seem to fit all that much better than datasets
-* the hope/presumption/trend is that data is getting more recognition.  the gap might shrink.
+* the hope/presumption/trend is that data is getting more recognition->  the gap might shrink.  on the other hand, no one thinks data papers *should* be considered as valuable as research papers, so perhaps this is all fine
 
 
 ###Metrics
@@ -296,18 +373,46 @@
 
 ##Demographics
 * Discipline, role, highest degree, and institution-type
+* analyzed responses from 249 researchers
 * Most common: Biologist, PI, PhD, research-focused academic
 
 ##Policy Awareness
-* OSTP Open Data Initiative, NSF DMP requirements, NIH data sharing policy
+* Respondents were asked to rate their familiarity with three US government policies related to data sharing
+* *scale from "never heard of it" to "know all the details"
+* Analysis restricted to US respondents
+* (A) OSTP Open Data Initiative (n=197)
+* (B) NSF DMP requirements (n=197)
+* (C) NIH data sharing policy: only relevant to biologists (n=71)
 
 ##Sharing Experience
-* looks primarily at channels for sharing
-* secondarily at documentation
+* restricted to respondents who answered "yes" "to "have you shared data?"
+* (A) - (C) are concerned with channels for sharing data
+* *Email / direct contact
+* *database or repository
+* *journal website (as supplemental material)
+* *personal or lab website
+* (A) Through what channels have you shared data? (n=122)
+* (B) If your data has been reused by someone else, how did they get it?
+* (C) If you have reused someone else's data, how did you get it? (n=150)
+* (D) looks at accompanying documentation (n=121)
+* *A traditional research paper based on the data (with analysis and conclusions)
+* *A data paper describing the data (without analysis or conclusions)
+* *Informal text describing the data
+* *Formal metadata describing the data (e.g. as XML)
+* *Computer code used to process or generate the data
+* *Shared with no additional documentation
 
 ##Credit
-* how the respondent credited others
-* how satisfied they were with the credit they got
+* (A, B) mechanisms for credit
+* *Authorship on paper
+* *Acknowledgement in the paper
+* *Data cited in the reference list
+* *Data cited informally in the text of the paper
+* (A) theoretical: how data sharer should be credited (n=151)
+* (B) concrete: how the respondent credited others (n=129)
+* (C) how satisfied they were with the credit they got (n=86)
+* *scale of 1-5 from very insufficient to very excessive
+* *mean = 2.9, SE = 0.8
 
 ##Definitions
 * data publication (vs. sharing) and peer review
@@ -321,3 +426,12 @@
 
 * people who haven't reviewed a journal article value journal articles less and everything else more than people who have
 * *nothing significant at p = 0.01
+
+* Scaramozzino (2012) \cite{scaramozzino_study_2012} survey of 131 tenure-track faculty at a teaching-oriented university (Cal Poly)
+>Over 65 percent of respondents believe it is important that they openly share their data and that their colleagues do the same. Of those who be- lieve it is important, fewer than half (48%) report always or frequently sharing data with those outside their research group.
+
+*Kim (2012) \cite{kim_insitutional_2012} interviewed 25 researchers about data sharing.
+* *15 of them mentioned credit/reputation as a benefit.
+* *methods mentioned: on request/email, personal website, external repository, supplemental material
+
+* Differences in actual and reported behavior: Ceci (1988) surveyed 57 "nonacademic scientists working in both the private and the public sectors at places like the Centers for Disease Control, the National Insitutes of Health, and various research hospitals" and found that 87% reported routinely honoring requests for data, but "59% claimed that their colleagues were not prone to sharing their data, even when they were obtained with the benefit of federal funds." \cite{ceci_scientists_1988}

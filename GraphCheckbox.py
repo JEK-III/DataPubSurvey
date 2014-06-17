@@ -2,25 +2,10 @@
 """
 Created on Thu May  1 10:26:47 2014
 
-Graph checkbox responses.
-
-
+Graph checkbox responses to a single question.
 
 @author: jkratz
 """
-"""
-COLORS = ['a6cee3',
-          '#1f78b4',
-          '#b2df8a',
-          '#33a02c',
-          '#fb9a99',
-          '#e31a1c',
-          '#fdbf6f',
-          '#ff7f00',
-          '#cab2d6',
-          '#6a3d9a']
-"""
-COLORS = 'w'
 
 ANSWERS = COLUMN_TO_ANSWERS[dvar]
 
@@ -46,10 +31,12 @@ print response_counts
 # sort descending for graph
 response_counts.sort(ascending=True)
 
+title_string = dvar + " (n=" + str(len(checkbox_responses)) + ')'
+
 # plot bar graph
 response_counts.plot(kind='barh', 
                      alpha=1, 
-                     color='r',
+                     color='b',
                      grid=False,
-                     title=dvar,
+                     title=title_string,
                      xlim=(0,1))
