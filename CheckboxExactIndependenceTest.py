@@ -59,6 +59,7 @@ for a in ANSWERS:
             relationship = square.as_matrix() - expected
             print ("positive correlation" if relationship[0][0] > 0 else 
                    "negative correlation")
+            print relationship[0][0]
 
 t_chi2, t_p, t_df, t_expected = sps.chi2_contingency(total_square.as_matrix())
 
