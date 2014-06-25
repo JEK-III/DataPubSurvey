@@ -118,11 +118,17 @@
 * 16% (39) of all respondents named a data journal
 * a number of respondents listed or asked about repositories: figshare (6), dryad (3), zenodo (1)
 
+####Sharing importance
+* a majority (56% / 140) of respondents said that it is very important to share the data that underlies a study
+* there was no statistically significant difference between disciplines (chi2 = 39.1, p=0.18)
+
 
 ###Sharing background
 * In Sharing Experience figure
 * asked about prior experience with sharing own data and using others
 * some background attitudes about sharing
+* 68% (168) shared data, 58% (98) of those had their data reused, and 62% (61) of those reuses led to a publication.
+* 61% (151) reused others data, 69% (104) of those led to a publication. 
 
 ###Channels
 * we asked three questions about mechanisms for sharing
@@ -146,7 +152,7 @@
 * we provided an 'Other' option with a free-text field.  
 * Overwhelmingly, some variant on "it depends"
 * many specified one of two factors:
-* *the role of the data in the paper
+* *the role of the data in the papers
 * **"depends on the amount of data shared and the importance to the study-if just some support in discussion, acknowledgement; vs. half or more of main study, authorship."
 * **"authorship if data is primary source of analysis, otherwise acknowledgement"
 * **"depends how central the data is to the resulting paper"

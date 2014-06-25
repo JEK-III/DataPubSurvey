@@ -5,6 +5,9 @@ Created on Fri Jun 20 14:55:23 2014
 
 @author: jkratz
 """
+
+import math
+
 # Graph formatting -------------------------------------------------------------
 COLORS = ['#08519c',
           '#3182bd',
@@ -50,14 +53,19 @@ for question in QUESTIONS:
     
     collected_counts = pd.DataFrame(index=dvar_responses) 
     mean_values = pd.Series(index=dvars)
+    sem_values = pd.Series(index=dvars)
     
     for column in dvars:            
         collected_counts[column] =  responses[column].value_counts().fillna(0)
         mean_values[column] = responses[column].map(VALUE_TO_NUMBER).mean()
+        sem_values[column] = (responses[column].map(VALUE_TO_NUMBER).std() /
+                              math.sqrt(len(responses[column].dropna())))
     
 
     mean_values = mean_values * 25 * 4.2
+    sem_values = sem_values * 25 * 4.2
     print mean_values
+    print sem_values
     
     #test = collected_counts     
       

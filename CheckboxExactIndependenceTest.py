@@ -47,6 +47,13 @@ for a in ANSWERS:
         square[False] = (checkbox_responses[checkbox_responses[a] 
                         == False][b].value_counts())
 
+        # check odds ratio and flip columns if it's going to be < 1
+        # needed for comparison b/c odds ratio isn't symmetric      
+        prelim_oddsratio = ((float(square[True][True]) * square[False][False]) /
+                        (square[False][True] * square[True][False]))
+        if prelim_oddsratio < 1:
+            square = square.reindex(columns=[False,True])
+       
         count_table = square.as_matrix()
 
         if ~numpy.isnan(count_table).any():
@@ -54,12 +61,11 @@ for a in ANSWERS:
             
             pvalues.ix[a,b] = p
            
-            print (a + " x " + b + ":\n odds ratio= " + str(oddsratio) + 
+            print (a + " x " + b + ":\n  odds ratio= " + str(oddsratio) + 
                    ", p= " + str(p))
-            relationship = square.as_matrix() - expected
-            print ("positive correlation" if relationship[0][0] > 0 else 
-                   "negative correlation")
-            print relationship[0][0]
+            print "  positive\n" if prelim_oddsratio == oddsratio \
+             else "  negative\n"
+            
 
 t_chi2, t_p, t_df, t_expected = sps.chi2_contingency(total_square.as_matrix())
 

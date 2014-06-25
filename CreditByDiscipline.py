@@ -27,7 +27,7 @@ DVAR = 'data_sharing_credit'
 DVAR_ANSWERS = COLUMN_TO_ANSWERS[DVAR]
 
 
-GRAPH_INDEX = set(SUBDISCIPLINE_TO_DISCIPLINE.values())
+#GRAPH_INDEX = set(SUBDISCIPLINE_TO_DISCIPLINE.values())
 
 
 
@@ -35,7 +35,7 @@ execfile("ReadInSurvey.py")
 
 #responses_ft = responses.reindex(columns=[ivar, dvar]).dropna()
 
-responses.discipline = responses.discipline.map(SUBDISCIPLINE_TO_DISCIPLINE)
+responses.discipline = responses.discipline.map(PAPER_DISCIPLINE_MAP)
 #mask = responses[CATEGORY_TYPE].isin(CATEGORIES)
 #responses_ft = responses.ix[mask]
 
@@ -77,11 +77,11 @@ response_counts = response_counts.reindex(columns=DVAR_ANSWERS + ['Other'])
 
 
 
-fig = response_counts.plot(kind='bar', 
+fig = response_counts.plot(kind='barh',
                            color=COLORS,
                            grid=False,
-                           #legend=False,
-                           ylim=(0,1),
+                           legend=False,
+                           xlim=(0,1),
                            rot=0,
                            title=GRAPH_TITLE,
                            edgecolor='w')

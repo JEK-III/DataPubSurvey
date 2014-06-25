@@ -7,7 +7,7 @@ Script to read the anonymized survey data in and perform some filtereing
 @author: jkratz
 """
 
-#import DefineConstants
+execfile("DefineConstants.py")
 
 responses = pd.read_csv('DataPubSurvey_anon.csv')
 
