@@ -1,6 +1,6 @@
 #Roadmap
 ##Abstract
-* Data "publication" attempts to appropriate for dat the prestige of publication in the scholarly literature. 
+* Data "publication" attempts to appropriate for data the prestige of publication in the scholarly literature. 
 * While the scholarly communication community substantially endorses the idea, it hasn't fully resolved what a data publication should look like, or how data peer review should work.  
 * To contribute an important and neglected perspective on these issues, we surveyed ~250 researchers across the sciences and social sciences, asking what expectations "data publication" raises and what features would be useful to evaluate the trustworthiness and impact of a data publication and the contribution of its creator(s).  
 * We found that the most widely-held perceptions of data publication as opposed to sharing related to access and preservation.
@@ -8,23 +8,46 @@
 
 
 ##Introduction
-* Data sharing is good, buy we need/ want to move from 'sharing' to 'publishing'
+1. Motivate data publication
+2. Open definitions / questions
+3. Discuss sharing surveys
+
+###access to research data is important
+* *reproducibility
+* **reproducibility crisis \cite{ioannidis_why_2005, prinz_believe_2011, mobley_survey_2013}
+* **data publication could be a solution to the crisis \cite{drew_lost_2013, collins_policy_2014}
+
+
+
+
+###data publication instead of sharing
+ 
+* Data sharing is good, buy we need/ want to move from 'sharing' to 'publishing' \cite{costello_motivating_2009, lawrence_data_2011}
+* the idea in data publication is to borrow terminology ('publication', 'peer review') from the existing publication system and in that way tie in to the existing academic reward system
+
+
 * To do this, it's very, very important to talk to researchers, not just library folks
 * a lot of surveys about data sharing have been done, which is great, but...
 * no one has asked about publication before now.
 
 * data sharing is good, and we've done a lot of surveys / interviews / needs assessments
-* *Tenopir
-* *Kim
+* papers
+* *Ceci (1988) 790 academic 'researchers from a variety of fields' in spring 1985, followed by 57 nonacademic.  "Scientist's Attitudes toward Data Sharing" \cite{ceci_data_1988}
+* *Tenopir surveyed 1329 scientists on their practices and perceptions of data sharing in 2011.
+* *Kim (2012) \cite{kim_insitutional_2012} interviewed 25 researchers about data sharing.
+* *Scaramozzino (2012) \cite{scaramozzino_study_2012} survey of 131 tenure-track faculty at a teaching-oriented university (Cal Poly)
+* reports
+* *RIN report based on >100 "detailed interviews with researchers across 8 subject areas" addresses data publciation explicitly \cite{swan_share_2008}
+* *Assessing the Future Landscape of Scholarly Communication: 160 interviews over 7 fields, covers lots of topics, but data sharing is in there \cite{harley_assessing_2010}
+* *"The Scientific Method in Practice: Reproducibility in the Computational Sciences"\cite{stodded_scientific_2010}
 
 
-* Data publication has multiple definitions
+###Data publication has multiple definitions
 * *simple: "sensible to adopt a pragmatic definition of "publication of datasets" as "making datasets publicly available"\cite{swan_share_2008}
 * *nuanced: share vs. publish vs. Publish\cite{callaghan_making_2012}
-* *ours: available, citable, maybe validates \cite{kratz_data_2014}
+* *ours: available, citable, maybe validate=d \cite{kratz_data_2014}
 
 
-* the idea in data publication is to borrow terminology ('publication', 'peer review') from the existing publication system and in that way tie in to the existing academic reward system
 * Lots of data publication initiatives are steaming ahead
 * in particular, lots of new venues for data papers
 * however, it's still not clear what 'data publicaiton' means, and 'data peer review' even less so
