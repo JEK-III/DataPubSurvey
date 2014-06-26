@@ -17,6 +17,13 @@
 * *Tenopir
 * *Kim
 
+
+* Data publication has multiple definitions
+* *simple: "sensible to adopt a pragmatic definition of "publication of datasets" as "making datasets publicly available"\cite{swan_share_2008}
+* *nuanced: share vs. publish vs. Publish\cite{callaghan_making_2012}
+* *ours: available, citable, maybe validates \cite{kratz_data_2014}
+
+
 * the idea in data publication is to borrow terminology ('publication', 'peer review') from the existing publication system and in that way tie in to the existing academic reward system
 * Lots of data publication initiatives are steaming ahead
 * in particular, lots of new venues for data papers
@@ -301,6 +308,7 @@
 * Others have found significant differences in data sharing / scholarly communication culture between disciplines
 * Tenopir (2011) \cite{tenopir_data_2011} asked what conditions/credit would be fair in exchange for use of data (you using others and others using yours)
 * found statistically significant differences between disciplines for every condition
+* "Each discipline has its own norms for making data public"\cite{swan_share_2008}
 * we didn't, which might be a function of the lower n or different test (we lumped everything together, they considered each column separately)
 
 * comparison between Tenopir results and ours; authorship is the only truly parallel condition
@@ -346,6 +354,7 @@
 
 
 ###Validation
+* Data pub definition: "There is, for some, also an implication that the information has been through a quality control process." \cite{swan_share_2008}
 
 ####Peer review
 * both the biggest factor in evaluating the trustworthiness of a dataset and the value on a CV
