@@ -1,4 +1,12 @@
 #Roadmap
+##Abstract
+* Data "publication" attempts to appropriate for dat the prestige of publication in the scholarly literature. 
+* While the scholarly communication community substantially endorses the idea, it hasn't fully resolved what a data publication should look like, or how data peer review should work.  
+* To contribute an important and neglected perspective on these issues, we surveyed ~250 researchers across the sciences and social sciences, asking what expectations "data publication" raises and what features would be useful to evaluate the trustworthiness and impact of a data publication and the contribution of its creator(s).  
+* We found that the most widely-held perceptions of data publication as opposed to sharing related to access and preservation.
+* Although most respondents did not published data to have been peer-reviewed, peer review was regarded as highly valuable; peer review of a dataset inspired more confidencein a dataset than publication with a traditional paper and and peer reviewed datasets would be considered substantially more heavily when presented on a CV.
+
+
 ##Introduction
 * Data sharing is good, buy we need/ want to move from 'sharing' to 'publishing'
 * To do this, it's very, very important to talk to researchers, not just library folks
