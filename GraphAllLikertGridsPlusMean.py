@@ -62,8 +62,8 @@ for question in QUESTIONS:
                               math.sqrt(len(responses[column].dropna())))
     
 
-    mean_values = mean_values * 25 * 4.2
-    sem_values = sem_values * 25 * 4.2
+    mean_values = mean_values + 1 #* 25 * 4.2
+    sem_values = sem_values #* 25 * 4.2
     print mean_values
     print sem_values
     

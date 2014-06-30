@@ -55,7 +55,7 @@
 
 * *simple: "sensible to adopt a pragmatic definition of "publication of datasets" as "making datasets publicly available"\cite{swan_share_2008}
 * *nuanced: share vs. publish vs. Publish\cite{callaghan_making_2012}
-* *ours: available, citable, maybe validate=d \cite{kratz_data_2014}
+* *ours: available, citable, maybe validated \cite{kratz_data_2014}
 
 * Lots of data publication initiatives are steaming ahead
 * in particular, lots of new venues for data papers
@@ -69,15 +69,20 @@
 
 ###Current data publications
 ####Data papers
-
+* Data papers: description w/o analysis \cite{newman_data_2009} 
+* Earth System Science Data (2009), Geoscience Data Journal \cite{allan_geoscience_2014}, Nature Scientific Data (2014) \cite{_more_2014}
+* Peer review of data and paper wrapped together
+ 
 ####Other stuff
-
-
-
-###Data peer review
-
+* bare bones: figshare (http://figshare.com/), Dryad (http://www.datadryad.org/)
+* complex: National Aeronautics and Space Administration (NASA) Distributed Active Archive Centers (DAACs) \cite{weaver_data_2012}
+* *peer review by product team and user review board
+* bespoke: Open Context \cite{kansa_we_2014}
+* *editorial and external peer review
+* Lawrence criteria\cite{lawrence_citation_2011}
 
 ###This survey
+* How well do current implementations of data publication meet the expectations of reasearchers?
 
 
 
@@ -137,8 +142,12 @@
 
 ##Analysis
 
-* Chi-squared was used for all significance testing
-* Consider questions where no answer was marked as skipped, rather than an intentional 'none of these' answer
+* Analysis was performed using Python, IPython\cite{perez_ipython_2007}, Pandas\cite{mckinney-proc-scipy-2010}, Numpy\cite{van_der_walt_numpy_2011}.
+* Fisher exact test was used for 2x2 tables; all pairwise comparisons.
+* Contingency table chi-square was used for all larger tables.
+* Consider questions where no answer was marked as skipped, rather than an intentional 'none of these' answer.
+* Graphs were prepared using Python, then reformatted with Adobe Illustrator.
+
 
 
 ##Results
@@ -421,8 +430,8 @@
 
 ###Data papers
 * the majority of respondents (84%) did not name any data journals
-* data papers confer less trust than any other feature we looked at, but everything except peer review is pretty comparable.
-* data papers are valued vastly less than traditional papers
+* data papers confer less trust than any other feature we looked at, but very close to reuse; on a scale of 1-5, data paper is 3.28 (SEM=0.05) and reuse is 3.35 (SEM=0.05)
+* data papers are valued much less than traditional papers (3.54 SEM=0.05 vs. 4.55 SEM=0.04) and 10% 'A great deal' vs 60%.
 * data papers do clearly add value to a dataset on a CV, but peer-reviewed datasets without papers do quite well
 * our results don't really resolve the question of whether data papers are a good use of one's time
 * the idea of data papers is to fit into the existing scholarly reward system; they don't seem to fit all that much better than datasets
