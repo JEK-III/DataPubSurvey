@@ -28,10 +28,12 @@ responses_ft = responses
 #responses_ft = responses[responses.discipline == 'Biology']
 responses_ft = responses_ft[responses_ft.united_states]
 
-responses_ct = responses_ft[QUESTIONS[0]].value_counts()
+responses_ct = responses_ft[QUESTIONS[2]].value_counts()
 
+print responses_ct
 
 responses_ct = responses_ct.div(responses_ct.sum().astype(float))
+print responses_ct
 
 responses_ct.plot(kind='barh',
                   stacked=True,

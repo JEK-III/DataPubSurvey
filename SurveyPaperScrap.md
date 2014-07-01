@@ -14,9 +14,13 @@
 
 ###access to research data
 ####Theory
-* *reproducibility
-* **reproducibility crisis \cite{ioannidis_why_2005, prinz_believe_2011, mobley_survey_2013}
-* **data publication could be a solution to the crisis \cite{drew_lost_2013, collins_policy_2014}
+* reproducibility
+* *reproducibility "crisis" / problem \cite{ioannidis_why_2005, prinz_believe_2011, mobley_survey_2013}
+* *data publication could be a solution to the crisis \cite{drew_lost_2013, collins_policy_2014}
+* reuse
+* *$ spend archiving data contributes to more papers than $ spent collecting new data \cite{piwowar_data_2011}
+* *reuse of data can make stuff cheaper and enable question to be answered that couldn't otherwise
+
 
 ####Practice
 * As early as a 1985 survey, "it was clear that scientists in all fields endorse the principle of data sharing as a desirable norm of science."\cite{ceci_scientists_1988}.
@@ -29,14 +33,15 @@
 * While more that 65% of respondents to Scarmozzino et al. (2011) beileve that open data sharing is important, less than half (48%) of those say that they frequently share their own data. \cite{scaramozzino_study_2012}
 * 76% of Finnish Social Scientists were positive toward open access to their own data. \cite{kuula_open_2008} 
 
+
 * time is the most frequently named cost \cite{tenopir_data_2011, kim_institutional_2012} to data sharing.
 * *54% cited as a reason in Tenopir
-* *44% mentioned time to organize data in Kim.
+* *44% mentioned time to organize data in Kim (the most frequently cited cost).
 * *Cited as a major constraint on data publication in swan (2008)\cite{swan_share_2008}
 
 * Other major constraints
-* *fears associated with misuse: others might use data without crediting you, might misuse data, might do something that you could/were planning to have done with it.
-* *Ethical / legal issues around human subject data
+* *fears associated with misuse: others might use data without crediting you, might misuse data, might do something that you could/were planning to have done with it.\cite{swan_share_2008}
+* *Ethical / legal issues around human subject data. \cite{swan_share_2008}
 
 
 
@@ -155,14 +160,14 @@
 ###Demographics
 * In demographics table
 * 281 unique responses   
-* 249 (89%) passed filters 
+* 249 (89%) passed filters for analysis
 * Largest response from biologists: (37%), followed by Archaeologists (13%), Social scientists (13%), and Environmental scientists (11%)
 * Responses from across the career spectrum: 41% principle investigator/lab heads, 24% postdocs, and 16% grad students.
 * Overwhelmingly, biggest response (85%) from academic institutions, 90% of those are research-focused.
+* we saw fewer differences between groups than expected, so we won't be presenting any
 
 ###Background knowledge
 * attempted to gauge familiarity with issues around data publication/sharing/access
-* 
 
 
 ####Policies
@@ -354,6 +359,10 @@
 
 ##Discussion
 
+###Limitations
+* undoubtedly a biased sample: researchers interested in this stuff are more likely to fill it out
+* *however, the high number (84%) of respondents who did not name a data journal and the high number unware of federal policies (69/35% never heard of NSF DMP, 122/62% never heard of OSTP) suggests that we're not too highly enriched for people who care about this stuff
+
 
 ###Our demographics vs. previous surveys
 * Tenopir (2011) \cite{tenopir_data_2011}
@@ -382,6 +391,7 @@
 > >50% (9) physical science
 * pretty good agreement among biologists, physical science.  our #s are lower for social & computer science
 * *could be change over time or question, but probably it's just the smaller n
+* *again, Tenopir found field specific differences, we didn't really
 
  
 
@@ -391,10 +401,12 @@
 
 ###Credit/citation
 * there is consensus in the scholarly communication community that the right thing to do is to cite formally in the reference list \cite{force11_data_citation_synthesis_group_joint_2014}
-* however, past studies have found that this is rarely actually done
-* *\cite{sieber_not_1995}: [old, somewhat complicated table of locations to parse]
-* here, most respondents agreed that formal citation is the way to go
-* furthermore, none of them would admit to informally citing data in the body of the paper
+* however, past studies have found that this is rarely actually done.\cite{sieber_not_1995, mooney_citing_2011, mooney_anatomy_2012}
+* In a 1995 survey of 198 papers that used published datasets, Sieber and Trumbo found that only 18.7% (37) had a citation with at least the title in the reference list \cite{sieber_not_1995}.  Seven years later, Mooney and Newton conducted a followup survey of 65 papers; only 16.9% (11) cited in the reference list.
+* In the sieber survey, 30.8% (61) of papers included the title of the dataset in the text of the paper; for Mooney it was 69.2% (45).
+
+* here, most respondents agreed that formal citation is the way to go.  This was the most common response to both how a datset creator should be credited 83% (126) and how they actually did credit the creator of a dataset that they used 63% (81) 
+* furthermore, none of them would admit to informally citing data in the body of the paper; could be confusion over terminology, could be differences in the group, could be lack of self-awareness
 * there was good agreement between the hypothetical and the reported actual behavior
 * *obviously, self-reported behavior comes with caveats
 * *e.g. very likely that a bio researcher using a GenBank sequence won't view that as data reuse
@@ -525,7 +537,7 @@
 * *Kim (2012) \cite{kim_insitutional_2012} interviewed 25 researchers about data sharing.
 * *Scaramozzino (2012) \cite{scaramozzino_study_2012} survey of 131 tenure-track faculty at a teaching-oriented university (Cal Poly)
 * reports
-* *RIN report based on >100 "detailed interviews with researchers across 8 subject areas" addresses data publciation explicitly \cite{swan_share_2008}
+* *RIN report based on >100 "detailed interviews with researchers across 8 subject areas" in UK addresses data publciation explicitly \cite{swan_share_2008}
 * *Assessing the Future Landscape of Scholarly Communication: 160 interviews over 7 fields, covers lots of topics, but data sharing is in there \cite{harley_assessing_2010}
 * *"The Scientific Method in Practice: Reproducibility in the Computational Sciences"\cite{stodden_scientific_2010}
 

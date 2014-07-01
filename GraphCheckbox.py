@@ -9,7 +9,7 @@ Graph checkbox responses to a single question.
 
 ANSWERS = COLUMN_TO_ANSWERS[dvar]
 
-responses_ft = responses[responses.reused_others_data == 'Yes']
+#responses_ft = responses[responses.reused_others_data == 'Yes']
 
 
 # extract checkbox column and split responses into array
