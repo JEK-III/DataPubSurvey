@@ -9,11 +9,11 @@ Graph checkbox responses to a single question.
 
 ANSWERS = COLUMN_TO_ANSWERS[dvar]
 
-#responses_ft = responses[responses.reused_others_data == 'Yes']
+responses_ft = responses[responses.reused_others_data == 'Yes']
 
 
 # extract checkbox column and split responses into array
-split_checkbox = responses_ft[dvar].str.split("; ").dropna()
+#split_checkbox = responses_ft[dvar].str.split("; ").dropna()
 
 # DF of bools; responders x checkbox (checked = True) 
 checkbox_responses = pd.DataFrame({name : 
@@ -21,6 +21,8 @@ checkbox_responses = pd.DataFrame({name :
 
 # count checked boxes 
 response_counts = checkbox_responses.sum()
+
+
 
 print response_counts
 

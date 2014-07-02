@@ -17,4 +17,4 @@ responses = responses[responses['highest_degree'] != 'Highschool']
 responses = responses[responses['generated_data'] != 'No']
 
 for column in CHECKBOX_COLUMNS:
-    split_checkbox = responses[column].str.split("; ")
+    responses[column] = responses[column].str.split("; ")

@@ -407,7 +407,8 @@
 
 * here, most respondents agreed that formal citation is the way to go.  This was the most common response to both how a datset creator should be credited 83% (126) and how they actually did credit the creator of a dataset that they used 63% (81) 
 * furthermore, none of them would admit to informally citing data in the body of the paper; could be confusion over terminology, could be differences in the group, could be lack of self-awareness
-* there was good agreement between the hypothetical and the reported actual behavior
+* there was fairly good agreement between the hypothetical and the reported actual behavior.
+* *still, statistically significant difference chi2= 15.8, p=0.0013
 * *obviously, self-reported behavior comes with caveats
 * *e.g. very likely that a bio researcher using a GenBank sequence won't view that as data reuse
 * suggests that what we need to do is enable data citation, not make the case in the first place
@@ -448,6 +449,7 @@
 * our results don't really resolve the question of whether data papers are a good use of one's time
 * the idea of data papers is to fit into the existing scholarly reward system; they don't seem to fit all that much better than datasets
 * the hope/presumption/trend is that data is getting more recognition->  the gap might shrink.  on the other hand, no one thinks data papers *should* be considered as valuable as research papers, so perhaps this is all fine
+* "I've never heard of this, but it sounds fantastic."
 
 
 ###Metrics
