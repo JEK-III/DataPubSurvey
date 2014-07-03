@@ -15,7 +15,8 @@ ANSWERS = COLUMN_TO_ANSWERS[dvar]
 FILE_TITLE = 'chi2_independence_PR_trust_and_definition.csv'
 
 # extract checkbox column and split responses into array
-split_checkbox = responses[dvar].str.split("; ").dropna()
+#split_checkbox = responses[dvar].str.split("; ").dropna()
+split_checkbox = responses[dvar].dropna()
 
 # DF of bools; responders x checkbox (checked = True) 
 checkbox_responses = pd.DataFrame({name : 

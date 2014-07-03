@@ -37,7 +37,7 @@ for column in CHECKBOX_COLUMNS:
 
 # radio buttons ----------------------------------------------------------------
 # replace free text answers with 'Other'
-"""
+
 def print_other_radio(cell, column):       
     if ~(cell in COLUMN_TO_ANSWERS[column]):
         print cell
@@ -46,4 +46,3 @@ def print_other_radio(cell, column):
 for column in RADIO_BUTTON_COLUMNS:
     print column
     responses_ft[column].map(lambda x: print_other_radio(x, column))
-"""

@@ -16,5 +16,6 @@ responses = responses[responses['discipline'] != "Information science"]
 responses = responses[responses['highest_degree'] != 'Highschool']
 responses = responses[responses['generated_data'] != 'No']
 
+
 for column in CHECKBOX_COLUMNS:
     responses[column] = responses[column].str.split("; ")

@@ -34,14 +34,16 @@
 * 76% of Finnish Social Scientists were positive toward open access to their own data. \cite{kuula_open_2008} 
 
 
-* time is the most frequently named cost \cite{tenopir_data_2011, kim_institutional_2012} to data sharing.
+* time is the most frequently named cost \cite{tenopir_data_2011, kim_institutional_2012, bobrow_establishing_2014} to data sharing.
+* *66% constrained to some or great extent in Boborow (the most frequently cited constraint)
 * *54% cited as a reason in Tenopir
 * *44% mentioned time to organize data in Kim (the most frequently cited cost).
 * *Cited as a major constraint on data publication in swan (2008)\cite{swan_share_2008}
 
 * Other major constraints
 * *fears associated with misuse: others might use data without crediting you, might misuse data, might do something that you could/were planning to have done with it.\cite{swan_share_2008}
-* *Ethical / legal issues around human subject data. \cite{swan_share_2008}
+* Ethical / legal issues around human subject data. \cite{swan_share_2008}
+* *second biggest constraint (55% to some or great extent) in EAGDA report \cite{bobrow_establishing_2014}
 
 
 
@@ -54,6 +56,8 @@
 * * if someone scoops you, at least you get *something* for your effort
 * * "Scientific Data provides a publication venue that credits scientists who share and explain their data." \cite{_more_2014}
 * data publications will be entered into the scholarly record for preservation.
+* 55% say lack or tangible rewards and recognition constrains data sharing to some or great extent. Report concludes "Data sharing can be most effectively rewarded by increasing recognition of data sharers"\cite{boborow_establishing_2014}
+
 
 
 ###Data publication has multiple definitions
@@ -88,9 +92,7 @@
 
 ###This survey
 * How well do current implementations of data publication meet the expectations of reasearchers?
-
-
-
+* What features would be useful to a researchers?
 
 ##Methods
 
@@ -217,6 +219,13 @@
 * *database or repository
 * *journal website (as supplemental material)
 * *personal or lab website
+* In all cases, Email / direct contact was the most frequently used channel: 
+* *87% (146) of those who shared did that way
+* *82% (82) of those whose data was reused shared it with the reusers that way.
+* *57% (86) of those who reused got data that way
+* Repository
+* *54% (90)
+* 8 (5%) wrote in that they extracted data from a published paper.
 
 
 ###Credit
@@ -272,6 +281,8 @@
 
 
 ###Definitions
+* We decomposed current models of data publication and asked what features researchers would expect a "published" vs a "shared" dataset.
+* 
 
 ####Data Publication
 * in definitions figure
@@ -282,7 +293,6 @@
 * thorough metadata (97 / 39%) outranks formal metadata (62 / 25%)
 * most researchers *don't* expect publication to imply peer review (only 70 / 29%)
 
-
 ####Peer review
 * in definitions figure
 * Evaluation of metadata ranks highly (196 / 80%)
@@ -291,6 +301,25 @@
 * a majority (150 / 62%) expect an evaluation of plausibility that requires domain expertise
 * collection and processing methods (220 / 90%) presumably also demand some domain expertise
 * low expectation that impact will be considered (53 / 22%)
+
+####Interrelations
+* we wanted to know whether there was some order to the definitions provided, so we tested against the null hypothesis that each component was chosen (or not) independently of every other
+* We used ch2 tests within each definition question; the null hypothesis was rejected for both data publication (chi2 = 290.0, p= 6.9e-58) and peer review (chi2 = 343.0, p= 5.7e-72)
+* To identify specific correlations, we performed pairwise Fisher Exact tests on every pair of features
+* None of the negative associations were close to statistically significant
+
+* Data publication
+* *We found a dense set of statiscitally significant (alpha = 0.05, adjusted for multiple hypothesies) associations among features related to access/preservation
+* **Deposited in a repository was linked to openly available (or=9.55, p= 7.6e-14), unique ID (or= 3.33, p= 1.33e-5), formal (or= 4.49, p= 3.94e-6) and rich (or= 3.83, p=1.14e-6) metadata.
+* **Formal and rich metadata were tightly linked (or= 12.15, p=2.07e-14).
+* **Formal metadata is tightly linked to Unique ID (or= 7.92, p=5.05e-11)
+* **Peer-review is associated with data papers (or= 3.00, p=0.0011)
+* **Data papers are also associated with rich (or=3.64, p=4.22e-5) and formal (or= 4.30, p= 1.32e-05)
+* **Traditional paper floats on its own (closest is or= 1.93, p=0.023)
+
+* Peer review
+* **Novelty was only associated with Plausibility (or= 5.50, p=1.13e-5)
+* **Plausibility, in turn is also associated with approriate methods (or= 4.51, p= 0.0014) and sufficient metadata (or= 4.90, p= 2.51e-6)
 
 
 ###Values
@@ -361,7 +390,8 @@
 
 ###Limitations
 * undoubtedly a biased sample: researchers interested in this stuff are more likely to fill it out
-* *however, the high number (84%) of respondents who did not name a data journal and the high number unware of federal policies (69/35% never heard of NSF DMP, 122/62% never heard of OSTP) suggests that we're not too highly enriched for people who care about this stuff
+* however, the high number (84%) of respondents who did not name a data journal and the high number unware of federal policies (69/35% never heard of NSF DMP, 122/62% never heard of OSTP) suggests that we're not too highly enriched for people who care about this stuff.
+* *compared to EAGDA report, where 60% of respondents were aware of data journals
 
 
 ###Our demographics vs. previous surveys
@@ -397,7 +427,8 @@
 
 
 ###Sharing channels
-* likely to be distorted by, e.g. the fact that a researcher always knows when someone gets their data though email, might not know about it if it's downloaded from a repository
+* likely to be distorted by, e.g. the fact that a researcher always knows when someone gets their data though email, might not know about it if it's downloaded from a repository.
+* *fitting with this idea, direct contact has a bigger lead in the two questions about other researchers using your data ()
 
 ###Credit/citation
 * there is consensus in the scholarly communication community that the right thing to do is to cite formally in the reference list \cite{force11_data_citation_synthesis_group_joint_2014}
@@ -417,7 +448,7 @@
 ###Data vultures 
 * although the majority of respondents were satisfied, the fraction who were not (22%) is too large to ignore
 * In kim (2012) study, 32% (8/25) researchers "Worried about data theft; cannot trust others" /cite{kim_institutional_2012}
-* no judgement implied about whether researcher expectations are reasonable or not
+* no judgement implied by us about whether researcher expectations are reasonable or not
 * could potentially address by some combination of encouraging people to credit more and expect less
 * maybe disciplines will work it out for themselves
 
@@ -429,11 +460,13 @@
 * both the biggest factor in evaluating the trustworthiness of a dataset and the value on a CV
 * peer review is valued, but not expected (71% don't think publish implies peer review)
 * a majority of researchers expect peer review to involve assessments that require domain expertise
+* "data is plausible" is associated with 3 other features that depend on domain knowledge (methods, metadata to replicate, novelty)
 * low expectation that impact would be considered fits with the practices of current DP efforts
 * *"I wouldn't expect metadata to be standardized, but I would like it if it were!"
 * data publication initiatives should probably incorporate some form of peer review if they can
 
 * "I have never heard this term applied to a dataset and I don't know what it means"
+
 
 
 ####Use as review
@@ -542,6 +575,9 @@
 * *RIN report based on >100 "detailed interviews with researchers across 8 subject areas" in UK addresses data publciation explicitly \cite{swan_share_2008}
 * *Assessing the Future Landscape of Scholarly Communication: 160 interviews over 7 fields, covers lots of topics, but data sharing is in there \cite{harley_assessing_2010}
 * *"The Scientific Method in Practice: Reproducibility in the Computational Sciences"\cite{stodden_scientific_2010}
+
+* Expert Advisory Group on Data Access (EAGDA) Report includes survey of 35 researchers over 3 fields in UK in 2013 \cite{bobrow_establishing_2014}
+
 
 * conclusions:
 * *time is the most highly cited cost \cite{tenopir_data_2011, kim_institutional_2012} to data sharing.

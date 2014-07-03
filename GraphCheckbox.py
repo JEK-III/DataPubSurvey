@@ -7,13 +7,14 @@ Graph checkbox responses to a single question.
 @author: jkratz
 """
 
+execfile("ReadInSurvey.py")
+
 ANSWERS = COLUMN_TO_ANSWERS[dvar]
 
-responses_ft = responses[responses.reused_others_data == 'Yes']
-
-
 # extract checkbox column and split responses into array
-#split_checkbox = responses_ft[dvar].str.split("; ").dropna()
+#split_checkbox = responses[dvar].str.split("; ").dropna()
+split_checkbox = responses_ft[dvar].dropna()
+
 
 # DF of bools; responders x checkbox (checked = True) 
 checkbox_responses = pd.DataFrame({name : 
