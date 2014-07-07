@@ -1,25 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% How to use writeLaTeX: 
-%
-% You edit the source code here on the left, and the preview on the
-% right shows you the result within a few seconds.
-%
-% Bookmark this page and share the URL with your co-authors. They can
-% edit at the same time!
-%
-% You can upload figures, bibliographies, custom classes and
-% styles using the files menu.
-%
-% If you're new to LaTeX, the wikibook is a great place to start:
-% http://en.wikibooks.org/wiki/LaTeX
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
 % Template for PLoS
 % Version 1.0 January 2009
 %
-% Edit the title below to update the display in My Documents
-%\title{PLoS Journal Article}
+% To compile to pdf, run:
+% latex plos.template
+% bibtex plos.template
+% latex plos.template
+% latex plos.template
+% dvipdf plos.template
 
 \documentclass[10pt]{article}
 
@@ -119,8 +106,32 @@ The University of California, Berkeley Insitiutional Review Board approved the s
 The survey could be completed anonymously.
 Respondends affiliated with the Univeristy of California had an opportunity to supply an email address for help with data publication, but that information was not used in any way for the purposes of this article.
 
+The survey asked questions in 3 categores: demographics, data sharing experience, and data publication perceptions.
+Data publication perceptions consisted of ``mark all that apply'' questions about the definition of data publication and peer review and Likert scale questions about the value of various possible features of a data publication.
 
+The survey was designed with a minimum of required questions.
+Some pages were displayed dynamically based on answers to certain questions; therefore, n varies considerably.
+The survey was administered as a Google Form.
+Solicitations were distributed via social media (Twitter, Facebook, Google+), emails to listservs, and a blog post on Data Pub\cite{kratz_data_2014}.
 
+Although opinions are unlikely to be controversial, light anonymization was performed prior to analysis.
+University of California (UC) affiliation and questions with specific application to UC researchers were redacted.
+Respondent locations were grouped into United States and ``Other''; this distinction was preserved because some questions asked about US government policies.  
+Sub-disciplines with fewer than three respondents were merged into the corresponding discipline.
+Listed data journals were standardized by hand.
+Free text answers were replaced with ``Other.''
+
+After anonymization, reponses were filtered for analysis.
+Because the goal of the survey was to learn about researchers, we exempted from analysis anyone who self-identified as a librarian or information scientist.
+To restrict the analysis to active researchers, we filtered anyone who affirmed that they had not generated any data in the last five years; the 90 respondents who did not answer this question were retained.
+Finally, we exempted anyone who did not posess at least a Bachelor's Degree.
+In total, 32 respondents were exempted from analysis, some on the basis of multiple criteria.
+
+Analysis was performed using IPython\cite{perez_ipython_2007}, Pandas\cite{mckinney-proc-scipy-2010}, and Numpy\cite{van_der_walt_numpy_2011}.
+Graphs were prepared using Python and formatted with Adobe Illustrator.
+For significance testing, the Fisher exact test was used for 2x2 tables and contingency table chi-square for all larger tables.
+A significance cutoff of \alpha=0.05 was used, corrected for multiple hypothesis testing when appropriate.
+Because few questions were required, questions with no reply at all were considered to be skipped rather than an intentional ``none of these''.
 
 
 % Do NOT remove this, even if you are not including acknowledgments
