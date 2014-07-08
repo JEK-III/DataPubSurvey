@@ -52,7 +52,8 @@ execfile("ReadInSurvey.py")
 
 
 # extract checkbox column and split responses into array
-split_ivar_checkbox = responses[IVAR].str.split("; ").dropna()
+#split_ivar_checkbox = responses[IVAR].str.split("; ").dropna()
+split_ivar_checkbox = responses[IVAR].dropna()
 
 # combine with the relevant columns from the response DataFrame
 merged_responses = pd.merge(pd.DataFrame(split_ivar_checkbox), responses[DVARS],
@@ -85,13 +86,20 @@ for action in IVAR_RESPONSES:
     p = "N/A"    
     
     print action
+    print collected_counts
+    
+    
     chi2_counts = collected_counts.dropna(axis=1)
     counts_array = np.array([chi2_counts.ix[True], 
                              chi2_counts.ix[False]])    
+        
+        
     
-    print counts_array
     if len(counts_array[0]) > 0 and len(counts_array[1]) > 0:
         chi, p, dof, expected_counts = sps.chi2_contingency(counts_array)
+        print expected_counts
+        print "chi2= " + str(chi) + ", p= " + str(p)
+
     
     # normalize         
     collected_counts = \
@@ -101,7 +109,6 @@ for action in IVAR_RESPONSES:
     collected_counts = \
         collected_counts.reindex(index=collected_counts.index[ ::-1 ])
     
-    print collected_counts
     
     # draw the subplot
     ax = subfigs[i][j]

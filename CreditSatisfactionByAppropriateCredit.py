@@ -50,7 +50,9 @@ fig.suptitle(GRAPH_TITLE, fontsize=14)
 execfile("ReadInSurvey.py")
 
 # extract checkbox column and split responses into array
-split_ivar_checkbox = responses[IVAR].str.split("; ").dropna()
+#split_ivar_checkbox = responses[IVAR].str.split("; ").dropna()
+split_ivar_checkbox = responses[IVAR].dropna()
+
 
 # combine with the relevant columns from the response DataFrame
 merged_responses = pd.merge(pd.DataFrame(split_ivar_checkbox), responses[DVARS],
