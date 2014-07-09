@@ -301,6 +301,7 @@
 * a majority (150 / 62%) expect an evaluation of plausibility that requires domain expertise
 * collection and processing methods (220 / 90%) presumably also demand some domain expertise
 * low expectation that impact will be considered (53 / 22%)
+* An expectation that data publication includes peer review correlated postively with thorough metadata (OR= 5.67, p= 0.00029, alpha= 0.008), plausibility considered (OR= 2.29, p= 0.0087, alpha= 0.008), and novelty/impact considered (OR= 2.42, p= 0.0092, alpha= 0.008), although only the first is statistically significant after accountin for MHT.
 
 ####Interrelations
 * we wanted to know whether there was some order to the definitions provided, so we tested against the null hypothesis that each component was chosen (or not) independently of every other
