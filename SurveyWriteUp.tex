@@ -75,7 +75,7 @@ Carly Strasser$^{1}$,
 \\
 \bf{1} California Digital Library, University of California Office of the President, Oakland, CA, USA
 
-$\ast$ E-mail: Corresponding John.Kratz@ucop.edu
+$\ast$ E-mail: John.Kratz@ucop.edu
 \end{flushleft}
 
 % Please keep the abstract between 250 and 300 words
@@ -123,7 +123,7 @@ A number of respondents listed non-journal data publishers: figshare (6), Dryad 
 \subsection*{Data sharing mechanisms}
 One of the goals of this survey was to explore the distinction between data sharing and publication.
 Unlike data publication, a relatively new and unfamiliar concept to researchers, most have experience with and opinions about data sharing.
-Many respondents (56\%, 140) said that it is very important to share the data that underlies a study; we did not see any statistically meaningful difference between disciplines (\chi^{2}= 39.1, p= 0.18). %Check that these values makes sense!
+Many respondents (56\%, 140) said that it is very important to share the data that underlies a study; we did not see any statistically meaningful difference between disciplines ($\chi^{2}= 39.1, p= 0.18$). %Check that these values makes sense!
 A majority (68\%, 168) have shared data in the past.
 Of those, 58\% (98) saw their data reused by someone, and 62\% (61) of those reuses led to publication.
 Slightly fewer, 61\% (151) had reused someone else's data; 69\% (104) of these led to a publication.
@@ -143,7 +143,7 @@ Acknowledgement also ranked highly at 62\% (93)
 The most common actual practice observed by examining published articles, informal reference in the body of the paper\cite{sieber_not_1995, mooney_anatomy_2012}, ranked lowest at 16\% (24).
 Respondents who used the provided free-text field overwhemlingly wrote some variant on ``it depends.''
 Two factors were cited: the publication status of the dataset (e.g. ``depends on whether the data is already published'') and the role of the data in the paper (e.g. ``authorship if data is [the] primary source of analysis, otherwise acknowledgment'').
-Becase previous studies identified substantial differences in culture between disciplines\cite{harley_assessing_2010, swan_share_2008}, we tested for significant differences between disciplines (omitting Mathematics because the \emph{n} was too low for chi-square), but did not find any (\chi^{2}= 15.6, p= 0.9).
+Becase previous studies identified substantial differences in culture between disciplines\cite{harley_assessing_2010, swan_share_2008}, we tested for significant differences between disciplines (omitting Mathematics because the \emph{n} was too low for chi-square), but did not find any ($\chi^{2}= 15.6, p= 0.9$).
 
 We also asked the subset who had published with someone else's data how they actually credited the creators.
 The answers to this question corresponded well with the prior theoretical question.
@@ -156,7 +156,7 @@ Most of the 86 who answered the question, 63\% (54) felt that they had been cred
 This left 22\% (13) who felt that they recieved insufficent credit; only 2 (2\%) felt that the credit was `very insufficent.'
 We considered the possibility that differences in satisfaction were driven by different attitudes toward what constitutes appropriate credit.  
 To that end, we collapsed responses into three categories (insufficient, appropriate, and excessive), and tested for independence with each of the four specified answers in data sharing credit.
-The strongest relationship, between less satisfaction and ``authorship on paper,'' was still far from statisctially significant (\chi^{2}= 3.26, p= 0.20, corrected \alpha= 0.0125).
+The strongest relationship, between less satisfaction and ``authorship on paper,'' was still far from statisctially significant ($\chi^{2}= 3.26, p= 0.20$, corrected $\$alpha= 0.0125$).
 
 \subsection*{Definitions}
 
@@ -170,10 +170,78 @@ To find out what researchers expected from data peer review, we asked what they 
 The most common responses were ``collection and processing methods were evaluated'' (90\%, 220) and ``descriptive text is thorough enough to use or replicate the dataset'' (80\%, 196).
 The high rank of the latter suggests an awareness of the importance of metadata.
 Fitting with current practice, there was little (22\%, 53) expectation that peer review would consider the novely or potential impact of the dataset.
-An expectation that data publication includes peer review correlated postively (by Fisher exact test) with thorough descriptive text (OR= 5.67, p= 0.00029), plausibility considered (OR= 2.29, p= 0.0087), and novelty/impact considered (OR= 2.42, p= 0.0092), although only the first edges over an \alpha= 0.05 signficance threshold after applying the Bonferroni correction for multiple hypothesis testing.
+An expectation that data publication includes peer review correlated postively (by Fisher exact test) with thorough descriptive text ($OR= 5.67, p= 0.00029$), plausibility considered ($OR= 2.29, p= 0.0087$), and novelty/impact considered ($OR= 2.42, p= 0.0092$), although only the first edges over an $\alpha= 0.05$ signficance threshold after applying the Bonferroni correction for multiple hypothesis testing.
 
 We were interested in whether selections of items in each definition represented coherent ideas about publication or peer review, so we tested agains the null hypothesis that each item was selected (or not) independently of every other.
-Not surprisingly, this hypothesis was rejected resoundingly for both data publication (\chi^{2}= 290.0, p= 6.9e-58) and peer review (\chi^{2}= 343.0, p= 5.7e-72)
+Not surprisingly, this hypothesis was rejected resoundingly for both data publication ($\chi^{2}$= 290.0, $p= 6.9\times10^{-58}$) and peer review ($\chi^{2}= 343.0, p= 5.7\times10^{-72}$) by chi square tests.
+To identify specific correlations, we performed pairwise Fisher exact tests between each feature (Figure XXX).
+We found a dense set of statistically significant (at the $\alpha= 0.05$ level, corrected to 0.0018) associates among features related to access and preservation.
+For instance, ``deposited in a repository'' was linked to ``openly available'' ($OR=9.55, p= 7.6\times10^{-14}$), unique ID ($OR= 3.33, p= 1.33\times10^{-5}$), formal ($OR= 4.49, p= 3.94\times10^{-6}$) and rich ($OR= 3.83, p=1.14\times10^{-6}$) metadata.
+We were unsurprised to find linkages between formal and rich metadata ($OR= 12.5, p= 2.7\times10^{-14}$) and between assignment of a unique ID and formal metadata ($OR= 7.92, p= 5.05\times10^{-11}$).
+Data papers were linked to both rich ($OR=3.64, p=4.22\times10^{-5}$) and formal ($OR=4.30, p=1.32\times10^{-5}$) metadata.
+Data papers were also the only feature associated with peer review ($OR=3.00, p=0.0011$).
+``Basis of a traditional paper'' had no significant associations; the closest was with data paper ($OR=1.93, p=0.023$).
+
+We also found multiple significant relationships among possible considerations for peer review, with a corrected cutoff of $\alpha=0.0033$.
+Three strong correlations formed a triangle from ``methods are appropriate'' to ``Metadata standardized'' ($OR=7.91, p=0.00081$) to ``Technical details check out'' ($OR=4.56, p=3.4\times10^{-6}$) to ``methods are appropriate'' ($OR=5.9, p=7.9\times10^{-5}$).
+``Data is plausible'' correlated with other factors that require domain expertise: ``methods are appropriate'' ($OR=4.51, p=0.0014$), ``metadata sufficient for replication'' ($OR=4.87, p=2.5\time10^{-6}$), and ``novelty/impact'' ($OR=5.50, p=1.1\times10^{-5}$).
+Interestingly, this was the only association for ``novelty/impact''
+
+\subsection*{Values}
+
+A sigficant goal of data publication is to facilitate reuse of data.
+Consequently, we wanted to know what features of a data publication would be useful to researchers in evaulating a dataset's quality.
+To address this question, we asked respondents to rate how much confidence each of four possible assurances of data quality inspires.
+All of the features inspired at least some confidence in a large majority of researchers (from 89\% to 98\%).
+Peer review was easilty the most important factor; 72\% (175) said it conferred complete or high confidence, while only 2\% (4) expressed little or no confidence.
+Having been the subject of a traditional paper was second with 56\% (137) complete or high confidence.
+Reuse by a third party came in 3rd, with 43\% (106) and description by a data paper was the least convincing at 37\% (89).
+The largest fraction of little or no confidence was reuse, at 11\% (25).
+
+* no strong relationship between peer review definition and peer review confidence
+
+
+####Data value/impact
+* in values figure
+* we wanted to know what dataset metrics researchers would value
+
+* citations, not surprisingly, was the winner
+* *119 / 49% extremely or highly useful
+
+* downloads did surprisingly well relative to citations
+* *77 / 32% extremely or highly useful
+* if somewhat useful is added in, downloads gets even closer to citations 179 (73%) vs. 201 (82%)
+
+* There was a substantial drop for search rank and altmetrics
+* *102 (42%) find search rank at least somewhat useful
+* *91 (37%) find altmetrics at least somewhat useful 
+* * furthermore, a majority of researchers find each to be slightly or not at all useful
+
+####Researcher evaluation
+* in values figure
+* part of the rationale for data publication is to incentivize data sharing by fitting data into the academic reward system
+* to that end, we wanted to know what features of a data publication would increase its value as an item on a CV
+* we considered the imprimatur of peer review and the inclusion of a data paper 
+
+* to establish a baseline, we asked about traditional papers
+* *not surprisingly, they are highly valued
+* *145 (60%) give it a great deal of weight and another 87 (36%) give it significant weight
+* we have a lot of biologists, who value peer reviewed publications above all else \cite{harley_assessing_2010}
+
+* data publications were much less highly valued at 23 (10%) a great deal for highest scorer, a peer-reviewed data paper, although 109 (46%) still gave that significant weight.
+
+* peer review appeared to be the more important feature
+* *from that 10%, a peer-reviewed dataset only dropped to 5% (12), while an un-peer-reviewed data paper dropped to 0.01% (2)
+* *if significant weight is added in, a peer reviewed data paper comes in at 134 (56%), a peer reviewed dataset at 85 (36%), and an un-reviewed data paper at 31 (12%)
+* not surprisingly, a significant number of respondents 65 (27%) gave un-peer reviewed data no weight at all.
+
+* we were particularly interested in the 26% (59) respondents who had served on a tenure and promotions committee.
+* their responses were similar to those who had not served on such a committee
+* we compared the set of values assigned to each item between those who had and had not served on a t&p committee by chi-square
+* values ranged from 
+* *chi2= 7.427 (p= 0.115) for peer-reviewed datasets (valued slightly less by experienced respondents) to 
+* *chi2= 2.097 (p= 0.351) for traditional papers (valued slightly more by experienced respondents)
+* for 5 items, alpha=0.01, none can be considered statistically significant
 
 
 \section*{Discussion}
@@ -217,7 +285,7 @@ In total, 32 respondents were exempted from analysis, some on the basis of multi
 Analysis was performed using IPython\cite{perez_ipython_2007}, Pandas\cite{mckinney-proc-scipy-2010}, and Numpy\cite{van_der_walt_numpy_2011}.
 Graphs were prepared using Python and formatted with Adobe Illustrator.
 For significance testing, the Fisher exact test was used for 2x2 tables and contingency table chi-square for all larger tables.
-A significance cutoff of \alpha=0.05 was used, corrected for multiple hypothesis testing when appropriate.
+A significance cutoff of $\alpha=0.05 was used, corrected for multiple hypothesis testing when appropriate.
 Because few questions were required, questions with no reply at all were considered to be skipped rather than an intentional ``none of these''.
 
 
