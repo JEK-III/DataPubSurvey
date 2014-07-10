@@ -59,9 +59,6 @@
 * 55% say lack or tangible rewards and recognition constrains data sharing to some or great extent. Report concludes "Data sharing can be most effectively rewarded by increasing recognition of data sharers"\cite{boborow_establishing_2014}
 
 
-
-###Data publication has multiple definitions
-
 * *simple: "sensible to adopt a pragmatic definition of "publication of datasets" as "making datasets publicly available"\cite{swan_share_2008}
 * *nuanced: share vs. publish vs. Publish\cite{callaghan_making_2012}
 * *ours: available, citable, maybe validated \cite{kratz_data_2014}
@@ -69,18 +66,13 @@
 * Lots of data publication initiatives are steaming ahead
 * in particular, lots of new venues for data papers
 * however, it's still not clear what 'data publicaiton' means, and 'data peer review' even less so
-* if we want to use those words, we'd better figure out what they mean to the real audience: researchers
-
-* therefore we decided to survey researchers directly about:
-1. what they think 'data publication' and 'data peer review' mean
-2. what potential components of a data publication would they find useful for evaluating the data and its creators
 
 
-###Current data publications
 ####Data papers
-* Data papers: description w/o analysis \cite{newman_data_2009} 
+* Data papers: description w/o analysis \cite{newman_data_2009}
 * Earth System Science Data (2009), Geoscience Data Journal \cite{allan_geoscience_2014}, Nature Scientific Data (2014) \cite{_more_2014}
-* Peer review of data and paper wrapped together
+* provide a bona-fide paper, albeit not quite the usual, that can be cited and listed on a cv
+* Peer review of data and paper wrapped together.
  
 ####Other stuff
 * bare bones: figshare (http://figshare.com/), Dryad (http://www.datadryad.org/)
@@ -91,6 +83,17 @@
 * Lawrence criteria\cite{lawrence_citation_2011}
 
 ###This survey
+* there's quite a lot of stuff out there called data publications
+* if we want to use those words, we'd better figure out what they mean to the real audience: researchers
+
+* whereas data sharing has been the subject of many surveys/reports, data publication has not.
+* *Swann and Brown (2009) talk about data publication, but they define it simply as “making datasets publicly available.”
+
+* therefore we decided to survey researchers directly about:
+1. what they think 'data publication' and 'data peer review' mean
+2. what potential components of a data publication would they find useful for evaluating the data and its creators
+
+
 * How well do current implementations of data publication meet the expectations of reasearchers?
 * What features would be useful to a researchers?
 
@@ -389,17 +392,23 @@
 
 ##Discussion
 
-###Limitations
+###Limitations / Our demographics vs. previous surveys
+
 * undoubtedly a biased sample: researchers interested in this stuff are more likely to fill it out
 * however, the high number (84%) of respondents who did not name a data journal and the high number unware of federal policies (69/35% never heard of NSF DMP, 122/62% never heard of OSTP) suggests that we're not too highly enriched for people who care about this stuff.
 * *compared to EAGDA report, where 60% of respondents were aware of data journals
 
+* also, haphazard distribution
+* lowish (n) 
 
-###Our demographics vs. previous surveys
+* obviously, web survey gives us a higher n than interviews would
+
+
 * Tenopir (2011) \cite{tenopir_data_2011}
 * *81% academic vs. our 85% is quite similar
 * *most heavily environmental sciences & ecology (36%), followed by social science (16%) and biology (14%)
 * *we're heavy in biology (37%), but with a significant representation from Earth and environmental science (16%) and social science (13%).
+
 
 * Others have found significant differences in data sharing / scholarly communication culture between disciplines
 * Tenopir (2011) \cite{tenopir_data_2011} asked what conditions/credit would be fair in exchange for use of data (you using others and others using yours)
@@ -425,6 +434,8 @@
 * *again, Tenopir found field specific differences, we didn't really
 
  
+* we're heavily in the US, a different envrionment than the UK.
+* some of the more thorough surveys have been done in the UK, where a single framework for assessment, the Research Assement Exercise (REA), now the Research Excellence Framework (REF) dominates utterly\cite{swan_share_2008, bobrow_establishing_2014}.
 
 
 ###Sharing channels
@@ -494,6 +505,7 @@
 * *"why would I care about any of that?"
 * *while few give them much weight, a majority do give them at least a little
 
+* we have a lot of biologists, who value peer reviewed publications above all else \cite{harley_assessing_2010}
 
 
 #Tables & Figures
@@ -577,7 +589,7 @@
 * *Assessing the Future Landscape of Scholarly Communication: 160 interviews over 7 fields, covers lots of topics, but data sharing is in there \cite{harley_assessing_2010}
 * *"The Scientific Method in Practice: Reproducibility in the Computational Sciences"\cite{stodden_scientific_2010}
 
-* Expert Advisory Group on Data Access (EAGDA) Report includes survey of 35 researchers over 3 fields in UK in 2013 \cite{bobrow_establishing_2014}
+* Expert Advisory Group on Data Access (EAGDA) Report includes survey of 35 researchers over 3 fields in UK in 2013 \cite{bobrow_establishing_2014, }
 
 
 * conclusions:
