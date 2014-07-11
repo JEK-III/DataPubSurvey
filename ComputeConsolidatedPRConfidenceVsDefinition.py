@@ -61,7 +61,7 @@ for b in ANSWERS:
     
     #pvalues.ix[c_level,b] = p
     if oddrat == oddrat:
-        print "Peer Review Confidence x " + b + ": odds ration= " + str(oddrat) + ", p= " + str(p)
+        print "Peer Review Confidence x " + b + ": odds ratio= " + str(oddrat) + ", p= " + str(p)
         #print expected
         #relationship = square.as_matrix() - expected
         #print ("positive correlation" if relationship[0][0] > 0 else 
