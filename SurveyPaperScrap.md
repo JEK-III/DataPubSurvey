@@ -502,7 +502,7 @@ Channels
 ####Data papers
 * the majority of respondents (84%) did not name any data journals
 * data papers were the least named component of a published dataset.
-* data papers confer less trust than any other feature we looked at, but very close to reuse; on a scale of 1-5, data paper is 3.28 (SEM=0.05) and reuse is 3.35 (SEM=0.05)
+* data papers confer less trust than any other feature we looked at, but very close to reuse; on a scale of 1-5, data paper is 3.28 (SEM=0.05) and reuse is 3.35 (SEM=0.05); 44\% rank reuse as high or complete confidence, 36\% rank data papers with high or complete confidence
 * data papers are valued much less than traditional papers (3.54 SEM=0.05 vs. 4.55 SEM=0.04) and 10% 'A great deal' vs 60%.
 * data papers do clearly add value to a dataset on a CV, but peer-reviewed datasets without papers do quite well
 * our results don't really resolve the question of whether data papers are a good use of one's time
