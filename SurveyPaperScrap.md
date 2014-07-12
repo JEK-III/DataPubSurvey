@@ -575,7 +575,7 @@ Channels
 * however, downloads do well and are much easier for a data publisher to implement
 * *if you're publishing data, you should provide download statistics
 * altmetrics still have a ways to go
-* *"why would I care about any of that?"
+* *"Why would any of the things listed matter?"
 * *while few give them much weight, a majority do give them at least a little
 * "Eighty-three per cent of respondents already tracked the use of their datasets, primarily through details of publications generated using the data (71%), the number of researchers accessing the data (51%) and the number of data downloads (43%)."\cite{bobrow_establishing_2014}
  
