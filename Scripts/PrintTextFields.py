@@ -10,7 +10,7 @@ execfile('DefineConstants.py')
 
 # ------------------------------------------------------------------------------
 # read in survey data
-responses_ft = pd.read_csv("DataPubSurveyResponses - Form Responses.csv")
+responses_ft = pd.read_csv("../Tables/DataPubSurveyResponses - Form Responses.csv")
 
 free_text_responses = pd.DataFrame()
 pd.set_printoptions(max_colwidth=1000)

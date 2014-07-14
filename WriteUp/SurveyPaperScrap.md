@@ -457,7 +457,7 @@ Bias
 ###Data sharing
 
 Importance
-* widely held
+* widely held 
 
 Differences between disciplines
 * Others have found significant differences in data sharing / scholarly communication culture between disciplines
