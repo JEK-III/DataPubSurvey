@@ -685,3 +685,5 @@ Channels
 
 * conclusions:
 * *time is the most highly cited cost \cite{tenopir_data_2011, kim_institutional_2012} to data sharing.
+
+Commenting on the variable meanings of data publication to researchers, the RIN report of 2008 remarked, ``[t]here is, for some, also an implication that the information has been through a quality control process.''\cite{swan_share_2008}
