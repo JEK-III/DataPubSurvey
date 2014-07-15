@@ -581,6 +581,14 @@ Channels
  
 
 ###Data publication redux
+* What is a data publication?
+* available: open, secondarily in a repository
+* citable: didn't ask specificially, but formal citation was the most appropriate way to cite a paper; repository and ID are citation-enablers
+* validated: 
+
+
+* What should data publishers do?
+
 
 * Although there is a lot of uncertainty still about what data publication means,
 1. gotta be in a repository, provide access
