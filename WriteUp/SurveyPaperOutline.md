@@ -682,6 +682,10 @@ Channels
 
 * Expert Advisory Group on Data Access (EAGDA) Report includes survey of 35 researchers over 3 fields in UK in 2013 \cite{bobrow_establishing_2014, }
 
+Published data can accumulate citations credit to compensate researchers for the time spent preparing their data. 
+The risk of missing out on publications is at least slightly offset if the researcher's contribution will be recognized.
+Data publications will be entered into the scholarly record for preservation.
+
 
 * conclusions:
 * *time is the most highly cited cost \cite{tenopir_data_2011, kim_institutional_2012} to data sharing.
