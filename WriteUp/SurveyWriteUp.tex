@@ -225,21 +225,26 @@ The strongest relationship, between less satisfaction and belief that authorship
 \subsection*{Definitions}
 
 The central question we hoped to answer is what ``data publication'' and ``data peer review'' actually mean to researchers.
-We decomposed the prevalent models of data publication into a set of potential features and asked which would distinguish a ``published'' dataset from a ``shared'' one (Figure 4A).
-The most common expectations relate to access: 68\% ($n=166$) expect a published dataset to be openly available and 54\% ($n=133$) expect it to have been deposited in a repository.
-Substantially researchers expected a published dataset to accompanied by a traditional publication ($43\%, n=105$) than a data paper ($22\%, n=55$).
-Only a 29\% ($n=70$) minority expect published data to have been peer reviewed.
+We decomposed the prevalent models of data publication into a set of potential features and asked respondents what would distinguish a ``published'' dataset from a ``shared'' one (Figure 4A).
+The most prevalent expectations relate to access: 68\% ($n=166$) expect a published dataset to be openly available somehow and 54\% ($n=133$) expect it to have been deposited in a repository or database.
+Substantially more researchers expected a published dataset to be accompanied by a traditional publication ($43\%, n=105$) than by a data paper ($22\%, n=55$).
+Only a minority of 29\% ($n=70$) expected published data to have been peer reviewed.
 
-To find out what researchers expected from data peer review, we asked what they would expect peer review of data to entail and provided a list of considerations that various organizations take into account when evaluating/validating datasets (Figure 4B).
-The most common responses were ``collection and processing methods were evaluated'' (90\%, 220) and ``descriptive text is thorough enough to use or replicate the dataset'' (80\%, 196).
-The high rank of the latter suggests an awareness of the importance of metadata.
-Fitting with current practice, there was little (22\%, 53) expectation that peer review would consider the novelty or potential impact of the dataset.
-An expectation that data publication includes peer review correlated positively (by Fisher exact test) with thorough descriptive text ($OR= 5.67, p= 0.00029$), plausibility considered ($OR= 2.29, p= 0.0087$), and novelty/impact considered ($OR= 2.42, p= 0.0092$), although only the first edges over an $\alpha= 0.05$ significance threshold after applying the Bonferroni correction for multiple hypothesis testing.
+Much of the prestige of scholarly publication derives from having survived the peer review process.
+It is natural, then, that many data publication initiatives model their validation process on peer review and use the term for its prestige and familiarity.
+However, it is not obvious exactly how literature peer review should be adapted for data or what guarantees it should make.
+To learn what researchers expect from data peer review, we provided a selection of considerations that data peer reviewers might take into account (Figure 4B).
+The most common responses sidestepped examination of the data itself; 90\% ($n=220$) of respondents expected evaluation of the methods and 80\% ($n=196$) of the documentation.
+%insert something about evaluation of the data
+Consonant with current practice, there was little ($22\%, n=53$) expectation that data reviewers would consider novelty or potential impact.
+We were interested to know whether respondents who expected data publication to include peer review and those who did not had different ideas about what data peer review would entail.  
+Expectation that data publication includes peer review was positively correlated with consideration of documentation ($OR= 5.67, p= 0.00029$), plausibility ($OR= 2.29, p= 0.0087$), and novelty/impact ($OR= 2.42, p= 0.0092$), but only the first is statistically significant at the $\alpha= 0.05$ level after correcting for multiple hypothesis testing.
+%say something about what this might mean in the discussion
 
-We were interested in whether selections of items in each definition represented coherent ideas about publication or peer review, so we tested agains the null hypothesis that each item was selected (or not) independently of every other.
-Not surprisingly, this hypothesis was rejected resoundingly for both data publication ($\chi^{2}$= 290.0, $p= 6.9\times10^{-58}$) and peer review ($\chi^{2}= 343.0, p= 5.7\times10^{-72}$) by chi square tests.
-To identify specific correlations, we performed pairwise Fisher exact tests between each feature (Figure XXX).
-We found a dense set of statistically significant (at the $\alpha= 0.05$ level, corrected to 0.0018) associates among features related to access and preservation.
+We were interested in whether respondents selected items to answer the above questions independently or as coherent constellations of ideas, so we tested for independence of items within each definition. 
+Not surprisingly, there is strong evidence of relationships between items within both data publication ($\chi^{2}$= 290.0, $p= 6.9\times10^{-58}$) and peer review ($\chi^{2}= 343.0, p= 5.7\times10^{-72}$).
+To identify relationships between specific items, we performed pairwise Fisher exact tests between each feature (Figure 5).
+Within data publication, we found a dense set of statistically significant (at the $\alpha= 0.05$ level, corrected to 0.0018) associations among features related to access and preservation.
 For instance, ``deposited in a repository'' was linked to ``openly available'' ($OR=9.55, p= 7.6\times10^{-14}$), unique ID ($OR= 3.33, p= 1.33\times10^{-5}$), formal ($OR= 4.49, p= 3.94\times10^{-6}$) and rich ($OR= 3.83, p=1.14\times10^{-6}$) metadata.
 We were unsurprised to find linkages between formal and rich metadata ($OR= 12.5, p= 2.7\times10^{-14}$) and between assignment of a unique ID and formal metadata ($OR= 7.92, p= 5.05\times10^{-11}$).
 Data papers were linked to both rich ($OR=3.64, p=4.22\times10^{-5}$) and formal ($OR=4.30, p=1.32\times10^{-5}$) metadata.
@@ -354,6 +359,9 @@ Naturally, a majority of respondents expect assessments that require domain expe
 ``Data is plausible'' was linked with three other features that require domain knowledge (methods evaluated, sufficient metadata to replicate, and potential impact/novelty).
 In general, respondents did not expect peer review to take novelty/impact into account (only 22\%), which is in line with most data peer review guidelines.
 We conclude that data publication initiatives that do not incorporate peer review are unlikely to confuse anyone, but that peer review is likely to be critical for data publications to attain a status comparable to that of journal articles.
+%move discussion of metadata here
+%The high rank of the latter suggests an awareness of the importance of metadata.
+
 
 Based on our personal experiences, we were surprised that ``successful reuse'' did not inspire more trust in respondents.
 The idea that ``data use in its own right provides a form of review''\cite{parsons_data_2010} is frequently put forward in discussions of data publication, but successful reuse rated below both peer review and ``basis of a traditional paper'' as a means of establishing trust in a dataset.
