@@ -238,10 +238,11 @@ However, it is not obvious exactly how literature peer review should be adapted 
 To learn what researchers expect from data peer review, we provided a selection of considerations that data peer reviewers might take into account (Figure 4B).
 The most common responses sidestepped examination of the data itself; 90\% ($n=220$) of respondents expected evaluation of the methods and 80\% ($n=196$) of the documentation.
 %insert something about evaluation of the data
-Consonant with current practice, there was little ($22\%, n=53$) expectation that data reviewers would consider novelty or potential impact.
+There was little ($22\%, n=53$) expectation that data reviewers would consider novelty or potential impact.
 We were interested to know whether respondents who expected data publication to include peer review and those who did not had different ideas about what data peer review would entail.  
 Expectation that data publication includes peer review was positively correlated with consideration of documentation ($OR= 5.67, p=0.00029$), plausibility ($OR= 2.29, p=0.0087$), and novelty/impact ($OR= 2.42, p= 0.0092$), but only the first is statistically significant at the $\alpha= 0.05$ level after correcting for multiple hypothesis testing.
 %say something about what this might mean in the discussion
+%again, figure out how to boil this down to a single number
 
 We were interested in whether respondents selected items to answer the above questions independently or as coherent constellations of ideas, so we tested for independence of items within each definition. 
 Not surprisingly, there is strong evidence for relationships between items within both data publication ($\chi^{2}=290.0, p=6.9\times10^{-58}$) and peer review ($\chi^{2}= 343.0, p= 5.7\times10^{-72}$).
@@ -311,12 +312,12 @@ DataONE heard mostly from researchers in its area of focus, Environmental scienc
 Scaramozzino's survey included a high proportion of Physicists and Mathematicians, but 18\% of respondents were Biologists\cite{scaramozzino_study_2012}.
 The EAGDA survery was heaviest in biomedical fields, such as Epidemiology and (26.8\%), Genetics/Genomics (20\%), but also featured 31.4\% Social scientists\cite{bobrow_establishing_2014}. 
 Whereas DataONE uncovered statistically distinct data sharing attitudes between respondents in different roles and disciplines, we did not.
+%return and revise rest of section
 The significance of differences in one survey and not the other is at least as likely to be an artifact of the difference in $n$ as a real reflection
 
 Because participation in the survey was entirely voluntary and uncontrolled, responses are almost certainly biased toward researchers with an interest in data sharing and publication related issues.
 However, the high proportion of respondents who did not name any data journals (84\%) and the low awareness of US federal policies (35\% of US respondents had never heard of the NSF data management plan requirement and 62\% had never heard of the OSTP Open Data Initiative) suggests that our sample is not extremely biased.
 To provide context, 40\% of respondents to the Wellcome Trust survey were unaware of data journals.
-
 
 \subsection*{Data publication}
 
@@ -326,10 +327,10 @@ One respondent simply wrote in ``terms are confusing.''
 However, the emergence of systematic relationships between some of the features demonstrates that the responses were not utterly confused.
 We observed two, arugably three, independent concepts of data publication.
 
-The first centers on present and future access.
+The most widely-held concept centers on present and future access.
 Open availability tightly correlates with the second most frequent feature, repository deposit.
 Repository deposit correlates with three other conceptually related features (unique identification, rich metadata, and formal metadata), numerous interconnections unite all five of these features.
-This concept of publication maps well onto virtually all present data publication implementations.
+This concept of publication maps well onto virtually all present data publication implementations, including lightweight approaches like figshare and Zenodo..
 
 The second concept lingers from the pre-digital days of scholarly communication: published data is data that has been used or described in a traditional journal article. 
 Nearly half (43\%) of the respondents chose ``basis of a research paper'' as a defining feature of data publication. 
@@ -350,30 +351,35 @@ Data papers clearly add percieved value to a dataset, but not as much as peer re
  
 \subsection*{Data validation}
 
-The type and degree of quality control is perhaps the most variable aspect of current data publication implementations. 
-Commenting on the variable meanings of data publication to researchers, the RIN report of 2008 remarked, ``[t]here is, for some, also an implication that the information has been through a quality control process.''\cite{swan_share_2008}
-Substantial trust is attached to the traditional scholarly publication process; researchers expressed a great deal of trust in datasets that had formed the basis of a traditional paper.
+Quality control via peer review is integral to traditional scholarly publication, so it is no surprise that, in reference to data publication, the RIN noted ``[t]here is, for some, also an implication that the information has been through a quality control process''\cite{swan_share_2008}.
+Even in regard to data, researchers trust the traditional scholarly publication process: our respondents trusted peer review and use in a research paper more than any other indicators of quality.
+However, less than half expected a published dataset to have been used in a published research paper and only a third expected it to have been peer reviewed.
+We conclude, with the RIN, that researchers don't have a clear idea what quality control to expect from published data.
+In this respect, the research and scholarly communication communities are in perfect agreement.
+How, and how extensively, to assess data quality is the least settled of the many open questions surrounding data publication, and different initiatives take a variety of approaches\cite{kratz_data_2014}.
+%discuss different PR approaches here
 
-Peer review was both the most significant factor in boosting the trustworthiness of dataset, and in boosting the value of dataset listed on a CV.
-This may, in part, reflect the high proportion of biologists in our survey; biologists value peer review especially highly\cite{harley_assessing_2010}
-Although peer review was highly valued, it was not expected by most researchers; 71\% would \textbf{not} expect a published dataset to have been peer-reviewed.
-Expectations for peer review seem to be more consistent than for publication, despite one respondents remark that ``I have never heard this term applied to a dataset and I don't know what it means.''
-Whereas the top item in the publication definition question was only chosen by ~2/3 of respondents, 90\% of respondents agreed that they would expect peer review to include evaluation of collection and processing methods.
-In fact, fully half of the items were chosen by more respondents than the top data publication item.
-Naturally, a majority of respondents expect assessments that require domain expertise.
-``Data is plausible'' was linked with three other features that require domain knowledge (methods evaluated, sufficient metadata to replicate, and potential impact/novelty).
-In general, respondents did not expect peer review to take novelty/impact into account (only 22\%), which is in line with most data peer review guidelines.
-We conclude that data publication initiatives that do not incorporate peer review are unlikely to confuse anyone, but that peer review is likely to be critical for data publications to attain a status comparable to that of journal articles.
-%move discussion of metadata here
-%The high rank of the latter suggests an awareness of the importance of metadata.
-%Mention that presumably trad. paper means some amount of peer review
+More than any other factor in this survey, peer review establishes the trustworthiness of dataset and elevates its percieved value.
+This may, in part, reflect the high proportion of biologists, a discipline that values peer review especially highly\cite{harley_assessing_2010} % look at biologists v. everyone else
+%Although peer review was highly valued, it was not expected by most researchers; 71\% would \textbf{not} expect a published dataset to have been peer-reviewed.
+Despite one respondent's remark that ``I have never heard this term applied to a dataset and I don't know what it means,'' expectations of peer review were more consistent than of publication. 
+Whereas the most popular defining feature of data publication was only chosen by ~2/3 of respondents, 90\% of respondents agreed that they expect data peer review to include evaluation of collection and processing methods.
+In fact, fully half of the peer review assements were chosen by more respondents than the top data publication feature.
+Unsurprisingly, a majority of respondents expect assessments that require domain expertise, i.e. review by peers in their field.
+Assessment of plausibility was linked with three other assessment that require domain expertise: method evaluation, adequacy of metadata for replication, and potential novelty/impact.
+The high (80\%) expectation that peer review of data includes peer review of its metadata suggests that researchers are aware of the critical importance of documentation for data reuse and replication.
+That and the low (22\%) expectation that peer review consider novelty/impact are in line with current data journal peer review processes and guidelines\cite{kratz_data_2014}.
+% return and revise rest of paragraph
+However, any number of other pre- or post-publication quality assessment processes could be used to satisfy these expectations of peer review.
+We conclude that models of data publication lacking peer review are unlikely to confuse researchers, but that peer review greatly enhances both reuse and reward.
+An assessment process involving domain expertise that can be reasonably be considered to be peer review is likely to be critical for data publications to attain a status comparable to that of journal articles.
 
-Based on our personal experiences, we were surprised that ``successful reuse'' did not inspire more trust in respondents.
-The idea that ``data use in its own right provides a form of review''\cite{parsons_data_2010} is frequently put forward in discussions of data publication, but successful reuse rated below both peer review and ``basis of a traditional paper'' as a means of establishing trust in a dataset.
-It's worth nothing that ``basis of a traditional paper'' is, itself, evidence of use.
-Interestingly, citations, a direct consequence of successful reuse, were the most useful metric for assessing data value/impact.
-The seeming disconnect could be the result of different ideas about what constitutes successful reuse vs. where a citation comes from, or the difference between trustworthiness and impact.
-Combined, the value of reuse/citations for increasing trust in dataset reusers and establishing the value of the creators work makes reuse as review highly worthwhile, but it does appear that it can't substitute for peer review.
+The idea that ``data use in its own right provides a form of review''\cite{parsons_data_2010} is frequently expressed in the conversation around data publication. 
+Based on past experiences, we were surprised that successful reuse did not inspire more trust; both peer review and ``basis of a traditional paper'' inspired more confidence than reuse.
+(Although it is worth nothing that serving as the basis of a research paper is iteself evidence of successful use, just not by a third party.)
+However, respondents considered the the direct consequences of successful reuse--- citations--- to be the most useful metric for assessing value/impact.
+This apparent contradiction could result from evaluating trustworthiness and impact differently or different concepts of  ``successful'' reuse and reuse that that results in a citation.
+The combined value of enhancing trust and establishing impact makes tracking dataset citations emminently worthwhile, but still no substitute for peer review.
 
 \subsection*{Credit for data}
 
