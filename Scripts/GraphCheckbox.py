@@ -13,7 +13,7 @@ ANSWERS = COLUMN_TO_ANSWERS[dvar]
 
 # extract checkbox column and split responses into array
 #split_checkbox = responses[dvar].str.split("; ").dropna()
-split_checkbox = responses_ft[dvar].dropna()
+split_checkbox = responses  [dvar].dropna()
 
 
 # DF of bools; responders x checkbox (checked = True) 

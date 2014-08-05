@@ -29,7 +29,8 @@ i = 0
 
 for question in QUESTIONS:
     
-    split_checkbox = responses[question].str.split("; ").dropna()
+    #split_checkbox = responses[question].str.split("; ").dropna()
+    split_checkbox = responses[question].dropna()
 
     # DF of bools; responders x checkbox (checked = True) 
     checkbox_responses = pd.DataFrame({name : 

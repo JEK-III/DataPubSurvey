@@ -14,7 +14,7 @@ COLORS = ['#08519c',
           
 GRAPH_TITLE = "Familiarity"        
 
-IVAR = 'discipline'
+#IVAR = 'discipline'
 QUESTIONS = ['aware_nsf_dmp', 
              'aware_nih_data_sharing_policy', 
              'aware_ostp_policy']
@@ -25,12 +25,13 @@ execfile("ReadInSurvey.py")
 responses.discipline = responses.discipline.map(PAPER_DISCIPLINE_MAP)
 
 responses_ft = responses
-#responses_ft = responses[responses.discipline == 'Biology']
+responses_ft = responses[responses.discipline == 'Biology']
 responses_ft = responses_ft[responses_ft.united_states]
 
-responses_ct = responses_ft[QUESTIONS[2]].value_counts()
+responses_ct = responses_ft[QUESTIONS[1]].value_counts()
 
 print responses_ct
+print "n= " + str(responses_ct.sum())
 
 responses_ct = responses_ct.div(responses_ct.sum().astype(float))
 print responses_ct
