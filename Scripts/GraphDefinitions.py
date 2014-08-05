@@ -48,7 +48,7 @@ for question in QUESTIONS:
     n = len(checkbox_responses)    
     response_counts = response_counts.apply(lambda x: float(x) / n)    
     
-    print n
+    print "n= " + str(n)
     print response_counts    
     
     #plt.tick

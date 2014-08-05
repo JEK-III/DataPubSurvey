@@ -4,7 +4,7 @@ Created on Wed Jun 11 14:59:22 2014
 
 @author: jkratz
 """
-
+import math
 
 # Graph formatting -------------------------------------------------------------
 COLORS = ['#08519c',
@@ -19,6 +19,10 @@ QUESTIONS = ['aware_nsf_dmp',
              'aware_nih_data_sharing_policy', 
              'aware_ostp_policy']
 
+VALUE_TO_NUMBER = {"Know all the details" : 3,
+                   "Read about it" : 2,
+                   "Heard of it" : 1,
+                   "Never heard of it" : 0}
 
 execfile("ReadInSurvey.py")
 
@@ -26,12 +30,19 @@ responses.discipline = responses.discipline.map(PAPER_DISCIPLINE_MAP)
 
 responses_ft = responses
 responses_ft = responses[responses.discipline == 'Biology']
+
 responses_ft = responses_ft[responses_ft.united_states]
 
 responses_ct = responses_ft[QUESTIONS[1]].value_counts()
 
+
+
 print responses_ct
 print "n= " + str(responses_ct.sum())
+print "mean= " + str(responses_ft[QUESTIONS[1]].map(VALUE_TO_NUMBER).mean())
+print "SEM= " + str(responses_ft[QUESTIONS[1]].map(VALUE_TO_NUMBER).std() /
+                    math.sqrt(len(responses_ft[QUESTIONS[1]].dropna())))
+
 
 responses_ct = responses_ct.div(responses_ct.sum().astype(float))
 print responses_ct

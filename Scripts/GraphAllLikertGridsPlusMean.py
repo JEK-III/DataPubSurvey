@@ -50,6 +50,7 @@ for question in QUESTIONS:
     dvars = GRID_QUESTIONS_TO_COLUMNS[question]    
     dvar_responses = GRID_QUESTIONS_TO_ANSWERS[question]
 
+    print '\n' + question    
     
     collected_counts = pd.DataFrame(index=dvar_responses) 
     mean_values = pd.Series(index=dvars)
@@ -60,7 +61,7 @@ for question in QUESTIONS:
         mean_values[column] = responses[column].map(VALUE_TO_NUMBER).mean()
         sem_values[column] = (responses[column].map(VALUE_TO_NUMBER).std() /
                               math.sqrt(len(responses[column].dropna())))
-    
+        print column + " n= " + str(len(responses[column].dropna()))                      
 
     mean_values = mean_values + 1 #* 25 * 4.2
     sem_values = sem_values #* 25 * 4.2
