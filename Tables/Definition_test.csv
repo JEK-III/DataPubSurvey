@@ -1,0 +1,30 @@
+peer_review_confidence,methods_evaluated,good_metadata,standard_metadata,review
+High confidence,TRUE,FALSE,FALSE,FALSE
+Complete confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,TRUE,TRUE
+Some confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,FALSE,TRUE
+High confidence,TRUE,TRUE,FALSE,TRUE
+High confidence,TRUE,FALSE,FALSE,FALSE
+High confidence,TRUE,FALSE,TRUE,FALSE
+Some confidence,TRUE,FALSE,TRUE,FALSE
+No confidence,TRUE,FALSE,TRUE,FALSE
+,TRUE,FALSE,TRUE,TRUE
+High confidence,TRUE,TRUE,TRUE,TRUE
+Complete confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,FALSE,TRUE
+High confidence,TRUE,TRUE,FALSE,TRUE
+High confidence,FALSE,FALSE,FALSE,TRUE
+Complete confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,FALSE,TRUE,TRUE,TRUE
+High confidence,FALSE,TRUE,TRUE,TRUE
+Complete confidence,FALSE,TRUE,TRUE,TRUE
+High confidence,FALSE,FALSE,FALSE,FALSE
+High confidence,FALSE,TRUE,FALSE,FALSE
+Complete confidence,FALSE,TRUE,TRUE,FALSE
+Some confidence,FALSE,TRUE,TRUE,FALSE
+High confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,TRUE,TRUE
+High confidence,TRUE,TRUE,TRUE,TRUE
