@@ -13,6 +13,8 @@ DEMO_COLUMNS = ['discipline',
                 'have_shared',
                 'reused_others_data']
 
+
+from DefineConstants import SUBDISCIPLINE_TO_DISCIPLINE
 execfile("ReadInSurvey.py")
 
 counts = responses.discipline.map(SUBDISCIPLINE_TO_DISCIPLINE).value_counts()
