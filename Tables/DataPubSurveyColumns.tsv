@@ -1,0 +1,46 @@
+Column name	Data type	Question or description
+Unnamed: 0	int64	Record number
+timestamp	object	Timestamp
+aware_nsf_dmp	object	NSF Data Management Plan Requirements for your discipline
+aware_nih_data_sharing_policy	object	NIH Data Sharing Policy
+aware_ostp_policy	object	Office of Science and Technology Policy (OSTP) Open Data Initiative
+aware_uc_oap	object	University of California Open Access Policy
+data_journals_named	object	Are you familiar with any data journals?  If so, what titles? [list of titles]
+number_data_journals_named	float64	Are you familiar with any data journals?  If so, what titles? [number of titles]
+data_sharing_importance	float64	How important is it to share data that underlies a published study?
+data_sharing_credit	object	How should a researcher who shares data be credited?
+have_shared	object	Have you ever shared your data with anyone outside your research group and collaborators?
+how_shared	object	Have you shared data in any of the following ways?
+how_documented 	object	Which of the following did you include with your data?
+wrote_paper	object	Have you been listed as an author on a peer-reviewed paper in the last 5 years?
+generated_data	object	Have you generated any data in the last 5 years?
+percent_public	float64	If yes, roughly what percentage of the data is publicly available?
+others_reused_data	object	Has your data been re-used by anyone outside your research group / collaborators?
+how_others_got 	object	How did they get your data?
+others_published	object	Did they publish a paper using some of your data?
+how_much_credit	float64	If yes, how did you feel about the amount of credit you were given?
+reused_others_data	object	Have you ever re-used data from another research group (not as part of an existing collaboration)?
+how_you_got	object	How did you get the data?
+you_published 	object	Did you publish a paper using the data in some way?
+how_you_credited	object	If yes, how did you credit them?
+publish_definition	object	If a colleague described one dataset as "published" and another as "shared", how might you expect the “published” dataset to differ from the “shared” one?
+peer_review_definition	object	If a colleague described a dataset as "peer reviewed", which of the following would you expect to have been part of the process?
+traditional_paper_confidence	object	If you were thinking about using someone else’s dataset in your work, how much confidence in the data would each of these things inspire? [Described in a traditional paper (with conclusions)]
+data_paper_confidence	object	If you were thinking about using someone else’s dataset in your work, how much confidence in the data would each of these things inspire? [Described in a data paper (description only)]
+peer_review_confidence	object	If you were thinking about using someone else’s dataset in your work, how much confidence in the data would each of these things inspire? [Peer-review of the dataset]
+reuse_confidence 	object	If you were thinking about using someone else’s dataset in your work, how much confidence in the data would each of these things inspire? [Re-used by others]
+impact_citation	object	In assessing a dataset's value/impact, how useful is each of the following metrics? [Number of citations]
+impact_downloads	object	In assessing a dataset's value/impact, how useful is each of the following metrics? [Number of downloads]
+impact_altmetrics	object	In assessing a dataset's value/impact, how useful is each of the following metrics? [Number of mentions in blog posts, Twitter, or popular media]
+impact_google_rank	object	In assessing a dataset's value/impact, how useful is each of the following metrics? [Rank in Google searches]
+researcher_review_experience	object	Which of the following have you done?
+traditional_paper_value	object	In evaluating a CV, how much weight would you put on each of the following? [Traditional paper (with conclusions)]
+data_paper_pr_value	object	In evaluating a CV, how much weight would you put on each of the following? [Data paper (description only), peer reviewed]
+data_paper_npr_value	object	In evaluating a CV, how much weight would you put on each of the following? [Data paper (description only), not peer reviewed]
+dataset_pr_value	object	In evaluating a CV, how much weight would you put on each of the following? [Standalone dataset, peer reviewed]
+dataset_npr_value 	object	In evaluating a CV, how much weight would you put on each of the following? [Standalone dataset, not peer reviewed]
+institution	object	Which best describes your employer/institution?
+united_states	bool	Where is your employer/institution located?
+highest_degree	object	What is the highest degree you hold?
+role	object	Which best describes your role?
+discipline	object	Which best describes your discipline?
