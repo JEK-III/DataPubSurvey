@@ -24,7 +24,7 @@ VALUE_TO_NUMBER = {"Know all the details" : 3,
                    "Heard of it" : 1,
                    "Never heard of it" : 0}
 
-execfile("ReadInSurvey.py")
+from DefineConstants import PAPER_DISCIPLINE_MAP
 responses.discipline = responses.discipline.map(PAPER_DISCIPLINE_MAP)
 output = {}
 
@@ -52,16 +52,16 @@ for question in QUESTIONS:
     responses_ct = responses_ct.div(responses_ct.sum().astype(float))
     print "\nPERCENT"    
     print responses_ct
+    
+    responses_ct.plot(kind='barh',
+                      stacked=True,
+                      xlim=(0,1))
 
 
 output_df = pd.DataFrame(output).T
 
 output_df.to_csv("Policy_awareness.csv")
 
-"""
-responses_ct.plot(kind='barh',
-                  stacked=True,
-                  xlim=(0,1))
-"""
+
 
 
