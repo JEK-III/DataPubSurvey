@@ -179,8 +179,10 @@ Researchers from 20 countries responded, but most were affiliated with instituti
 The institutions were largely academic (85\%, $n=204$); 94\% ($n=191$) of those were focused on research rather than teaching. 
 By discipline, the largest response was from biologists (37\%), followed by arch{\ae}ologists (13\%), social scientists (13\%), and environmental scientists (11\%).
 We heard from researchers across the academic career spectrum: 41\% ($n=102$) were principal investigators/lab heads, 24\% ($n=61$) postdocs, and 16\% ($n=41$) grad students.
-We saw surprisingly few significant differences in responses between disciplines or roles, so we have presented the results in aggregate.
-For breakdown of data by discipline or role, see the full raw-- except for redactions to preserve anonymity)-- dataset at XXX. %fill in data citation
+We saw few significant differences in responses between disciplines or roles.
+For significance testing, we consolidated subdisciplines into 11 high-level disciplines.
+Given the number of respondents, this survey should have 80\% power to detect medium Cohen's w effect sizes of 0.26 for disciplines and 0.21 for role \cite{cohen_statistical_1988}.
+For breakdown of data by discipline or role, see the full raw-- except for redactions to preserve anonymity-- dataset at XXX. %fill in data citation
 
 \subsection*{Background knowledge}
 
@@ -221,7 +223,7 @@ Rewarding data creators is a primary goald of data publication, so we asked how 
 The most common answer, from 83\% ($n=126$) of respondents, was formal citation in the reference list.
 Acknowledgment also ranked highly at 62\% (93).
 Most respondents who gave a free-text answer wrote some variant on ``it depends,'' often citing one of two factors: the publication status of the dataset (e.g. ``depends on whether the data is already published'') and the role of the data in the paper (e.g. ``authorship if data is [the] primary source of analysis, otherwise acknowledgment'').
-Because previous studies reported differences in citation practices between disciplines \cite{swan_share_2008, harley_assessing_2010, tenopir_data_2011}, we tested whether discipline had a detectable effect on the response  (omitting Mathematics because of low $n$) and found that it did not ($\chi^{2}=15.6$, $p=0.9$).
+Because previous studies reported differences in citation practices between disciplines \cite{swan_share_2008, harley_assessing_2010, tenopir_data_2011}, we tested whether discipline had a detectable effect on the response (omitting Mathematics because of low $n$) and found that it did not ($\chi^{2}=15.6$, $p=0.9$).
 
 We also asked respondents who had published with shared data how they actually credited the creator.
 Reported practice fit well with theory: formal citation was the most popular method (63\%, $n=81$), followed by acknowledgment (50\%, $n=70$).
@@ -317,6 +319,7 @@ Scaramozzino's survey included a high proportion of physicists and mathematician
 The EAGDA survey was heaviest in biomedical fields, such as epidemiology and (26.8\%), genetics/genomics (20\%), but also featured 31.4\% social scientists \cite{bobrow_establishing_2014}. 
 Whereas DataONE uncovered statistically distinct data sharing attitudes between respondents in different roles and disciplines, we did not.
 Detection of statistically meaningful distinctions in one survey and not the other is at least as likely to be an artifact of the difference in $n$ (1329 vs. 249) as a reflection of real differences in the respondent populations.
+For instance, 
 
 As is the case for many of the previous surveys, participation was voluntary and open, so our sample may be biased toward researchers with an interest in data sharing and publication.
 However, a high proportion of respondents (84\%) did not name any data journals, especially relative to the 40\% of EAGDA respondents who were unfamiliar with the format \cite{bobrow_establishing_2014}.
@@ -463,6 +466,7 @@ Analysis was performed using IPython \cite{perez_ipython:_2007}, Pandas \cite{mc
 Graphs were prepared using matplotlib \cite{hunter_matplotlib:_2007} and formatted with Adobe Illustrator.
 For significance testing, Fisher's exact test was used for all 2x2 tables and contingency table chi-square for all larger tables.
 A statistical significance cutoff of $\alpha=0.05$ was used, corrected for multiple hypothesis testing when appropriate.
+Statistical power calculations were performed using G*Power 3.1\cite{faul_g*_2007}.
 Because few questions were required,  ``mark all that apply'' questions with no reply at all were considered to be skipped.
 Questions that related to US policies were analyzed based on US respondents only; one questions about the NIH was analyzed based only on US biologists.
 
