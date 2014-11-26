@@ -1,0 +1,10 @@
+,Openly available without contacting the author(s),Deposited in a database or repository,Assigned a unique identifier such as a DOI,A traditional research paper is based on the data,A data paper (without conclusions) describes the data,Packaged with a thorough description of the data,Packaged with formal metadata describing the data (e.g. as XML),"Dataset is ""peer reviewed""",I don't see any difference
+Openly available without contacting the author(s),,7.6037667712838059e-14,0.00028173309364523842,0.07356048205947989,0.25329059771075796,0.0034907298224034541,0.1186579575932438,0.88071401683078387,
+Deposited in a database or repository,,,1.3309642870003143e-05,0.24519600754298768,0.013767843173800998,1.1404630689851254e-06,3.9351367699093743e-06,0.67100469509988847,
+Assigned a unique identifier such as a DOI,,,,0.35774527577664839,0.0027782698411592953,0.00046086181282225342,5.0521532493978325e-11,0.56567394127593884,
+A traditional research paper is based on the data,,,,,0.16773709211007831,0.89566192085918939,1.0,0.022776638041367703,
+A data paper (without conclusions) describes the data,,,,,,4.2172401964358204e-05,1.3163725047487687e-05,0.0010823052712443707,
+Packaged with a thorough description of the data,,,,,,,2.0721125471349873e-14,0.08243072692497741,
+Packaged with formal metadata describing the data (e.g. as XML),,,,,,,,0.10316046399432172,
+"Dataset is ""peer reviewed""",,,,,,,,,
+I don't see any difference,,,,,,,,,

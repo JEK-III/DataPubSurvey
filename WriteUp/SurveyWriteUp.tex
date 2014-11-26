@@ -151,8 +151,8 @@ One thing that all of these publishers have in common is that they endeavor to m
 The variety of forms of data publication attests to a general shortage of consensus on what, exactly, it means to publish data.
 Noting a lack of both consensus and interest on the part of researchers, the RIN report of 2008 adopted a deliberately minimal definition: ``making datasets publicly available'' \cite{swan_share_2008}.
 While eminently practical, this definition does not do much to distinguish publication from sharing (except for ruling out certain channels) or to advance its prestige.
-More recently, Callaghan et al. (2012) suggested distinguishing between shared (available), \underline{p}ublished (also citable), and \underline{P}ublished (also peer-reviewed) data \cite{callaghan_making_2012}.
-We have argued that the consensus in the scholarly communications community-- publishers, librarians, curators-- is that published data is openly available and citable, but that what kind of validation (if any) is required to qualify is still an open question \cite{kratz_data_2014}.
+More recently, Callaghan et al. (2012) suggested distinguishing between \underline{p}ublished (available), and \underline{P}ublished (also citable and peer-reviewed) data \cite{callaghan_making_2012}.
+We have argued that the consensus in the scholarly communications community-- publishers, librarians, curators-- is that published data is openly available, documented, and citable, but that what kind of validation (if any) is required to qualify is still an open question \cite{kratz_data_2014}.
 It is easy to forget, however, that what data publication means to the scholarly communication community is substantially irrelevant.
 The point of calling data made public through whatever particular process ``published'' is to exploit the meaning of the word to researchers; the important definition is what data publication means to them. 
 This paper surveys researchers to explore these kinds of semantic gaps between the scholarly communication community and researchers and seeks to ensure that researcher expectations are more obvious, so that data publishers can maximize the return on their efforts.  
@@ -179,10 +179,10 @@ Researchers from 20 countries responded, but most were affiliated with instituti
 The institutions were largely academic (85\%, $n=204$); 94\% ($n=191$) of those were focused on research rather than teaching. 
 By discipline, the largest response was from biologists (37\%), followed by arch{\ae}ologists (13\%), social scientists (13\%), and environmental scientists (11\%).
 We heard from researchers across the academic career spectrum: 41\% ($n=102$) were principal investigators/lab heads, 24\% ($n=61$) postdocs, and 16\% ($n=41$) grad students.
-We saw few significant differences in responses between disciplines or roles.
+We saw few significant differences in responses between disciplines or roles, so we have presented the results in aggregate.
 For significance testing, we consolidated subdisciplines into 11 high-level disciplines.
 Given the number of respondents, this survey should have 80\% power to detect medium Cohen's w effect sizes of 0.26 for disciplines and 0.21 for role \cite{cohen_statistical_1988}.
-For breakdown of data by discipline or role, see the full raw-- except for redactions to preserve anonymity-- dataset at XXX. %fill in data citation
+For breakdown of data by discipline or role, see the full raw-- except for redactions to preserve anonymity-- dataset (\href{https://dash.ucop.edu/xtf/view?docId=ucop/ark%2B%3Db5060%3Dd8rp4v/mrt-datacite.xml}{doi:10.5060/d8rp4}).
 
 \subsection*{Background knowledge}
 
@@ -211,32 +211,30 @@ Of the researchers who shared, 58\% ($n=98$) saw their data reused by someone an
 Most of the respondents who reused data published a paper with it (69\%, $n=104$).
 
 Because some, but not all, means of sharing data satisfy the availability requirements of data publication \cite{kratz_data_2014}, we asked researchers with data sharing experience about the mode of transmission (Figure \ref{fig:sharing}A-C).
-The supplied answer choices were the four methods for external data sharing that emerged in interviews by Kim and Stanton: email/direct contact, personal website, journal website, and database or repository \cite{kim_institutional_2012}.
+The supplied answer choices were the four methods for external data sharing that emerged in interviews by Kim and Stanton (2012): email/direct contact, personal website, journal website, and database or repository \cite{kim_institutional_2012}.
 Email/direct contact was the most frequently reported method for sharing: 87\% ($n=146$) of the respondents who shared data did so directly, 82\% ($n=82$) were aware of other researchers obtaing their data directly, and 57\% ($n=86$) of the respondents who reused data obtained it directly.
-The predominance of direct contact is problably in part an artifact of awareness: respondents necessarily know when they give someone their data directly, but they may not be notified when someone downloads it from a repository or website.
+The predominance of direct contact is probably in part an artifact of awareness– respondents necessarily know when they give someone their data directly, but they may not be notified when someone downloads it from a repository or website.
 Eight respondents (5\%) wrote-in that they had obtained data through a channel we had not considered: extracting data from the text, tables, or figures of a published paper.
 
 
 \subsection*{Credit for sharing data}
 
-Rewarding data creators is a primary goald of data publication, so we asked how a dataset creator should be credited by a reuser (Figure \ref{fig:credit}A.).
+Rewarding data creators is a primary goal of data publication, so we asked how a dataset creator should be credited by a reuser (Figure \ref{fig:credit}A.).
 The most common answer, from 83\% ($n=126$) of respondents, was formal citation in the reference list.
 Acknowledgment also ranked highly at 62\% (93).
-Most respondents who gave a free-text answer wrote some variant on ``it depends,'' often citing one of two factors: the publication status of the dataset (e.g. ``depends on whether the data is already published'') and the role of the data in the paper (e.g. ``authorship if data is [the] primary source of analysis, otherwise acknowledgment'').
-Because previous studies reported differences in citation practices between disciplines \cite{swan_share_2008, harley_assessing_2010, tenopir_data_2011}, we tested whether discipline had a detectable effect on the response (omitting Mathematics because of low $n$) and found that it did not ($\chi^{2}=15.6$, $p=0.9$).
+Most (30 out of 34) respondents who gave a free-text answer wrote some variant on ``it depends,'' often citing one of two factors: the publication status of the dataset (e.g. ``depends on whether the data is already published'') and the role of the data in the paper (e.g. ``authorship if data is [the] primary source of analysis, otherwise acknowledgment'').
+Because previous studies reported differences in citation practices between disciplines \cite{swan_share_2008, harley_assessing_2010, tenopir_data_2011}, we tested whether different disciplines responded differently (omitting Mathematics because the $n$ was too low to reliably test). Following the approach of Tenopir et al. (2011), we peformed separate $\chi^{2}$ tests for each of the four provided answer choices. Using a significance cutoff corrected for mulitple hypothesis testing of $\alpha= 0.05/4 = 0.0125$, we did not detect a difference between disciplines ($\chi^{2}\leq 16.4$, $p\geq 0.022$).
 
 We also asked respondents who had published with shared data how they actually credited the creator.
 Reported practice fit well with theory: formal citation was the most popular method (63\%, $n=81$), followed by acknowledgment (50\%, $n=70$).
-There was, however, a statistically significant difference between answers to the two questions ($\chi^{2}=15.8$, $p=0.0013$).
-A possible source of this distinction is that while a few respondents (16\%, $n=24$) felt that it was appropriate to cite data informally in the body of the text, none admitted to doing it (Figure \ref{fig:credit}B.).
+A notable distinction was that while a few respondents (16\%, $n=24$) said that it was appropriate to cite data informally in the body of the text, none admitted to actually doing it (Figure \ref{fig:credit}B.).
 
 Many researchers fear that shared data might be used by ``data vultures'' who contribute little and don't acknowledge the source \cite{kim_institutional_2012}.
 To assess how realistic this fear is, we asked respondents whose data had been reused for a publication whether they felt adequately credited.
 Most (63\%, $n=54$) felt satisfied, and a combined 78\% ($n=67$) felt the credit was appropriate or excessive.
 This left 22\% ($n=13$) who were unsatisfied; only 2 (2\%) felt that the credit was ``very insufficient.''
 These differences in satisfaction could derive from different attitudes toward appropriate credit.  
-To test this, we collapsed responses into three categories (insufficient, appropriate, and excessive), and tested for independence with each of the four provided answers in data sharing credit.
-The strongest relationship, between less satisfaction with past acknowledgment and belief that authorship would be appropriate, was still far from statistically meaningful ($\chi^{2}= 3.26$, $p= 0.20$, corrected $\alpha= 0.0125$).
+To test this, we collapsed responses into three categories (insufficient, appropriate, and excessive) and tested for independence with each of the four provided answers in data sharing credit, but none of the relationships were statistically meaningful (corrected $\alpha= 0.0125$, $\chi^{2}\leq 3.26$, $p\geq 0.20$).
 
 \subsection*{Expected features of data publication and peer review}
 
@@ -252,6 +250,7 @@ However, it is not obvious exactly how literature peer review processes and crit
 We asked what researchers expect from data peer review, providing a selection of considerations that data reviewers might take into account (Figure \ref{fig:definitions}B).
 The most common responses sidestepped examination of the data itself; 90\% ($n=220$) of respondents expected evaluation of the methods and 80\% ($n=196$) of the documentation.
 There was little ($22\%, n=53$) expectation that data reviewers would consider novelty or potential impact.
+
 Respondents who expect data publication to include peer review and those who do not might be expected to have different expectations of data peer review, but we did not find any significant difference in their responses ($\chi^{2}=3.4$, $p=0.64$).  
 
 To learn whether respondents selected data publication features or peer-review assessments independently or as coherent constellations of ideas, we tested for independence of items within each question. 

@@ -62,7 +62,7 @@ for a in ANSWERS:
             oddsratio, p = sps.fisher_exact(count_table)
             
             pvalues.ix[a,b] = p
-           
+            print count_table
             print (a + " x " + b + ":\n  odds ratio= " + str(oddsratio) + 
                    ", p= " + str(p))
             print "  positive\n" if prelim_oddsratio == oddsratio \
