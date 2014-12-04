@@ -254,7 +254,7 @@ There was little ($22\%, n=53$) expectation that data reviewers would consider n
 % next two paragraphs need revision for style
 Respondents who expect data publication to include peer review and those who do not might be expected to have different expectations of data peer review. Although the overall pattern of expectations was similar in the two groups, those who did expect the publication process to include peer review also expected a slightly more rigorous peer reivew process. From the 6 possible peer review criteria listed, they selected a mean of 4.3, while those who did not expect it selected 3.3; we confirmed that the count of boxes selected between the two groups was significantly different ()$\chi^{2}= 25.2$, $p= 0.003$). 
 
-We also tested for differences in expectations between disciplines and research roles. The only two significant differences that we found both concern formal metadata. Discipline had a significant effect on whether the respondent expected publication to include formal metadata (corrected $\alpha= 0.006$, $\chi^{2}= 33.0$, $p= 2.6\times10^{-5}$) and peer review to consider whether the metadata is standardized (corrected $\alpha= 0.008$, $\chi^{2}= 26.7$, $p= 3.8\times10^{-4}$). In both cases, the most notable distinction was the high expectation from environmental scientists: 63\% (compared to 25\% in the population as a whole) for publication and 73\% (compared to 31\%) for peer-review.
+We also tested for differences in expectations between disciplines and research roles. The only two significant differences that we found both concern formal metadata. Discipline had a significant effect on whether the respondent expected publication to include formal metadata (corrected $\alpha= 0.006$, $\chi^{2}= 33.0$, $p= 2.6\times10^{-5}$) and peer review to consider whether the metadata is standardized (corrected $\alpha= 0.008$, $\chi^{2}= 26.7$, $p= 3.8\times10^{-4}$). In both cases, the most notable distinction was the high expectation from environmental scientists: 63\% (compared to 25\% in the population as a whole) for publication and 73\% (compared to 39\%) for peer-review.
 % ----
 
 To learn whether respondents selected data publication features or peer-review assessments independently or as coherent constellations of ideas, we performed Fisher exact tests of independece between every pair of features (Figure \ref{fig:definition_web}).
@@ -296,11 +296,10 @@ A peer-reviewed dataset with no paper dropped to 5\% ($n=12$) giving a great dea
 Thus, peer review outweighed having a data paper as a factor. 
 A substantial, 27\% ($n=65$) would award an un-peer-reviewed dataset no weight at all.
 For this question, which explicitly addressed evaluation of dataset creators, we were particularly interested in the 26\% (59) of survey respondents who had experience on a tenure and promotions committee.
-We compared their responses to each feature with those who had not served on a committee by chi square, but even the lowest p-value ($p= 0.12$ for peer-reviewed datasets) is well above the significance cutoff for 5 comparisons
-
+We compared their responses to each feature with those who had not served on a committee by chi square, but found no significant relationships (corrected $\alpha= 0.01$, $\chi^{2}\leq 8.39$, $p\geq 0.078$).
 \section*{Discussion}
 
-\subsection*{Demographics}
+\subsection*{Demographics and statistical power}
 
 Although this survey was international in scope, most of the respondents were affiliated with institutions in the United States.
 The respondents here (84\% North American) resemble those of the DataONE survey \cite{tenopir_data_2011} (73\% North American); many of the previous surveys were conducted entiredly in the US \cite{ceci_scientists_1988, kim_institutional_2012, scaramozzino_study_2012}.
@@ -318,9 +317,12 @@ Our largest response was from biologists (37\%), followed by archaeologists (13\
 DataONE heard mostly from researchers in its area of focus, environmental sciences and ecology (36\%), followed by social science (16\%) and biology (14\%) \cite{tenopir_data_2011}. 
 Scaramozzino's survey included a high proportion of physicists and mathematicians, but 18\% of respondents were biologists \cite{scaramozzino_study_2012}.
 The EAGDA survey was heaviest in biomedical fields, such as epidemiology and (26.8\%), genetics/genomics (20\%), but also featured 31.4\% social scientists \cite{bobrow_establishing_2014}. 
-Whereas DataONE uncovered statistically distinct data sharing attitudes between respondents in different roles and disciplines, we did not.
+
+Whereas DataONE uncovered statistically distinct data sharing attitudes between respondents in different disciplines, we did not.
 Detection of statistically meaningful distinctions in one survey and not the other is at least as likely to be an artifact of the difference in $n$ (1329 vs. 249) as a reflection of real differences in the respondent populations.
-For instance, 
+Our survey has 80\% sensitivity to detect moderate effects of discipline (effect size $\Phi_{C}=0.24$) or role ($\Phi_{C}=0.22$)\cite{cohen_statisctical_1988}.
+The effect sizes observed in tables 21 and 22 of Tenopir et. al (2011)\cite{tenopir_data_2011}-- which most closely paralleled our questions about appropriate credit for sharing data-- are small, ranging from $\Phi_{C}=0.11$ to $0.17$.
+
 
 As is the case for many of the previous surveys, participation was voluntary and open, so our sample may be biased toward researchers with an interest in data sharing and publication.
 However, a high proportion of respondents (84\%) did not name any data journals, especially relative to the 40\% of EAGDA respondents who were unfamiliar with the format \cite{bobrow_establishing_2014}.
@@ -337,7 +339,7 @@ We observed two, arguably three, independent concepts of data publication.
 The most widely held concept centers on present and future access.
 Open availability tightly correlates with the second most frequent feature, repository deposit.
 Repository deposit correlates with three other conceptually related features (unique identification, rich metadata, and formal metadata), and numerous interconnections unite all five of these features.
-This concept of publication maps well onto virtually all present data publication implementations, including lightweight approaches like figshare and Zenodo..
+This concept of publication maps well onto virtually all present data publication implementations, including lightweight approaches like figshare and Zenodo.
 
 The second concept lingers from the pre-digital days of scholarly communication: published data is data that has been used or described in a traditional journal article. 
 Nearly half (43\%) of the respondents chose ``basis of a research paper'' as a defining feature of data publication. 
@@ -379,7 +381,7 @@ Furthermore, assessment processes that at least meet the expectations of peer re
 
 The idea that ``data use in its own right provides a form of review'' \cite{parsons_data_2010} is frequently expressed in the conversation around data publication. 
 Reuse could be documented through citations from reaserch papers to the dataset or direct feedback from researchers who used the data.
-Based on past experiences, we were surprised that successful reuse did not inspire more trust; both peer review and ``basis of a traditional paper'' inspired more confidence than reuse.
+Based on past experiences, we were surprised that successful reuse did not inspire more trust; both peer review and ``basis of a traditional paper'' inspired slightly more confidence than reuse.
 It is worth nothing that serving as the basis of a research paper by the dataset creator is itself evidence of successful use, just not by a third party.
 However, respondents did consider citations to be the most useful metric for assessing value/impact.
 This apparent contradiction could result from evaluating trustworthiness and impact differently or from different concepts of  ``successful'' reuse and reuse that that results in a citation.
@@ -409,7 +411,7 @@ For data publishers, there is certainly no harm in providing altmetrics-- and a 
 Researchers see the time required as the biggest cost to data sharing, but the risk they most fear is that ``data vultures'' will strip the data for publications without adequately acknowledging the creator(s) \cite{kim_institutional_2012}.
 To learn how well-founded these fears are, we asked respondents how satisfied they were with their credit the last time someone published using their data.
 The majority felt that the credit was appropriate, but the fraction that felt shortchanged (22\%) is too large to ignore, and we must conclude that this dissatisfaction is a real problem.
-Whether the problem is ultimately with the way dataset creators are credited or the way dataset creators \textit{expect} to be credited is for researcher communities to decide.
+Whether the problem is ultimately with the way dataset creators are credited or the way dataset creators \textit{expect} to be credited is for research communities to decide.
 We can say that there was no significant difference in how satisfied and dissatisfied respondents thought dataset creators should be credited, so the variability in satisfaction was most likely driven by variability in credit recieved rather than the respondent's expectation.
 As data publication takes shape, the problem can be reduced by solidification of community norms around data use, increased prestige for dataset creators, and better adoption of formal data citation.
 
@@ -453,7 +455,7 @@ Solicitations were distributed via social media (Twitter, Facebook, Google+), em
 \subsection*{Data processing and analysis}
 Although the topic of the survey is benign and identification would be unlikely to negatively impact respondents, light anonymization was performed prior to analysis and release of the response data.
 UC affiliation and answers to UC-specific questions were redacted.
-Respondent locations were grouped into United States and ``other;'' this distinction was preserved only because some questions asked about US government policies.  
+Respondent locations were grouped into United States and ``other'' this distinction was preserved only because some questions asked about US government policies.  
 Sub-disciplines with fewer than three respondents were re-coded with the corresponding discipline.
 Listed data journal names were standardized manually, and free text answers to other questions were replaced with ``other.''
 
@@ -463,10 +465,15 @@ To restrict the analysis to active researchers only, anyone who affirmed that th
 Finally, respondents without at least a Bachelor's Degree were filtered out.
 In total, 32 respondents were removed before analysis, some by multiple criteria.
 
+Statistical significane was tested using Fisher's exact test where possible (i.e., for 2x2 tables) and contingency $\chi^{2}$ in all other cases.
+Most notably, odds ratios and p-values from Fisher's exact test were used to assess the relationships between items depicted in Figure \ref{fig:definition_web}.
+A statistical significance cutoff of $\alpha=0.05$ was used, corrected for multiple hypothesis testing when appropriate.
+The robustness of all significant results was confirmed using a jacknife procedure in which the test was repeated systematically with each respondent removed; in no cases did the absence of a single respondent raise the p-value above the significance threshold.
+Error bars derive 95\% confidence intervals calculated with basic
+
+
 Analysis was performed using IPython \cite{perez_ipython:_2007}, Pandas \cite{mckinney_data_2010}, and Numpy \cite{van_der_walt_numpy_2011}.
 Graphs were prepared using matplotlib \cite{hunter_matplotlib:_2007} and formatted with Adobe Illustrator.
-For significance testing, Fisher's exact test was used for all 2x2 tables and contingency table chi-square for all larger tables.
-A statistical significance cutoff of $\alpha=0.05$ was used, corrected for multiple hypothesis testing when appropriate.
 Statistical power calculations were performed using G*Power 3.1\cite{faul_g*_2007}.
 Because few questions were required,  ``mark all that apply'' questions with no reply at all were considered to be skipped.
 Questions that related to US policies were analyzed based on US respondents only; one questions about the NIH was analyzed based only on US biologists.
