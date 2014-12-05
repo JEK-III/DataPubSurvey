@@ -181,8 +181,8 @@ By discipline, the largest response was from biologists (37\%), followed by arch
 We heard from researchers across the academic career spectrum: 41\% ($n=102$) were principal investigators/lab heads, 24\% ($n=61$) postdocs, and 16\% ($n=41$) grad students.
 We saw few significant differences in responses between disciplines or roles, so we have presented the results in aggregate.
 For significance testing, we consolidated subdisciplines into 11 high-level disciplines.
-Given the number of respondents, this survey should have 80\% power to detect medium Cohen's w effect sizes of 0.26 for disciplines and 0.21 for role \cite{cohen_statistical_1988}.
-For breakdown of data by discipline or role, see the full raw-- except for redactions to preserve anonymity-- dataset (\href{https://dash.ucop.edu/xtf/view?docId=ucop/ark%2B%3Db5060%3Dd8rp4v/mrt-datacite.xml}{doi:10.5060/d8rp4}).
+Given the number of respondents, this survey should have 80\% power to detect medium effect sizes of $\Phi_{C}=0.26$ for disciplines and 0.21 for role \cite{cohen_statistical_1988}.
+For breakdown of data by discipline or role, see the full raw-- except for redactions to preserve anonymity-- dataset published in the Unifersity of California's Merritt repository\cite{kratz_researcher_2014}.
 
 \subsection*{Background knowledge}
 
@@ -469,11 +469,13 @@ Because few questions were required,  ``mark all that apply'' questions with no 
 Questions that related to US policies were analyzed based on US respondents only; one questions about the NIH was analyzed based only on US biologists.
 
 Statistical significane was tested using Fisher's exact test where possible (i.e., for 2x2 tables) and contingency $\chi^{2}$ in all other cases\cite{agresti_statistical_1992}.
-Nnotably, odds ratios\cite{szumilas_explaining_2010} and p-values from Fisher's exact test were used to assess the relationships between items depicted in Figure \ref{fig:definition_web}.
-A statistical significance cutoff of $\alpha=0.05$ was used, corrected for multiple hypothesis testing when appropriate.
-The robustness of all significant results was confirmed using a jacknife-like procedure in which the test was repeated systematically with each respondent removed; in no cases did the absence of a single respondent raise the p-value above the significance threshold.
-Error bars represent bootstrapped 95\% confidence intervals (based on 10,000 resamples)\cite{efron_bootstrap_1979}.
+A statistical significance cutoff of $\alpha=0.05$ was used. 
+When testing for e.g., effects of discipline or prior experience, each answer choice was tested separately, then the Bonferroni correction for multiple hypothesis testing was applied to adjust $\alpha$ for that question; this is a conservative approach that may not detect subtle differences.
+Odds Ratios (ORs)\cite{szumilas_explaining_2010} and Fisher's exact test p-values were used to assess the relationships between items depicted in Figure \ref{fig:definition_web}; to enable meaningful comparison, all ORs were calculated in the direction that yeilded a value \geq 1.
 
+The robustness of all significant results was confirmed using a jacknife procedure in which the test was repeated systematically with each respondent removed; in no cases did the absence of a single respondent raise the p-value above the significance threshold.
+Error bars represent 95\% basic bootstrap confidence intervals (10,000 resamples) of the mean response in Figure \ref{fig:definition_web} and the percentage of positive responses in all other figures.
+To faciliate comparison, $\chi^{2}$ effects were measured as Cram\'er's V ($\Phi_{C}$)\cite{cramer_mathematical_1999}.
 
 Analysis was performed using IPython \cite{perez_ipython:_2007}, Pandas \cite{mckinney_data_2010}, and Numpy \cite{van_der_walt_numpy_2011}.
 Graphs were prepared using matplotlib \cite{hunter_matplotlib:_2007} and formatted with Adobe Illustrator.
