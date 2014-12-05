@@ -465,18 +465,20 @@ To restrict the analysis to active researchers only, anyone who affirmed that th
 Finally, respondents without at least a Bachelor's Degree were filtered out.
 In total, 32 respondents were removed before analysis, some by multiple criteria.
 
-Statistical significane was tested using Fisher's exact test where possible (i.e., for 2x2 tables) and contingency $\chi^{2}$ in all other cases.
-Most notably, odds ratios and p-values from Fisher's exact test were used to assess the relationships between items depicted in Figure \ref{fig:definition_web}.
+Because few questions were required,  ``mark all that apply'' questions with no reply at all were considered to be skipped.
+Questions that related to US policies were analyzed based on US respondents only; one questions about the NIH was analyzed based only on US biologists.
+
+Statistical significane was tested using Fisher's exact test where possible (i.e., for 2x2 tables) and contingency $\chi^{2}$ in all other cases\cite{agresti_statistical_1992}.
+Nnotably, odds ratios\cite{szumilas_explaining_2010} and p-values from Fisher's exact test were used to assess the relationships between items depicted in Figure \ref{fig:definition_web}.
 A statistical significance cutoff of $\alpha=0.05$ was used, corrected for multiple hypothesis testing when appropriate.
-The robustness of all significant results was confirmed using a jacknife procedure in which the test was repeated systematically with each respondent removed; in no cases did the absence of a single respondent raise the p-value above the significance threshold.
-Error bars derive 95\% confidence intervals calculated with basic
+The robustness of all significant results was confirmed using a jacknife-like procedure in which the test was repeated systematically with each respondent removed; in no cases did the absence of a single respondent raise the p-value above the significance threshold.
+Error bars represent bootstrapped 95\% confidence intervals (based on 10,000 resamples)\cite{efron_bootstrap_1979}.
 
 
 Analysis was performed using IPython \cite{perez_ipython:_2007}, Pandas \cite{mckinney_data_2010}, and Numpy \cite{van_der_walt_numpy_2011}.
 Graphs were prepared using matplotlib \cite{hunter_matplotlib:_2007} and formatted with Adobe Illustrator.
 Statistical power calculations were performed using G*Power 3.1\cite{faul_g*_2007}.
-Because few questions were required,  ``mark all that apply'' questions with no reply at all were considered to be skipped.
-Questions that related to US policies were analyzed based on US respondents only; one questions about the NIH was analyzed based only on US biologists.
+
 
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
@@ -501,7 +503,7 @@ The authors would like to thank colleagues at the CDL for productive discussions
 \caption{
 {\bf Researchers are generally unfamiliar with data-related funder policies.}
 Respondents based at US institutions self-reported their familiarity with three government funder policies: the Whitehouse OSTP Open Data Initiative ($n=197$), NSF Data Management Plan requirements ($n=197$), and the NIH data sharing policy (only biologists included, $n=76$). 
-White dots show the mean familiarity for each item; standard error of each mean \textless the radius of the dot.
+White dots show the mean familiarity for each item; error bars depict bootstrapped 95\% confidence intervals.
 }
 \label{fig:policy_knowledge}
 \end{figure}
@@ -515,6 +517,7 @@ White dots show the mean familiarity for each item; standard error of each mean 
 {\bf Researchers primarily share data in response to direct contact (e.g. via email).}
 Respondents who shared data indicated (A.) the channels they used to share their data, (B.) the channels others used to obtain the data, and (D.) how they documented the data.
 (C.) Respondents who used others data indicated the channels through which they obtained the data.
+Error bars depict bootstrapped 95\% confidence intervals.
 }
 \label{fig:sharing}
 \end{figure}
@@ -527,6 +530,7 @@ Respondents who shared data indicated (A.) the channels they used to share their
 \caption{
 {\bf Formal citation is the preferred method of crediting dataset creators.}
 Respondents indicated (A.) how a dataset creator should be credited, (B.) how they actually credited a dataset creator in the past, and (C.) how satisfied they were with the credit they received the last time someone else published using their data.  (A., B.) Respondents could select more than one item for each question.
+Error bars depict bootstrapped 95\% confidence intervals.
 } 
 \label{fig:credit}
 \end{figure}
@@ -538,7 +542,10 @@ Respondents indicated (A.) how a dataset creator should be credited, (B.) how th
 \end{center}
 \caption{
 {\bf Researcher expectations of data publication center on availability, not peer review.}
-Respondents conveyed the expectations raised by the terms (A.) publication and (B.) peer review in the context of data. Respondents could select more than one item for each question.
+Respondents conveyed the expectations raised by the terms (A.) publication and (B.) peer review in the context of data. 
+Respondents could select more than one item for each question. 
+Error bars depict bootstrapped 95\% confidence intervals. 
+
 }
 \label{fig:definitions}
 \end{figure}
@@ -550,9 +557,11 @@ Respondents conveyed the expectations raised by the terms (A.) publication and (
 \end{center}
 \caption{
 {\bf Researchers have coherent expectations of data publication and peer review.}
-Graph of relationships between the researcher expectations shown in \ref{fig:definitions}. 
+Graph of relationships between the researcher expectations shown in Figure \ref{fig:definitions}. 
 Nodes are potential (A.) publication features or (B.) peer review assessment.
-Edges depict relationship strength; line thickness is proportional to odds ratio. Blue edges are positive relationships, red are negative. Dark edges are significant at the $\alpha=0.05$ level by Fisher's exact test, with correction for multiple hypothesis testing.
+Edges depict relationship strength as measured by odds ratio.  
+Blue edges show positive relationships, red are negative. 
+Dark edges are significant at the $\alpha=0.05$ level by Fisher's exact test, with correction for multiple hypothesis testing to (A.) $\alpha=0.0018$ and (B.) $\alpha=0.0033$.
 }
 \label{fig:definition_web}
 \end{figure}
@@ -566,7 +575,7 @@ Edges depict relationship strength; line thickness is proportional to odds ratio
 {\bf Researchers trust and value peer review highly.}
 (A.) Respondents reported their past experience evaluating other researchers in each context; respondents could select more than one item.
 Respondents reported (B.) how much trust each data publication feature inspires, (C.) how useful each metric would be for assessing impact, and (D.) how valuable a CV item each kind of data publication would be.
-White dots show the mean response for each item; standard error of each mean \textless the radius of the dot.
+White dots show the mean response for each item; error bars depict bootstrapped 95\% confidence intervals.
 }
 
 \label{fig:values}
